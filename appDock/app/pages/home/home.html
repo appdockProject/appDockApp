@@ -1,82 +1,82 @@
-<!-- <ion-navbar *navbar>
-  <ion-title>
-    Home
-  </ion-title>
-</ion-navbar> -->
-
 <ion-content class="home">
-    <ion-grid>
-        <ion-row class="bothCards">
 
-
-            <ion-col width-20 class="navigation">
-                <ion-card>
-                    <ion-card-header>
-                        <img src="images/logo.png" />
-                    </ion-card-header>
-                    <ion-list>
-
-                        <ion-item>
-                            <button secondary>
-                                Apps
-                            </button>
-                        </ion-item>
-
-                        <ion-item>
-                            <button secondary>
-                                Developers
-                            </button>
-                        </ion-item>
-
-                        <ion-item>
-                            <button secondary>
-                                Tutorial
-                            </button>
-                        </ion-item>
-
-                        <ion-item>
-                            <button secondary>
-                                Feedback
-                            </button>
-                        </ion-item>
-
-                        <ion-item>
-                            <button secondary>
-                                Social
-                            </button>
-                        </ion-item>
-                    </ion-list>
-                </ion-card>
-            </ion-col>
+<ion-grid class="noScroll">
+  <ion-row>
 
 
 
-            <ion-col width-80 class="appContent">
-                <ion-card>
-                    <ion-card-header>
-                        Discover Senegelese Apps:
 
-                    </ion-card-header>
+<ion-col width-20 class="theNavHeight">
+      <ion-list>
 
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col> <img src="images/icons/1.png" /> </ion-col>
-                            <ion-col> <img src="images/icons/2.png" /> </ion-col>
-                            <ion-col> <img src="images/icons/3.png" /> </ion-col>
-                            <ion-col> <img src="images/icons/4.png" /> </ion-col>
-                        </ion-row>
+        <ion-item>
+            <img src="images/logo.png" class="center" alt="" />
+        </ion-item>
 
-                        <ion-row>
-                            <ion-col> <img src="images/icons/5.png" /> </ion-col>
-                            <ion-col> <img src="images/icons/6.png" /> </ion-col>
-                            <ion-col> <img src="images/icons/7.png" /> </ion-col>
-                            <ion-col> <img src="images/icons/8.png" /> </ion-col>
-                        </ion-row>
+          <ion-item>
+              <button secondary>
+                  Apps
+              </button>
+          </ion-item>
 
-                    </ion-grid>
-                </ion-card>
-            </ion-col>
+          <ion-item>
+              <button [navPush] = "devPage" secondary>
+                  Developers
+              </button>
+          </ion-item>
 
-        </ion-row>
-    </ion-grid>
+          <ion-item>
+              <button [navPush] = "tutorialPage" secondary>
+                  Tutorial
+              </button>
+          </ion-item>
+
+          <ion-item>
+              <button [navPush] = "feedbackPage" secondary>
+                  Feedback
+              </button>
+          </ion-item>
+
+          <ion-item>
+              <button [navPush] = "socialPage" secondary>
+                  Social
+              </button>
+          </ion-item>
+      </ion-list>
+</ion-col>
+
+<ion-col width-80>
+ <div class="blah">
+   <ion-grid class="iconMargin">
+
+     <ion-row class = "discover">
+       <title class = "center2"> Discover Senegalese Apps </title>
+       <button secondary> about</button>
+     </ion-row>
+
+       <ion-row>
+           <ion-col > <img src="images/icons/1.png" /> </ion-col>
+           <ion-col > <img src="images/icons/2.png" /> </ion-col>
+           <ion-col > <img src="images/icons/3.png" /> </ion-col>
+           <ion-col> <img src="images/icons/4.png" /> </ion-col>
+       </ion-row>
+
+       <ion-row>
+           <ion-col> <img src="images/icons/5.png" /> </ion-col>
+           <ion-col> <img src="images/icons/6.png" /> </ion-col>
+           <ion-col> <img src="images/icons/7.png" /> </ion-col>
+           <ion-col> <img src="images/icons/8.png" /> </ion-col>
+       </ion-row>
+
+
+
+   </ion-grid>
+ </div>
+</ion-col>
+
+
+    </ion-row>
+</ion-grid>
+
+
 </ion-content>

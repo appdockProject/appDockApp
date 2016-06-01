@@ -1,4 +1,87 @@
-.home {
+$bgColor: #8db255;
+$wood: #aa8736;
 
-button{width:90%;}
+
+
+
+.home {
+background-color: $bgColor;
+max-height:100vh;
+overflow:hidden;
+
+button{
+  height:10vh;
+  font-size:3vh;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+
+
+}
+
+.discover{
+
+  button{
+      width:auto;
+  }
+}
+
+title {
+  color:#F3C13A;
+  font-size: 5vh;
+  padding-bottom:10%;
+  padding-right:25%;
+
+
+}
+.blah{
+  background-color: $bgColor;
+  height:100vh;
+}
+
+.theNavHeight{
+  height:100vh;
+  background-color: $bgColor;
+  img{
+    align-items:center;
+    align-self:center;
+    align-content:center;
+
+  }
+
+
+
+  ion-item{
+    background-color: $wood;
+  }
+}
+
+
+.iconMargin{
+  // padding-top:10%;
+  img{
+    padding-bottom:10%;
+  }
+
+
+}
+
+.noScroll{
+  max-height: 90vh;
 }
