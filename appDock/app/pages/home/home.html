@@ -1,82 +1,105 @@
 <ion-content class="home">
 
-<ion-grid class="noScroll">
-  <ion-row>
+
+    <ion-grid class="smaller">
+        <ion-row>
 
 
 
 
-<ion-col width-20 class="theNavHeight">
-      <ion-list>
+            <ion-col width-25 class="theNavHeight">
+                <ion-list>
 
-        <ion-item>
-            <img src="images/logo.png" class="center" alt="" />
-        </ion-item>
+                    <ion-item>
+                        <img src="images/logo.png" class="center" alt="" />
+                    </ion-item>
 
-          <ion-item>
-              <button secondary>
-                  Apps
-              </button>
-          </ion-item>
+                    <ion-item>
+                        <button secondary>
+                            Applications
+                        </button>
+                    </ion-item>
 
-          <ion-item>
-              <button [navPush] = "devPage" secondary>
-                  Developers
-              </button>
-          </ion-item>
+                    <ion-item>
+                        <button [navPush]="devPage" secondary>
+                            Développeurs
+                        </button>
+                    </ion-item>
 
-          <ion-item>
-              <button [navPush] = "tutorialPage" secondary>
-                  Tutorial
-              </button>
-          </ion-item>
+                    <ion-item>
+                        <button [navPush]="tutorialPage" secondary>
+                            Education
+                        </button>
+                    </ion-item>
 
-          <ion-item>
-              <button [navPush] = "feedbackPage" secondary>
-                  Feedback
-              </button>
-          </ion-item>
+                    <ion-item>
+                        <button [navPush]="feedbackPage" secondary>
+                            Commentaires
+                        </button>
+                    </ion-item>
 
-          <ion-item>
-              <button [navPush] = "socialPage" secondary>
-                  Social
-              </button>
-          </ion-item>
-      </ion-list>
-</ion-col>
+                    <ion-item>
+                        <button [navPush]="socialPage" secondary>
+                            Facebook
+                        </button>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
 
-<ion-col width-80>
- <div class="blah">
-   <ion-grid class="iconMargin">
+            <ion-col width-75>
+                <div class="rightColumn center">
 
-     <ion-row class = "discover">
-       <title class = "center2"> Discover Senegalese Apps </title>
-       <button secondary> about</button>
-     </ion-row>
-
-       <ion-row>
-           <ion-col > <img src="images/icons/1.png" /> </ion-col>
-           <ion-col > <img src="images/icons/2.png" /> </ion-col>
-           <ion-col > <img src="images/icons/3.png" /> </ion-col>
-           <ion-col> <img src="images/icons/4.png" /> </ion-col>
-       </ion-row>
-
-       <ion-row>
-           <ion-col> <img src="images/icons/5.png" /> </ion-col>
-           <ion-col> <img src="images/icons/6.png" /> </ion-col>
-           <ion-col> <img src="images/icons/7.png" /> </ion-col>
-           <ion-col> <img src="images/icons/8.png" /> </ion-col>
-       </ion-row>
+                    <ion-row class="button-right">
+                        <button secondary [navPush] = "aboutPage"> A propos d'AppDock </button>
+                    </ion-row>
 
 
+                    <div class="centerVert">
+                        <ion-row class="discover">
+                            <h3> découvrez des applications mobiles sénégalaises </h3>
+                        </ion-row>
 
-   </ion-grid>
- </div>
-</ion-col>
+                        <div class="allIcons">
+                            <ion-row class="topRow">
+                                <ion-col> <img src="images/icons/1.png" class="center" [navPush]="onePage" />
+                                    <p>
+                                        <br> Cross Dakar City | Jeu
+                                        <br> Teere | Education
+                                    </p>
+                                </ion-col>
+                                <ion-col> <img src="images/icons/2.png" class="center" [navPush]="twoPage" />
+                                    <p>
+                                        <br> Talibi | Transport
+                                        <br> Andando | Transport
+                                    </p>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-row class="bottomRow">
+                                <ion-col> <img src="images/icons/3.png" class="center" [navPush]="threePage" />
+                                    <p>
+                                        <br> Sakanal | Vie quotidienne
+                                        <br> Expat-Dakar | Petites annonces
+                                    </p>
+                                </ion-col>
+                                <ion-col> <img src="images/icons/4.png" class="center" [navPush]="fourPage" />
+                                    <p>
+                                        <br> SeneNews | Actualités
+                                        <br> Senego | Actualités
+                                    </p>
+                                </ion-col>
+
+                            </ion-row>
+                        </div>
+                    </div>
 
 
-    </ion-row>
-</ion-grid>
+                </div>
+            </ion-col>
+
+
+        </ion-row>
+    </ion-grid>
 
 
 </ion-content>

@@ -1,87 +1,64 @@
 $bgColor: #8db255;
 $wood: #aa8736;
+$title: #F3C13A;
+ion-content {
 
-
-
-
+}
 .home {
-background-color: $bgColor;
-max-height:100vh;
-overflow:hidden;
-
-button{
-  height:10vh;
-  font-size:3vh;
-    width:90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    background-color: $bgColor;
 }
-
-
-}
-
 .center {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align:center;
 }
 
-.center2 {
-    margin-top: auto;
-    margin-bottom: auto;
-    display: block;
-
-
+.allIcons{
+  font-size:3vh;
+p{
+  margin-top:0;
+  color:darken($title,30);
 }
 
-.discover{
-
-  button{
-      width:auto;
-  }
+img{
+  width:22vh;
+  height:auto;
 }
-
-title {
-  color:#F3C13A;
-  font-size: 5vh;
-  padding-bottom:10%;
-  padding-right:25%;
-
+}
+.centerVert {
+    align-items: center;
+}
+.button-right {
+    justify-content: flex-end;
+}
+.discover {
+    h3 {
+        color: $title;
+        font-size: 4vh;
+    }
+}
+.rightColumn {
 
 }
-.blah{
-  background-color: $bgColor;
-  height:100vh;
-}
-
-.theNavHeight{
-  height:100vh;
-  background-color: $bgColor;
-  img{
-    align-items:center;
-    align-self:center;
-    align-content:center;
-
-  }
-
-
-
-  ion-item{
+.theNavHeight {
     background-color: $wood;
-  }
+    border-radius: 6px;
+    ion-list{
+      border-radius:10px;
+
+    }
+    button {
+
+        width: 95%;
+        height: 10vh;
+        font-size:2vmax;
+    }
+    ion-item {
+        background-color: $wood;
+    }
+
 }
-
-
-.iconMargin{
-  // padding-top:10%;
-  img{
-    padding-bottom:10%;
-  }
-
-
-}
-
-.noScroll{
-  max-height: 90vh;
+.topRow {
+    padding-bottom: 5vh;
 }
