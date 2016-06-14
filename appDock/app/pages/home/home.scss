@@ -2,7 +2,9 @@ $bgColor: #8db255;
 $wood: #aa8736;
 $title: #F3C13A;
 
-
+&::-webkit-scrollbar {
+    display: none;
+}
 
 .home {
     background-color: $bgColor;
@@ -21,10 +23,17 @@ p{
   color:darken($title,30);
 }
 
-img{
-  width:22vh;
-  height:auto;
+ion-row{
+  img{
+    height:14vh;
+    width: auto;
+  }
 }
+
+// img{
+//   width:auto;
+//   height:10vh;
+// }
 }
 .centerVert {
     align-items: center;
@@ -33,10 +42,13 @@ img{
     justify-content: flex-end;
 }
 .discover {
+
     h3 {
         color: $title;
         font-size: 4vh;
+        margin-left:11%;
     }
+
 }
 .rightColumn {
 
@@ -61,4 +73,5 @@ img{
 }
 .topRow {
     padding-bottom: 5vh;
+
 }
