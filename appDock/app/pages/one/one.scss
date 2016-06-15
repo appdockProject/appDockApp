@@ -1,3 +1,45 @@
-.one {
+$bgColor: #8db255;
+$wood: #aa8736;
+$title: #F3C13A;
 
+
+
+.one {
+    background-color: $bgColor;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align:center;
+}
+
+.theNavHeight {
+    background-color: $wood;
+    border-radius: 6px;
+    ion-list{
+      border-radius:10px;
+
+    }
+    button {
+
+        width: 95%;
+        height: 10vh;
+        font-size:2vmax;
+    }
+    ion-item {
+        background-color: $wood;
+    }
+
+}
+
+.theContent{
+  img{
+    height: 40vh;
+    width:auto;
+    padding-right: 3vw;
+  }
+  button{
+    height:10vh;
+  }
 }
