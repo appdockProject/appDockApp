@@ -1,11 +1,16 @@
 $bgColor: #8db255;
 $wood: #aa8736;
 $title: #F3C13A;
+$writing: darken($title,30);
+
 
 
 
 .tutorial {
     background-color: $bgColor;
+    h4{
+      color:$writing;
+    }
 }
 .center {
     margin-left: auto;
@@ -14,7 +19,11 @@ $title: #F3C13A;
     text-align:center;
 }
 
-
+.title{
+  h2{
+    color:$title;
+  }
+}
 .theNavHeight {
     background-color: $wood;
     border-radius: 6px;

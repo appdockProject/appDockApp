@@ -1,8 +1,20 @@
 $bgColor: #8db255;
 $wood: #aa8736;
 $title: #F3C13A;
+$writing: darken($title,30);
+$talk: gold;
 
+.talk{
+    background-color:$talk
+}
 
+h2{
+  color:$title;
+}
+
+h4{
+  color:$writing;
+}
 
 .one {
     background-color: $bgColor;
@@ -33,12 +45,16 @@ $title: #F3C13A;
 
 }
 
-.theContent{
-  img{
+.topPics{
+
     height: 40vh;
     width:auto;
     padding-right: 3vw;
-  }
+
+
+}
+
+.bottomButton{
   button{
     height:10vh;
   }

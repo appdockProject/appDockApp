@@ -1,9 +1,15 @@
 $bgColor: #8db255;
 $wood: #aa8736;
 $title: #F3C13A;
+$writing: darken($title,30);
+$talk: gold;
 
 &::-webkit-scrollbar {
     display: none;
+}
+
+.talk{
+  color: $talk;
 }
 
 .home {
