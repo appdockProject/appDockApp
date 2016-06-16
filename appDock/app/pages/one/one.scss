@@ -4,8 +4,13 @@ $title: #F3C13A;
 $writing: darken($title,30);
 $talk: gold;
 
+
+.rightAlign{
+  justify-content: flex-end;
+}
 .talk{
     background-color:$talk
+
 }
 
 h2{
