@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppDock</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Découvrez des applications mobiles sénégalaises</string>
+</resources>
