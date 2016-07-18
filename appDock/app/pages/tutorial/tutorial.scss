@@ -1,0 +1,50 @@
+$bgColor: #8db255;
+$wood: #aa8736;
+$title: #F3C13A;
+$writing: darken($title,30);
+$talk: gold;
+
+.talk{
+  color: $talk;
+}
+
+.tutorial {
+    background-color: $bgColor;
+    h4{
+      color:$writing;
+    }
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align:center;
+}
+
+.title{
+  h2{
+    color:$title;
+  }
+}
+.theNavHeight {
+    background-color: $wood;
+    border-radius: 6px;
+    ion-list{
+      border-radius:10px;
+
+    }
+    button {
+
+        width: 95%;
+        height: 10vh;
+        font-size:2vmax;
+    }
+    ion-item {
+        background-color: $wood;
+    }
+
+}
+
+.pic{
+  height:35vh;
+}

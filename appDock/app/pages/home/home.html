@@ -1,0 +1,132 @@
+<ion-content class="home">
+
+    <ion-grid>
+        <ion-row>
+
+
+
+            <ion-col width-25 class="theNavHeight">
+                <ion-list>
+
+                    <ion-item>
+                        <img src="images/logo.png" class="center" />
+                    </ion-item>
+
+                    <ion-item>
+                        <button dark>
+                            Applications
+                        </button>
+                    </ion-item>
+
+                    <ion-item>
+                        <button [navPush]="devPage" secondary>
+                            Développeurs
+                        </button>
+                    </ion-item>
+
+                    <ion-item>
+                        <button [navPush]="tutorialPage" secondary>
+                            Education
+                        </button>
+                    </ion-item>
+
+                    <ion-item>
+                        <button [navPush]="feedbackPage" secondary>
+                            Commentaires
+                        </button>
+                    </ion-item>
+
+                    <ion-item>
+                        <button [navPush]="socialPage" secondary>
+                            Facebook
+                        </button>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+
+            <ion-col width-75>
+                <div class="rightColumn center">
+
+                    <ion-row class="button-right">
+                        <button secondary [navPush] = "aboutPage"> A propos d'AppDock </button>
+                       <button class="talk"> <img  src="images/talk2.png" /></button>
+                    </ion-row>
+
+
+                    <div class="centerVert">
+                        <ion-row class="discover">
+                            <h3> Découvrez des applications mobiles sénégalaises </h3>
+                        </ion-row>
+
+                        <div class="allIcons">
+                            <ion-row class="topRow">
+                                <ion-col> <img src="images/icons/1.png" class="center" [navPush]="onePage" />
+                                    <p>
+                                        <br> Cross Dakar City | Jeu
+
+                                    </p>
+                                </ion-col>
+                                <ion-col> <img src="images/icons/2.png" class="center" [navPush]="twoPage" />
+                                    <p>
+                                        <br> Andando | Transport
+                                    </p>
+                                </ion-col>
+
+                                <ion-col> <img src="images/icons/7.png" class="center" />
+                                  <p>
+                                    <br> Teere | Education
+                                  </p>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-row class="middleRow">
+                                <ion-col> <img src="images/icons/3.png" class="center" [navPush]="threePage" />
+                                    <p>
+                                        <br> Expat-Dakar | Petites annonces
+                                    </p>
+                                </ion-col>
+                                <ion-col> <img src="images/icons/4.png" class="center" [navPush]="fourPage" />
+                                    <p>
+                                        <br> SeneNews | Actualités
+                                    </p>
+                                </ion-col>
+
+                                <ion-col> <img src="images/icons/6.png" class="center" />
+                                  <p>
+                                    <br> Talibi | Transport
+                                  </p>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-row class="bottomRow">
+                              <ion-col> <img src="images/icons/5.png" class="center" />
+                                <p>
+                                  <br>  Sakanal | Vie quotidienne
+                                </p>
+                              </ion-col>
+                                <ion-col> <img src="images/icons/8.png" class="center" />
+                                  <p>
+                                    <br> Senego | Actualités
+                                  </p>
+                                </ion-col>
+
+                                <ion-col> <img src ="images/icons/9.png" class="center" />
+                                  <p>
+                                    <br> Vitfé Mobile Money | Argent
+                                  </p>
+                                </ion-col>
+
+                            </ion-row>
+                        </div>
+                    </div>
+
+
+                </div>
+            </ion-col>
+
+
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

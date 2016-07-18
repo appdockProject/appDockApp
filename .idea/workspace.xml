@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b6c00a4-2d6a-42b4-862e-5f3bdcf95246" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/gradle.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/.idea/runConfigurations.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/androidTest/java/com/appdockproject/appdock/ApplicationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/java/com/appdockproject/appdock/appPage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/java/com/appdockproject/appdock/navbar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/i.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-hdpi/wolof.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/i.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-mdpi/wolof.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/i.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xhdpi/wolof.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/i.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxhdpi/wolof.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/i.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/drawable-xxxhdpi/wolof.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/layout/activity_app_page.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/layout/fragment_navbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/values-w820dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/app/src/test/java/com/appdockproject/appdock/ExampleUnitTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/gradle.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/gradlew" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/gradlew.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppDock/settings.gradle" afterPath="" />
+    </list>
+    <ignored path="appDockApp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="appDockApp" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="797" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="AndroidView" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b6c00a4-2d6a-42b4-862e-5f3bdcf95246" name="Default" comment="" />
+      <created>1468883520318</created>
+      <option name="number" value="Default" />
+      <updated>1468883520318</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
