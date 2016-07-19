@@ -31,7 +31,7 @@
             android:text="Applications"
             android:id="@+id/appBtn"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/highlighted"
             android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog"
             android:layout_margin="15dp"
             android:textColor="@color/abc_primary_text_material_dark"
