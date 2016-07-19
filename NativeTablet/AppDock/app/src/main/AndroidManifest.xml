@@ -15,7 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".devActivity"></activity>
+        <activity android:name=".devActivity" />
+        <activity android:name=".eduActivity" />
+        <activity android:name=".feedbackActivity" />
+        <activity android:name=".facebookActivity"></activity>
     </application>
 
 </manifest>
