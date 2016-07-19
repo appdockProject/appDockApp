@@ -23,23 +23,24 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
             android:gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:weightSum="1">
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="521dp"
                 android:layout_height="wrap_content"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:paddingTop="5dp"
                 android:text="@string/title"
                 android:id="@+id/title"
                 android:textStyle="bold"
-                android:layout_marginRight="10dp"
-                android:textColor="@android:color/holo_orange_dark" />
+                android:layout_marginRight="0dp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textAlignment="center" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -65,8 +66,8 @@
 
 
         <GridLayout
-            android:layout_width="680dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:rowCount="7"
             android:columnCount="3"
             android:orientation="horizontal"
@@ -84,7 +85,8 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_margin="0dp"
-                android:layout_marginTop="40dp" />
+                android:layout_marginTop="10dp"
+                android:layout_gravity="right" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -98,7 +100,7 @@
                 android:background="@color/colorLightColor"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -109,9 +111,10 @@
                 android:layout_column="1"
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp" />
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="fill_horizontal|center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -120,10 +123,10 @@
                 android:id="@+id/bText"
                 android:layout_row="1"
                 android:layout_column="1"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="fill_horizontal|center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -134,9 +137,10 @@
                 android:layout_column="2"
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_gravity="center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -145,10 +149,11 @@
                 android:id="@+id/cText"
                 android:layout_row="1"
                 android:layout_column="2"
-                android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp"
+                android:textAlignment="center"
+                android:layout_gravity="fill" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -160,7 +165,7 @@
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp" />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -172,7 +177,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -183,9 +188,10 @@
                 android:layout_column="1"
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp" />
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="fill_horizontal|center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -194,10 +200,10 @@
                 android:id="@+id/eText"
                 android:layout_row="3"
                 android:layout_column="1"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="fill_horizontal|center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -208,9 +214,10 @@
                 android:layout_column="2"
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_gravity="center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -219,10 +226,11 @@
                 android:id="@+id/fText"
                 android:layout_row="3"
                 android:layout_column="2"
-                android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal|right" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -234,7 +242,7 @@
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp" />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -246,7 +254,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -257,9 +265,10 @@
                 android:layout_column="1"
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp" />
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="fill_horizontal|center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -271,7 +280,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -282,9 +291,10 @@
                 android:layout_column="2"
                 android:background="@color/colorLightColor"
                 android:layout_margin="0dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_gravity="center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -293,10 +303,11 @@
                 android:id="@+id/iText"
                 android:layout_row="6"
                 android:layout_column="2"
-                android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp" />
+                android:textSize="13dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal|right" />
 
 
         </GridLayout>
