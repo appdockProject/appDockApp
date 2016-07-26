@@ -81,110 +81,149 @@
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
     </LinearLayout>
 
-    <RelativeLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp">
+        android:layout_gravity="right">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout">
-        <TextView
-            android:id="@+id/textView"
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="Comment télécharger et installer un application mobile"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wolof"
+                android:id="@+id/imageButton"
+                android:layout_column="1" />
+
+
+        </TableRow>
+
+        <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:text="Utilisez votre téléphone avec des applications mobiles"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textSize="12sp" />
+            >
 
-        <ImageButton
-            android:id="@+id/imageButton"
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+              >
+            <ImageView android:id="@+id/gmail"
+                android:src="@drawable/gmail"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_column="0"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                android:layout_centerHorizontal="true"
+                    />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Créer un compte Gmail"
+                android:layout_alignBottom="@+id/gmail"
+                android:layout_centerHorizontal="true"
+                 />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView android:id="@+id/mobileapp"
+                    android:src="@drawable/mobileapp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:padding="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qu’est-ce qu’une application mobile?"
+                    android:layout_alignBottom="@+id/mobileapp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+            </RelativeLayout>
+
+        </TableRow>
+
+        <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/wolof"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:maxHeight="250dp"
-            android:maxWidth="250dp"
-            android:src="@drawable/gmail"
-            android:layout_below="@+id/relativeLayout"
-            android:layout_alignParentStart="true" />
+            >
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/imageView"
-            android:text="Créer un compte Gmail"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textSize="12sp" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/mobileapp"
-            android:layout_below="@+id/relativeLayout"
-            android:layout_alignParentEnd="true" />
+                >
+                <ImageView android:id="@+id/play"
+                    android:src="@drawable/play"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:padding="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_centerHorizontal="true"
+                    />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/imageView2"
-            android:text=" Qu’est-ce qu’une application mobile ?"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textSize="9sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qu’est-ce qu’un magasin d’applications mobiles?"
+                    android:layout_alignBottom="@+id/play"
+                    android:layout_centerHorizontal="true"
+                    />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView2"
-            android:src="@drawable/play" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/imageView3"
-            android:text="Qu’est-ce qu’un magasin d’applications mobiles ?"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textSize="9sp" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/textView3"
-            android:src="@drawable/download" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageView4"
-            android:layout_alignEnd="@+id/imageView4"
-            android:text="Comment télécharger et installer un application mobile"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textSize="9sp" />
-
-    </RelativeLayout>
+            </RelativeLayout>
 
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <ImageView android:id="@+id/download"
+                    android:src="@drawable/download"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_column="0"
+                    android:padding="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comment installer une application mobile"
+                    android:layout_alignBottom="@+id/download"
+                    android:layout_centerHorizontal="true"
+                    />
+
+            </RelativeLayout>
+
+        </TableRow>
+
+    </TableLayout>
 </LinearLayout>
