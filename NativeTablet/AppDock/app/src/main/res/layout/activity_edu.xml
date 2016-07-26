@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="horizontal"
     tools:context="com.appdockproject.appdock.eduActivity">
 
     <LinearLayout
@@ -12,71 +14,177 @@
         android:orientation="vertical">
 
         <ImageButton
+            android:id="@+id/logo"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:id="@+id/logo"
-            android:src="@drawable/logo"
+            android:layout_margin="10dp"
             android:layout_weight="2"
             android:background="@color/highlighted"
 
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="10dp" />
+            android:src="@drawable/logo"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Applications"
             android:id="@+id/appBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog"
-            android:layout_margin="15dp"
+            android:clickable="true"
+            android:text="Applications"
             android:textColor="@color/abc_primary_text_material_dark"
-            android:clickable="true" />
+            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog" />
 
         <Button
+            android:id="@+id/devBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Développeurs"
-            android:id="@+id/devBtn"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
+            android:text="Développeurs"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
         <Button
+            android:id="@+id/eduBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Education"
-            android:id="@+id/eduBtn"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/highlighted"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
+            android:text="Education"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Commentaires"
             android:id="@+id/comBtn"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Facebook"
-            android:id="@+id/fbBtn"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
+            android:text="Commentaires"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+        <Button
+            android:id="@+id/fbBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="Facebook"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Utilisez votre téléphone avec des applications mobiles"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wolof"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:maxHeight="250dp"
+            android:maxWidth="250dp"
+            android:src="@drawable/gmail"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView"
+            android:text="Créer un compte Gmail"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/mobileapp"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imageView2"
+            android:text=" Qu’est-ce qu’une application mobile ?"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="9sp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:src="@drawable/play" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView3"
+            android:text="Qu’est-ce qu’un magasin d’applications mobiles ?"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="9sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView3"
+            android:src="@drawable/download" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_alignEnd="@+id/imageView4"
+            android:text="Comment télécharger et installer un application mobile"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="9sp" />
+
+    </RelativeLayout>
+
 
 </LinearLayout>
