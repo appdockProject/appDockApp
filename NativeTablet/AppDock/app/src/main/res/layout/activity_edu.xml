@@ -99,11 +99,12 @@
                 android:text="Comment télécharger et installer un application mobile"
                 />
 
-            <ImageButton
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/wolof"
                 android:id="@+id/imageButton"
+                android:layout_gravity="end"
                 android:layout_column="1" />
 
 
@@ -112,6 +113,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             >
 
             <RelativeLayout
@@ -135,6 +137,8 @@
                 android:text="Créer un compte Gmail"
                 android:layout_alignBottom="@+id/gmail"
                 android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:textColor="@android:color/holo_orange_dark"
                  />
 
             </RelativeLayout>
@@ -161,6 +165,8 @@
                     android:text="Qu’est-ce qu’une application mobile?"
                     android:layout_alignBottom="@+id/mobileapp"
                     android:layout_centerHorizontal="true"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/holo_orange_dark"
                     />
 
             </RelativeLayout>
@@ -193,6 +199,8 @@
                     android:text="Qu’est-ce qu’un magasin d’applications mobiles?"
                     android:layout_alignBottom="@+id/play"
                     android:layout_centerHorizontal="true"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/holo_orange_dark"
                     />
 
             </RelativeLayout>
@@ -219,6 +227,8 @@
                     android:text="Comment installer une application mobile"
                     android:layout_alignBottom="@+id/download"
                     android:layout_centerHorizontal="true"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/holo_orange_dark"
                     />
 
             </RelativeLayout>
