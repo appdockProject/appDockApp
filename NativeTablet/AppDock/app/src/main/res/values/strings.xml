@@ -11,4 +11,31 @@
     <string name="Senago">Hello blank fragment</string>
     <string name="SeneNews">Hello blank fragment</string>
     <string name="talibi">Hello blank fragment</string>
+
+
+
+
+
+    <!-- Featured Developer Names -->
+    <string name="dev1">Developer Name</string>
+    <string name="dev2">Ousseynou Khadim Bèye</string>
+    <string name="dev3">Developer Name</string>
+    <string name="dev4">Developer Name</string>
+    <string name="dev5">Developer Name</string>
+    <string name="dev6">Developer Name</string>
+    <string name="dev7">Developer Name</string>
+    <string name="dev8">Developer Name</string>
+    <string name="dev9">Developer Name</string>
+
+    <!-- Featured App Names -->
+    <string name="app1">Andando | Transport</string>
+    <string name="app2">Cross Dakar City | Jeu</string>
+    <string name="app3">Expat-Dakar | Petites Annonces</string>
+    <string name="app4">Sakanal | Vie Quotidienne</string>
+    <string name="app5">Senego | Actualités</string>
+    <string name="app6">SeneNews | Actualités</string>
+    <string name="app7">Talibi  | Transport </string>
+    <string name="app8">Teere | Éducation</string>
+    <string name="app9">Vitfé | Transfert d\'Argent</string>
+
 </resources>

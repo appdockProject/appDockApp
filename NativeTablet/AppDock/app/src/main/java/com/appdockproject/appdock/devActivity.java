@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class devActivity extends AppCompatActivity {
 
@@ -22,6 +23,8 @@ public class devActivity extends AppCompatActivity {
         Button eduBtn = (Button) findViewById(R.id.eduBtn);
         Button cmntBtn = (Button) findViewById(R.id.comBtn);
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
+
+        ImageButton dev1 = (ImageButton) findViewById(R.id.dev1);
 
 
         homeBtn.setOnClickListener(new View.OnClickListener(){
@@ -49,6 +52,15 @@ public class devActivity extends AppCompatActivity {
         fbBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent = new Intent(devActivity.this, facebookActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        //go to developer pages
+        dev1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(devActivity.this, dev1Activity.class);
                 startActivity(intent);
             }
         });
