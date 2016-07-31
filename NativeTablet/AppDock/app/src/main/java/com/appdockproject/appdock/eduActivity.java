@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class eduActivity extends AppCompatActivity {
 
@@ -22,6 +23,11 @@ public class eduActivity extends AppCompatActivity {
         Button homeBtn = (Button) findViewById(R.id.appBtn);
         Button cmntBtn = (Button) findViewById(R.id.comBtn);
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
+
+        ImageButton vid1 = (ImageButton) findViewById(R.id.gmail);
+        ImageButton vid2 = (ImageButton) findViewById(R.id.mobileapp);
+        ImageButton vid3 = (ImageButton) findViewById(R.id.play);
+        ImageButton vid4 = (ImageButton) findViewById(R.id.download);
 
         devBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
@@ -51,5 +57,18 @@ public class eduActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //to play videos -- only first button goes somewhere right now
+
+        vid1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(eduActivity.this, eduVid1Activity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
