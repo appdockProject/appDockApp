@@ -38,4 +38,14 @@
     <string name="app8">Teere | Éducation</string>
     <string name="app9">Vitfé | Transfert d\'Argent</string>
 
+    <!-- survey titles -->
+    <string name="survey">Laissez vos commentires. Merci! </string>
+    <string name="age">Age </string>
+    <string name="prof"> Profession </string>
+    <string name="first">Cest votre primer temps avec lappDock? </string>
+    <string name="time">Combien de temps avez-vous passe </string>
+
+
+
+
 </resources>

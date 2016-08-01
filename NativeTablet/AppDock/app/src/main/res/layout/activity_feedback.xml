@@ -79,5 +79,12 @@
             android:textColor="@color/abc_primary_text_material_dark" />
     </LinearLayout>
 
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.appdockproject.appdock.survey"
+        android:id="@+id/fragment"
+        tools:layout="@layout/fragment_survey" />
+
 
 </LinearLayout>

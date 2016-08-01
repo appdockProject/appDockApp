@@ -6,6 +6,7 @@
     <color name="colorAccent">#c8e6c9</color>
     <color name="colorDividerColor">#b6b6b6</color>
     <color name="highlighted">#FFC107</color>
+    <color name="text">#FFFFFF</color>
 
     <!--button colors -->
     <color name="buttonText">#E8EAF6</color>
