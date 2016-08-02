@@ -96,11 +96,13 @@
             android:layout_alignParentStart="true"
             android:layout_marginRight="0dp"
             android:paddingTop="5dp"
-            android:text="Education"
-            android:textAlignment="textStart"
+            android:text="Créer un compte Gmail"
             android:textColor="@android:color/holo_orange_dark"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
 
             <VideoView
                 android:layout_width="wrap_content"
