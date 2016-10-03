@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+
 public class eduActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +21,10 @@ public class eduActivity extends AppCompatActivity {
             int UI_OPTIONS = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
+
+        //Starting to add support for facebook
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
 
         Button devBtn = (Button) findViewById(R.id.devBtn);
         Button homeBtn = (Button) findViewById(R.id.appBtn);

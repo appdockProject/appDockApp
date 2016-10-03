@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.appdockproject.appdock">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,9 +25,14 @@
         <activity android:name=".feedbackActivity"
             android:screenOrientation="landscape"/>
         <activity android:name=".facebookActivity"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape"/>
         <activity android:name=".eduVid1Activity"
-           android:screenOrientation="landscape" ></activity>
+           android:screenOrientation="landscape" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
     </application>
+
+    <provider android:authorities="com.facebook.app.FacebookContentProvider{203732883030353}"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true"/>
 
 </manifest>
