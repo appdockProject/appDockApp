@@ -1,0 +1,14 @@
+AppDock/node_modules/
+AppDock/www/build/
+AppDock/platforms/
+AppDock/plugins/
+AppDock/.DS_Store
+
+*NativeTablet/AppDock/.iml
+NativeTablet/AppDock/.gradle
+NativeTablet/AppDock/local.properties
+NativeTablet/AppDock/.idea/workspace.xml
+NativeTablet/AppDock/.idea/libraries
+NativeTablet/AppDock/.DS_Store
+NativeTablet/AppDock/build
+NativeTablet/AppDock/captures
