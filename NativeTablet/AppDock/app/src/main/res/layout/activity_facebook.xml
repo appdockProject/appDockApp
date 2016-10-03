@@ -134,18 +134,36 @@
 
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="117dp">
+            android:layout_height="800dp">
+
+            <ImageView
+                android:layout_width="600dp"
+                android:layout_height="400dp"
+                android:id="@+id/imFacebookphoto"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
             <Button
                 android:text="Prenez Une Photo"
-                android:layout_width="match_parent"
+                android:layout_below="@id/imFacebookphoto"
+                android:layout_alignStart="@id/imFacebookphoto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/camera"
                 android:onClick="takePicture"/>
-        </LinearLayout>
+            <Button
+                android:text="Partagex sur Facebook"
+                android:layout_below="@id/imFacebookphoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/imFacebookphoto"
+                android:id="@+id/bShareToFacebook"
+                android:onClick="shareToFacebook"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 

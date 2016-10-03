@@ -30,5 +30,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support:support-v4:24.0.0'
 
+    compile 'com.karumi:dexter:2.3.1'
+
     compile 'com.facebook.android:facebook-android-sdk:[4,5)' //Facebook SDK
 }
