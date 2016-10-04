@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "932660854891",
+    "firebase_url": "https://appdock-1365.firebaseio.com",
+    "project_id": "appdock-1365",
+    "storage_bucket": "appdock-1365.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932660854891:android:8655b1fa21fc63f6",
+        "android_client_info": {
+          "package_name": "com.appdockproject.appdock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932660854891-6jpfsv1glinft348qihjcqic4r9ofav4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJYgii-GPo-WczzyTetOrNrbztmDzX0S0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
