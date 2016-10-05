@@ -93,7 +93,7 @@ public class feedbackActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //age and make sure value is not null (in this case -1)
-                if (age.getCheckedRadioButtonId() == -1) {
+                if (age.getCheckedRadioButtonId() != -1) {
                     selectedId = age.getCheckedRadioButtonId();
                     selectedAge = (RadioButton) findViewById(selectedId);
                     ageString = selectedAge.getText().toString();
