@@ -23,9 +23,9 @@
         <activity android:name=".feedbackActivity"
             android:screenOrientation="landscape"/>
         <activity android:name=".facebookActivity"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape"/>
         <activity android:name=".eduVid1Activity"
-           android:screenOrientation="landscape" ></activity>
+           android:screenOrientation="landscape" />
     </application>
 
 </manifest>
