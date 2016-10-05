@@ -2,17 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.appdockproject.appdock">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-    <dependency>
-        <groupId>com.facebook.android</groupId>
-        <artifactId>facebook-android-sdk</artifactId>
-        <version>v4.16.0</version>
-    </dependency>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,15 +23,9 @@
         <activity android:name=".feedbackActivity"
             android:screenOrientation="landscape"/>
         <activity android:name=".facebookActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape"></activity>
         <activity android:name=".eduVid1Activity"
-           android:screenOrientation="landscape" />
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-        <provider android:authorities="com.facebook.app.FacebookContentProvider203732883030353"
-            android:name="com.facebook.FacebookContentProvider"
-            android:exported="true"/>
+           android:screenOrientation="landscape" ></activity>
     </application>
-
-
 
 </manifest>

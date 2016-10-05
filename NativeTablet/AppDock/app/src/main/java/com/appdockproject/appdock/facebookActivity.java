@@ -54,7 +54,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public class facebookActivity extends AppCompatActivity {
 
-    private static final int CONTENT_REQUEST=1337;
+    private static final int CONTENT_REQUEST = 1337;
     private final String TAG = "fbPhotoActivity";
     private File output = null;
     private ImageView imPreview;
@@ -72,7 +72,18 @@ public class facebookActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             int UI_OPTIONS = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
-            getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
+            //getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+            View decorView = getWindow().getDecorView();
+// Hide both the navigation bar and the status bar.
+// SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
+// a general rule, you should design your app to hide the status bar whenever you
+// hide the navigation bar.
+            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN;
+            decorView.setSystemUiVisibility(uiOptions);
 
             Button devBtn = (Button) findViewById(R.id.devBtn);
             Button eduBtn = (Button) findViewById(R.id.eduBtn);
@@ -121,8 +132,11 @@ public class facebookActivity extends AppCompatActivity {
         //Used to get Permissions
         Dexter.initialize(this);
         Dexter.checkPermissions(new MultiplePermissionsListener() {
-            @Override public void onPermissionsChecked(MultiplePermissionsReport report) {/* ... */}
-            @Override public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {/* ... */}
+            @Override
+            public void onPermissionsChecked(MultiplePermissionsReport report) {/* ... */}
+
+            @Override
+            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {/* ... */}
         }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
     }
@@ -164,7 +178,7 @@ public class facebookActivity extends AppCompatActivity {
 
     public void shareToFacebook(View view) throws IOException {
 
-        if (mCurrentPhotoPath == ""){
+        if (mCurrentPhotoPath == "") {
             Toast.makeText(this, "No photo taken!", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -172,7 +186,7 @@ public class facebookActivity extends AppCompatActivity {
         Bitmap image;
         try {
             image = BitmapFactory.decodeFile(mCurrentPhotoPath);
-        } catch (Error e){
+        } catch (Error e) {
             Log.e(TAG, "Couldn't find image when sharing to facebook..");
             return;
         }
@@ -192,7 +206,7 @@ public class facebookActivity extends AppCompatActivity {
 
     }
 
-    private void setPic(){
+    private void setPic() {
         // Get the dimensions of the View
         int targetW = imPreview.getWidth();
         int targetH = imPreview.getHeight();
@@ -205,7 +219,7 @@ public class facebookActivity extends AppCompatActivity {
         int photoH = bmOptions.outHeight;
 
         // Determine how much to scale down the image
-        int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
+        int scaleFactor = Math.min(photoW / targetW, photoH / targetH);
 
         // Decode the image file into a Bitmap sized to fill the View
         bmOptions.inJustDecodeBounds = false;
@@ -214,7 +228,7 @@ public class facebookActivity extends AppCompatActivity {
         Bitmap bitmap;
         try {
             bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-        } catch (Error e){
+        } catch (Error e) {
             System.out.println(e.toString());
             Log.e(TAG, "Couldn't find photo in setPhoto..");
             return;
