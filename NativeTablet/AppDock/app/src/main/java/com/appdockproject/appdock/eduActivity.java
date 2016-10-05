@@ -22,9 +22,9 @@ public class eduActivity extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
 
-        //Starting to add support for facebook
+ /**       //Starting to add support for facebook
         FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
+        AppEventsLogger.activateApp(this); **/
 
         Button devBtn = (Button) findViewById(R.id.devBtn);
         Button homeBtn = (Button) findViewById(R.id.appBtn);

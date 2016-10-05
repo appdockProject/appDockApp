@@ -85,6 +85,8 @@ public class facebookActivity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_FULLSCREEN;
             decorView.setSystemUiVisibility(uiOptions);
 
+        }
+
             Button devBtn = (Button) findViewById(R.id.devBtn);
             Button eduBtn = (Button) findViewById(R.id.eduBtn);
             Button cmntBtn = (Button) findViewById(R.id.comBtn);
@@ -120,7 +122,7 @@ public class facebookActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-        }
+
 
         //The following is needed to use facebook
         FacebookSdk.sdkInitialize(getApplicationContext());
@@ -238,4 +240,18 @@ public class facebookActivity extends AppCompatActivity {
         Log.i(TAG, "Image set from location: " + mCurrentPhotoPath);
     }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        View decorView = getWindow().getDecorView();
+        if (hasFocus) {
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
+    }
 }
