@@ -111,27 +111,29 @@ public class facebookActivity extends AppCompatActivity {
             }
         });
 
-
         //The following is needed to use facebook
+        Log.i(TAG, "Setting up facebook");
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(getApplication());
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
 
-//        //Used to get Permissions
-//        Dexter.initialize(this);
-//        Dexter.checkPermissions(new MultiplePermissionsListener() {
-//            @Override
-//            public void onPermissionsChecked(MultiplePermissionsReport report) {/* ... */}
-//
-//            @Override
-//            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {/* ... */}
-//        }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        Log.i(TAG, "Setting up permissions");
+        Dexter.initialize(this); //Used to get Permissions
+        //The following checks for permissions and asks if none are found
+        Dexter.checkPermissions(new MultiplePermissionsListener() {
+            @Override
+            public void onPermissionsChecked(MultiplePermissionsReport report) {/* ... */}
 
+            @Override
+            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {/* ... */}
+        }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE
+                , Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET);
     }
 
     public void takePicture(View view) throws IOException {
+
         //access camera, tell where to save
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
@@ -220,5 +222,21 @@ public class facebookActivity extends AppCompatActivity {
         imPreview.setImageBitmap(bitmap);
         imPreview.postInvalidate();
         Log.i(TAG, "Image set from location: " + mCurrentPhotoPath);
+    }
+
+    // Needs this to remove statusbar and navigation layout after focus of activity regains focus
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        View decorView = getWindow().getDecorView();
+        if (hasFocus) {
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
     }
 }
