@@ -143,6 +143,7 @@
                 android:layout_width="600dp"
                 android:layout_height="400dp"
                 android:id="@+id/imFacebookphoto"
+                android:background="@color/com_facebook_button_background_color_focused_disabled"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
