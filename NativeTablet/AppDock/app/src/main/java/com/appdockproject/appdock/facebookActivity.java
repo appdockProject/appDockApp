@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
@@ -219,6 +220,7 @@ public class facebookActivity extends AppCompatActivity {
             Log.e(TAG, "Couldn't find photo in setPhoto..");
             return;
         }
+        imPreview.setBackgroundResource(0);
         imPreview.setImageBitmap(bitmap);
         imPreview.postInvalidate();
         Log.i(TAG, "Image set from location: " + mCurrentPhotoPath);

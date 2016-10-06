@@ -135,13 +135,14 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:padding="50dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="800dp">
 
             <ImageView
-                android:layout_width="600dp"
-                android:layout_height="400dp"
+                android:layout_width="650dp"
+                android:layout_height="350dp"
                 android:id="@+id/imFacebookphoto"
                 android:background="@color/com_facebook_button_background_color_focused_disabled"
                 android:layout_alignParentTop="true"
