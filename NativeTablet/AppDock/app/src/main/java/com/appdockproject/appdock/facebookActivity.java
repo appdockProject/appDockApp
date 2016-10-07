@@ -165,7 +165,7 @@ public class facebookActivity extends AppCompatActivity {
 
     public void shareToFacebook(View view) throws IOException {
 
-        if (mCurrentPhotoPath == "") {
+        if (mCurrentPhotoPath.equals("")) {
             Toast.makeText(this, "No photo taken!", Toast.LENGTH_SHORT).show();
             return;
         }

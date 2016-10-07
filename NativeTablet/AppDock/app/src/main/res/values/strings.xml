@@ -45,7 +45,9 @@
     <string name="first">Cest votre primer temps avec lappDock? </string>
     <string name="time">Combien de temps avez-vous passe </string>
 
-
+    <!-- Facebook Activity -->
     <string name="facebook_app_id">203732883030353</string>
+    <string name="take_a_photo">Prenez Une Photo</string>
+    <string name="upload_to_facebook">Partagex sur Facebook</string>
 
 </resources>

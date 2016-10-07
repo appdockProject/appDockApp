@@ -146,10 +146,10 @@
                 android:id="@+id/imFacebookphoto"
                 android:background="@color/com_facebook_button_background_color_focused_disabled"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"/>
 
             <Button
-                android:text="Prenez Une Photo"
+                android:text="@string/take_a_photo"
                 android:layout_below="@id/imFacebookphoto"
                 android:layout_alignStart="@id/imFacebookphoto"
                 android:layout_width="wrap_content"
@@ -157,7 +157,7 @@
                 android:id="@+id/camera"
                 android:onClick="takePicture"/>
             <Button
-                android:text="Partagex sur Facebook"
+                android:text="@string/upload_to_facebook"
                 android:layout_below="@id/imFacebookphoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
