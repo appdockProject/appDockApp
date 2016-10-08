@@ -28,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
+import com.facebook.FacebookActivity;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.share.model.ShareHashtag;
@@ -51,7 +52,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static android.os.Build.VERSION_CODES.M;
+
 
 public class facebookActivity extends AppCompatActivity {
 
@@ -120,20 +122,74 @@ public class facebookActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
 
-        Log.i(TAG, "Setting up permissions");
+        Log.i(TAG, "Initializing permissions");
         Dexter.initialize(this); //Used to get Permissions
-        //The following checks for permissions and asks if none are found
-        Dexter.checkPermissions(new MultiplePermissionsListener() {
-            @Override
-            public void onPermissionsChecked(MultiplePermissionsReport report) {/* ... */}
 
+        Button bTakePhoto = (Button) findViewById(R.id.bTakePhoto);
+        bTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {/* ... */}
-        }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE
-                , Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.INTERNET);
+            public void onClick(View v) {
+                Log.i(TAG, "Checking for camera and storage permissions.");
+                Dexter.checkPermissions(new MultiplePermissionsListener() {
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport report) {
+                        if(report.areAllPermissionsGranted()){
+                            Log.i(TAG, "Storage and camera permission granted");
+                            try {
+                                takePicture();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        } else if (report.isAnyPermissionPermanentlyDenied()){
+                            Log.e(TAG, "Permissions permanently denied!");
+                        } else
+                        {
+                            Toast.makeText(facebookActivity.this,
+                                    "You need to activate permissions!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
+                }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE);
+            }
+        });
+        Button bShareToFacebook = (Button) findViewById(R.id.bShareToFacebook);
+        bShareToFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mCurrentPhotoPath.equals("")) {
+                    Toast.makeText(facebookActivity.this, "No photo taken!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Log.i(TAG, "Checking for internet permission.");
+                Dexter.checkPermissions(new MultiplePermissionsListener() {
+                    @Override public void onPermissionsChecked(MultiplePermissionsReport report) {
+                        if(report.areAllPermissionsGranted()){
+                            Log.i(TAG, "Internet permission granted");
+                            try {
+                                shareToFacebook();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        } else if (report.isAnyPermissionPermanentlyDenied()){
+                            Log.e(TAG, "Permissions permanently denied!");
+                        } else
+                         {
+                            Toast.makeText(facebookActivity.this,
+                                    "You need to activate permissions!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    @Override public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {token.continuePermissionRequest();}
+                }, Manifest.permission.INTERNET, Manifest.permission.READ_EXTERNAL_STORAGE);
+            }
+        });
     }
 
-    public void takePicture(View view) throws IOException {
+    public void takePicture() throws IOException {
 
         //access camera, tell where to save
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -163,12 +219,7 @@ public class facebookActivity extends AppCompatActivity {
         }
     }
 
-    public void shareToFacebook(View view) throws IOException {
-
-        if (mCurrentPhotoPath.equals("")) {
-            Toast.makeText(this, "No photo taken!", Toast.LENGTH_SHORT).show();
-            return;
-        }
+    public void shareToFacebook() throws IOException {
 
         Bitmap image;
         try {

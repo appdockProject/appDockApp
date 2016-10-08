@@ -154,7 +154,7 @@
                 android:layout_alignStart="@id/imFacebookphoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/camera"
+                android:id="@+id/bTakePhoto"
                 android:onClick="takePicture"/>
             <Button
                 android:text="@string/upload_to_facebook"
