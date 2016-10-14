@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <ImageButton
-            android:layout_width="150dp"
+            android:layout_width="152dp"
             android:layout_height="150dp"
             android:id="@+id/logo"
             android:src="@drawable/logo"
