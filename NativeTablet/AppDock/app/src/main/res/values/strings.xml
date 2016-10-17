@@ -30,15 +30,97 @@
     <string name="dev3bio">Developer Bio</string>
 
     <!-- Featured App Names -->
-    <string name="app1">Andando | Transport</string>
+
+    <!-- APP 1 -->
+    <string name="app1">Andando | Réseaux sociaux</string>
+    <string name="app1Desc">Andando est une solution pour faciliter le covoiturage.
+        Que l\’on soit passager ou conducteur, Andando est la solution économe et écolo
+        à ses soucis de déplacements. Andando permet de transporter des personnes aussi
+        bien sur des trajets courts en ville que sur des trajets un peu plus longs de
+        ville en ville.</string>
+    <string name="app1Key">#Covoiturage #Réseau social #Communauté #Partage #Ecologie</string>
+    <string name="app1Link">http://bit.ly/appliandando</string>
+    <string name="app1SMSLink">http://bit.ly/appandando</string>
+
+    <!-- APP 2 -->
     <string name="app2">Cross Dakar City | Jeu</string>
-    <string name="app3">Expat-Dakar | Petites Annonces</string>
-    <string name="app4">Sakanal | Vie Quotidienne</string>
-    <string name="app5">Senego | Actualités</string>
-    <string name="app6">SeneNews | Actualités</string>
+    <string name="app2Desc">Description</string>
+    <string name="app2Key">#Jeu #Education #Divertissement</string>
+    <string name="app2Link">http://bit.ly/applicrossdakar</string>
+    <string name="app2SMSLink">http://bit.ly/appcrossdakar</string>
+
+    <!-- APP 3 -->
+    <string name="app3">Expat-Dakar | Shopping</string>
+    <string name="app3Desc">Expat-Dakar est la version mobile du site de petites
+        annonces expat-dakar.com. Elle permet de rechercher un emploi ou vendre,
+        acheter ou simplement rechercher biens allant de l\’électroménager à l\’immobilier.
+        Le but est de mettre les utilisateurs en contact avec des milliers de particuliers
+        partout au Sénégal.</string>
+    <string name="app3Key">#Shopping #Petites annonces #Achat #Vente #Emploi</string>
+    <string name="app3Link">http://bit.ly/appliexpatdakar</string>
+    <string name="app3SMSLink">http://bit.ly/appexpatdakar</string>
+
+    <!-- APP 4 -->
+    <string name="app4">Sakanal | Productivité</string>
+    <string name="app4Desc">SakanalApp a pour le but d'aider à réduire et mieux
+        maîtriser ses dépenses quotidiennes liées à l\'électricité. Elle aide à
+        changer ses habitudes pour économiser. Elle permet de calculer sa prochaine
+        facture, simuler sa consommation, et envoyer des conseils pour économiser en
+        suivant des gestes simples.</string>
+    <string name="app4Key">#Gestion #Ecologie #Finance #Conseils</string>
+    <string name="app4Link">http://bit.ly/applisakanal</string>
+    <string name="app4SMSLink">http://bit.ly/appsakanal</string>
+
+    <!-- APP 5 -->
+    <string name="app5">Senego | Actualité</string>
+    <string name="app5Desc">Senego est un application d’information. Elle couvre l\’actualité
+        du Sénégal et de l\’Afrique de l\’Ouest. Elle traite de politique, de sports et de people
+        et possède même un onglet Senego TV consacré à l\'actualité en vidéo.</string>
+    <string name="app5Key">#Actualité #Politique #Sport #People #International #TV</string>
+    <string name="app5Link">http://bit.ly/applisenego</string>
+    <string name="app5SMSLink">http://bit.ly/appsenego</string>
+
+    <!-- APP 6 -->
+    <string name="app6">SeneNews | Actualité</string>
+    <string name="app6Desc">Cette application est un concentré de toute l\’actualité
+        et en particulier l\’actualité sénégalaise sur son mobile. La rédaction est basée
+        au Sénégal mais a aussi des branches à l\'étranger pour couvrir l\’actualité
+        internationales et celle des expatriés.</string>
+    <string name="app6Key">#Actualité #International #Expatriés #Politique #Sport #People</string>
+    <string name="app6Link">http://bit.ly/applisenenews</string>
+    <string name="app6SMSLink">http://bit.ly/appsenenews</string>
+
+    <!-- APP 7 -->
     <string name="app7">Talibi  | Transport </string>
+    <string name="app7Desc">Talibi est une application de calcul d\’itinéraire. Elle permet
+        de trouver le meilleur chemin possible en bus pour se rendre à tous ses rendez-vous.
+        Elle peut être utilisée à Dakar, Thiès et Kaolack. L\’application propose aussi des
+        endroits à proximité qui pourraient être intéressants. </string>
+    <string name="app7Key">#Transport #Itinéraire #Plan #Tourisme</string>
+    <string name="app7Link">http://bit.ly/applitalibi</string>
+    <string name="app7SMSLink">http://bit.ly/apptalibi</string>
+
+    <!-- APP 8 -->
     <string name="app8">Teere | Éducation</string>
-    <string name="app9">Vitfé | Transfert d\'Argent</string>
+    <string name="app8Desc">Teere propose aux utilisateurs d\’améliorer leurs connaissances
+        sur l\’Afrique. On y trouve: des dictionnaires de langues africaines; des présentations
+        de pays africains et de personnalités qui ont marqué le continent; des citations et
+        proverbes africains; et des quizz pour tester ses connaissances.</string>
+    <string name="app8Key">#Afrique #Education #Quizz #Dictionnaire #Citations</string>
+    <string name="app8Link">http://bit.ly/appliteere</string>
+    <string name="app8SMSLink">http://bit.ly/appteere</string>
+
+    <!-- APP 9 -->
+    <string name="app9">Vitfé | Finance</string>
+    <string name="app9Desc">Vitfé Mobile Money est un porte-monnaie électronique permettant
+        d\’effectuer des transactions financières à partir de son téléphone portable en toute
+        sécurité. Elle permet également de payer ses factures et abonnements mais aussi
+        de faire des achats et des transferts, et de suivre les mouvements de fonds en temps
+        réel.</string>
+    <string name="app9Key">#Finance #Transfert d’argent #Achat #Paiement</string>
+    <string name="app9Link">http://bit.ly/applivitfe</string>
+    <string name="app9SMSLink">http:// bit.ly/appvitfe</string>
+
 
     <!-- survey titles -->
     <string name="survey">Laissez vos commentaires. Merci! </string>
