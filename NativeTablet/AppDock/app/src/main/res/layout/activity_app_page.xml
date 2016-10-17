@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
                 android:paddingTop="5dp"
-                android:text="@string/title"
+                android:text="@string/appTitle"
                 android:id="@+id/title"
                 android:textStyle="bold"
                 android:layout_marginRight="0dp"

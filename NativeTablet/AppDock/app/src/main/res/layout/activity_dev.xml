@@ -38,7 +38,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Applications"
+                android:text="@string/appTitleBtn"
                 android:id="@+id/appBtn"
                 android:layout_weight="1"
                 android:background="@color/colorPrimaryDark"
@@ -50,7 +50,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Développeurs"
+                android:text="@string/devTitleBtn"
                 android:id="@+id/devBtn"
                 android:layout_weight="1"
                 android:background="@color/highlighted"
@@ -61,7 +61,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Education"
+                android:text="@string/eduTitleBtn"
                 android:id="@+id/eduBtn"
                 android:layout_weight="1"
                 android:background="@color/colorPrimaryDark"
@@ -72,7 +72,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Commentaires"
+                android:text="@string/surveyTitleBtn"
                 android:id="@+id/comBtn"
                 android:layout_weight="1"
                 android:background="@color/colorPrimaryDark"
@@ -83,7 +83,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Facebook"
+                android:text="@string/facebookTitleBtn"
                 android:id="@+id/fbBtn"
                 android:layout_weight="1"
                 android:background="@color/colorPrimaryDark"
@@ -127,7 +127,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginRight="0dp"
                         android:paddingTop="5dp"
-                        android:text="Découvrez des développeuses et développeurs sénégalais"
+                        android:text="@string/devTitle"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/holo_orange_dark"
                         android:textSize="25dp"
