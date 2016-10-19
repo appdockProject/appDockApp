@@ -1,0 +1,118 @@
+<!--
+  Generated template for the FeedbackPage page.
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content class="feedback">
+  <ion-grid>
+      <ion-row>
+
+
+
+          <ion-col width-25 class="theNavHeight">
+              <ion-list>
+
+                  <ion-item>
+                      <img src="images/logo.png" class="center" alt="" />
+                  </ion-item>
+
+                  <ion-item>
+                      <button secondary [navPush]="homePage">
+                          Applications
+                      </button>
+                  </ion-item>
+
+                  <ion-item>
+                      <button [navPush]="devPage" secondary>
+                          Développeurs
+                      </button>
+                  </ion-item>
+
+                  <ion-item>
+                      <button [navPush]="tutorialPage" secondary>
+                          Education
+                      </button>
+                  </ion-item>
+
+                  <ion-item>
+                      <button [navPush]="feedbackPage" dark>
+                          Commentaires
+                      </button>
+                  </ion-item>
+
+                  <ion-item>
+                      <button [navPush]="socialPage" secondary>
+                          Facebook
+                      </button>
+                  </ion-item>
+              </ion-list>
+          </ion-col>
+
+				<ion-grid>
+			<ion-row class="rightAlign"> <button class="talk"> <img  src="images/talk2.png" /></button> </ion-row>
+        <ion-row>
+					<h2> Laissez vos commentires, Merci!</h2>
+
+				</ion-row>
+
+
+					<ion-row width-75>
+
+  						<ion-title class = "center">AGE</ion-title>
+
+					</ion-row>
+						<ion-row width-75>
+							<button block> 12</button>
+							<button block> 12 - 15</button>
+							<button block> 16-18 </button>
+							<button block> 19 -25 </button>
+							<button block dark> 25 + </button>
+						</ion-row>
+
+
+					<ion-row width-75>
+					<ion-title class = "center">Profession</ion-title>
+					</ion-row>
+					<ion-row width-75>
+							<button dark block>Etudient</button>
+							<button block>Farmer</button>
+							<button block>Teacher</button>
+							<button block>Engineer</button>
+							<button block>Financial</button>
+					</ion-row>
+
+					<ion-row width-75>
+					<ion-title class = "center">Is it your first time using AppDock?</ion-title>
+					</ion-row>
+					<ion-row width-55>
+							<button block dark>Yes</button>
+							<button block>No</button>
+					</ion-row>
+
+					<ion-row width-55>
+					<ion-title class = "center">How Long did you spend on AppDock</ion-title>
+					</ion-row>
+					<ion-row width-55>
+							<button block>30 min</button>
+							<button block dark> 30 min - 60 min</button>
+							<button block>60 min - 120 min</button>
+							<button block>120 min +</button>
+					</ion-row>
+
+					<ion-row width-55>
+					<ion-title class = "center">Gender</ion-title>
+					</ion-row>
+					<ion-row width-75>
+							<button block dark>Male</button>
+							<button block> Female</button>
+							<button block>Other</button>
+					</ion-row>
+
+				</ion-grid>
+      </ion-row>
+
+  </ion-grid>
+
+</ion-content>

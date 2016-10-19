@@ -9,7 +9,10 @@ import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+<<<<<<< HEAD
 import android.widget.ImageButton;
+=======
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
 
 
 public class appPage extends AppCompatActivity {
@@ -26,7 +29,10 @@ public class appPage extends AppCompatActivity {
         Button eduBtn = (Button) findViewById(R.id.eduBtn);
         Button cmntBtn = (Button) findViewById(R.id.comBtn);
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
+<<<<<<< HEAD
         ImageButton appA = (ImageButton) findViewById(R.id.bImage);
+=======
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
 
         devBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
@@ -56,6 +62,7 @@ public class appPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+<<<<<<< HEAD
 
         appA.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
@@ -63,5 +70,7 @@ public class appPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+=======
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
     }
 }

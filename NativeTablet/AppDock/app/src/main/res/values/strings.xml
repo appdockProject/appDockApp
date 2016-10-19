@@ -3,7 +3,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+<<<<<<< HEAD
     <string name="title">Découvrez des applications mobiles sénégalaises</string>
+=======
+    <string name="appTitle">Découvrez des applications mobiles sénégalaises</string>
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
     <string name="and">Hello blank fragment</string>
     <string name="cross">Hello blank fragment</string>
     <string name="expat">Hello blank fragment</string>
@@ -12,11 +16,21 @@
     <string name="SeneNews">Hello blank fragment</string>
     <string name="talibi">Hello blank fragment</string>
 
+<<<<<<< HEAD
+=======
+    <!-- Fragment Button Titles -->
+    <string name="appTitleBtn">APPLICATIONS</string>
+    <string name="devTitleBtn">DÉVELOPPEURS</string>
+    <string name="eduTitleBtn">ÉDUCATION</string>
+    <string name="surveyTitleBtn">COMMENTAIRES</string>
+    <string name="facebookTitleBtn">FACEBOOK</string>
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
 
     <!-- Featured Developer Names -->
     <string name="dev1">Developer Name</string>
     <string name="dev2">Ousseynou Khadim Bèye</string>
     <string name="dev3">Developer Name</string>
+<<<<<<< HEAD
     <string name="dev4">Developer Name</string>
     <string name="dev5">Developer Name</string>
     <string name="dev6">Developer Name</string>
@@ -37,11 +51,115 @@
 
     <!-- survey titles -->
     <string name="survey">Laissez vos commentires. Merci! </string>
+=======
+
+    <!-- Featured Developer Bio Descriptions -->
+    <string name="dev1bio">Developer Bio</string>
+    <string name="dev2bio">Developer Bio</string>
+    <string name="dev3bio">Developer Bio</string>
+
+    <!-- Featured App Names -->
+
+    <!-- APP 1 -->
+    <string name="app1">Andando | Réseaux sociaux</string>
+    <string name="app1Desc">Andando est une solution pour faciliter le covoiturage.
+        Que l\’on soit passager ou conducteur, Andando est la solution économe et écolo
+        à ses soucis de déplacements. Andando permet de transporter des personnes aussi
+        bien sur des trajets courts en ville que sur des trajets un peu plus longs de
+        ville en ville.</string>
+    <string name="app1Key">#Covoiturage #Réseau social #Communauté #Partage #Ecologie</string>
+    <string name="app1Link">http://bit.ly/appliandando</string>
+    <string name="app1SMSLink">http://bit.ly/appandando</string>
+
+    <!-- APP 2 -->
+    <string name="app2">Cross Dakar City | Jeu</string>
+    <string name="app2Desc">Description</string>
+    <string name="app2Key">#Jeu #Education #Divertissement</string>
+    <string name="app2Link">http://bit.ly/applicrossdakar</string>
+    <string name="app2SMSLink">http://bit.ly/appcrossdakar</string>
+
+    <!-- APP 3 -->
+    <string name="app3">Expat-Dakar | Shopping</string>
+    <string name="app3Desc">Expat-Dakar est la version mobile du site de petites
+        annonces expat-dakar.com. Elle permet de rechercher un emploi ou vendre,
+        acheter ou simplement rechercher biens allant de l\’électroménager à l\’immobilier.
+        Le but est de mettre les utilisateurs en contact avec des milliers de particuliers
+        partout au Sénégal.</string>
+    <string name="app3Key">#Shopping #Petites annonces #Achat #Vente #Emploi</string>
+    <string name="app3Link">http://bit.ly/appliexpatdakar</string>
+    <string name="app3SMSLink">http://bit.ly/appexpatdakar</string>
+
+    <!-- APP 4 -->
+    <string name="app4">Sakanal | Productivité</string>
+    <string name="app4Desc">SakanalApp a pour le but d'aider à réduire et mieux
+        maîtriser ses dépenses quotidiennes liées à l\'électricité. Elle aide à
+        changer ses habitudes pour économiser. Elle permet de calculer sa prochaine
+        facture, simuler sa consommation, et envoyer des conseils pour économiser en
+        suivant des gestes simples.</string>
+    <string name="app4Key">#Gestion #Ecologie #Finance #Conseils</string>
+    <string name="app4Link">http://bit.ly/applisakanal</string>
+    <string name="app4SMSLink">http://bit.ly/appsakanal</string>
+
+    <!-- APP 5 -->
+    <string name="app5">Senego | Actualité</string>
+    <string name="app5Desc">Senego est un application d’information. Elle couvre l\’actualité
+        du Sénégal et de l\’Afrique de l\’Ouest. Elle traite de politique, de sports et de people
+        et possède même un onglet Senego TV consacré à l\'actualité en vidéo.</string>
+    <string name="app5Key">#Actualité #Politique #Sport #People #International #TV</string>
+    <string name="app5Link">http://bit.ly/applisenego</string>
+    <string name="app5SMSLink">http://bit.ly/appsenego</string>
+
+    <!-- APP 6 -->
+    <string name="app6">SeneNews | Actualité</string>
+    <string name="app6Desc">Cette application est un concentré de toute l\’actualité
+        et en particulier l\’actualité sénégalaise sur son mobile. La rédaction est basée
+        au Sénégal mais a aussi des branches à l\'étranger pour couvrir l\’actualité
+        internationales et celle des expatriés.</string>
+    <string name="app6Key">#Actualité #International #Expatriés #Politique #Sport #People</string>
+    <string name="app6Link">http://bit.ly/applisenenews</string>
+    <string name="app6SMSLink">http://bit.ly/appsenenews</string>
+
+    <!-- APP 7 -->
+    <string name="app7">Talibi  | Transport </string>
+    <string name="app7Desc">Talibi est une application de calcul d\’itinéraire. Elle permet
+        de trouver le meilleur chemin possible en bus pour se rendre à tous ses rendez-vous.
+        Elle peut être utilisée à Dakar, Thiès et Kaolack. L\’application propose aussi des
+        endroits à proximité qui pourraient être intéressants. </string>
+    <string name="app7Key">#Transport #Itinéraire #Plan #Tourisme</string>
+    <string name="app7Link">http://bit.ly/applitalibi</string>
+    <string name="app7SMSLink">http://bit.ly/apptalibi</string>
+
+    <!-- APP 8 -->
+    <string name="app8">Teere | Éducation</string>
+    <string name="app8Desc">Teere propose aux utilisateurs d\’améliorer leurs connaissances
+        sur l\’Afrique. On y trouve: des dictionnaires de langues africaines; des présentations
+        de pays africains et de personnalités qui ont marqué le continent; des citations et
+        proverbes africains; et des quizz pour tester ses connaissances.</string>
+    <string name="app8Key">#Afrique #Education #Quizz #Dictionnaire #Citations</string>
+    <string name="app8Link">http://bit.ly/appliteere</string>
+    <string name="app8SMSLink">http://bit.ly/appteere</string>
+
+    <!-- APP 9 -->
+    <string name="app9">Vitfé | Finance</string>
+    <string name="app9Desc">Vitfé Mobile Money est un porte-monnaie électronique permettant
+        d\’effectuer des transactions financières à partir de son téléphone portable en toute
+        sécurité. Elle permet également de payer ses factures et abonnements mais aussi
+        de faire des achats et des transferts, et de suivre les mouvements de fonds en temps
+        réel.</string>
+    <string name="app9Key">#Finance #Transfert d’argent #Achat #Paiement</string>
+    <string name="app9Link">http://bit.ly/applivitfe</string>
+    <string name="app9SMSLink">http:// bit.ly/appvitfe</string>
+
+
+    <!-- survey titles -->
+    <string name="survey">Laissez vos commentaires. Merci! </string>
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
     <string name="age">Age </string>
     <string name="prof"> Profession </string>
     <string name="first">Cest votre primer temps avec lappDock? </string>
     <string name="time">Combien de temps avez-vous passe </string>
 
+<<<<<<< HEAD
     <!-- Facebook Activity -->
     <string name="facebook_app_id">203732883030353</string>
     <string name="take_a_photo">Prenez Une Photo</string>
@@ -49,5 +167,22 @@
 
     <!--App descriptions-->
     <string name="descript">Cross Dakar City est un jeu dont le héros est un enfant des rues de Dakar, un Talibé. Le héros du jeu a décidé de rompre les chaînes de la mendicité et d’aller à la recherche de ses parents. Son périple consistera à se faufiler entre les voitures à travers Dakar. Le jeu est sur 16 niveaux et est volontairement difficile pour refléter le quotidien de ces enfants. </string>
+=======
+    <!-- Developer Activity -->
+    <string name="devTitle">Découvrez des développeuses et développeurs sénégalais</string>
+
+    <!-- Education Activity -->
+    <string name="eduTitle">Comment télécharger et installer un application mobile</string>
+
+    <string name="video1Title">Créer un compte Gmail</string>
+    <string name="video2Title">Qu\'est-ce qu\'une application mobile?</string>
+    <string name="video3Title">Qu\'est-ce qu\'un magasin?</string>
+    <string name="video4Title">Comment installer une application?</string>
+
+    <!-- Facebook Activity -->
+    <string name="facebook_app_id">203732883030353</string>
+    <string name="take_a_photo">Prenez Une Photo</string>
+    <string name="upload_to_facebook">Partagez sur Facebook</string>
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
 
 </resources>

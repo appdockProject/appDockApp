@@ -35,7 +35,11 @@
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
                 android:paddingTop="5dp"
+<<<<<<< HEAD
                 android:text="@string/title"
+=======
+                android:text="@string/appTitle"
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
                 android:id="@+id/title"
                 android:textStyle="bold"
                 android:layout_marginRight="0dp"

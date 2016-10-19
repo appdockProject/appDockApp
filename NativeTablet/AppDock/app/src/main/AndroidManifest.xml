@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <dependency>
+<<<<<<< HEAD
         <groupId>
             com.facebook.android
         </groupId>
@@ -24,6 +25,11 @@
         <version>
             v4.16.0
         </version>
+=======
+        <groupId>com.facebook.android</groupId>
+        <artifactId>facebook-android-sdk</artifactId>
+        <version>v4.16.0</version>
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
     </dependency>
 
     <application
@@ -60,13 +66,19 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
         <provider
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider203732883030353"
             android:exported="true" />
 
+<<<<<<< HEAD
         <activity android:name=".appA"></activity>
+=======
+>>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
     </application>
 
 </manifest>
