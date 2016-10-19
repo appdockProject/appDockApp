@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appdockproject.appdock">
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <dependency>
+        <groupId>
+            com.facebook.android
+        </groupId>
+
+        <artifactId>
+            facebook-android-sdk
+        </artifactId>
+
+        <version>
+            v4.16.0
+        </version>
+    </dependency>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".appPage"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".devActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".eduActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".feedbackActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".facebookActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".eduVid1Activity"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider203732883030353"
+            android:exported="true" />
+
+        <activity android:name=".appA"></activity>
+    </application>
+
+</manifest>

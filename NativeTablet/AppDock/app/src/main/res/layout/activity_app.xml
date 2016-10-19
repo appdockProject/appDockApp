@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.appdockproject.appdock.appA">
+
+    <LinearLayout
+        android:padding="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/line"
+            >
+
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b"
+                android:id="@+id/appLogo" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keywords: #Jeu #Education #Divertissement"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="491dp"
+                android:layout_height="288dp"
+                android:text="@string/descript"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="23dp"
+
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b"
+                android:id="@+id/devLogo" />
+
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b"
+                android:id="@+id/compLogo"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Obtenir l’application :"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:id="@+id/obtainApp"
+                android:layout_below="@+id/devLogo"
+                android:layout_toStartOf="@+id/compLogo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="Par lien :"
+                android:id="@+id/parlien"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignStart="@+id/textView6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="http://bitly.com/jodfojf"
+                android:id="@+id/bitly"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/parlien"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="88dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="Par SMS :"
+                android:id="@+id/parSms"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/bitly"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="Votre numéro de téléphone"
+                android:id="@+id/smsNumber"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/parSms"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/border"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
