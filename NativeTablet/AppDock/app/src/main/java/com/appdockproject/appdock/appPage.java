@@ -26,7 +26,7 @@ public class appPage extends AppCompatActivity {
         Button eduBtn = (Button) findViewById(R.id.eduBtn);
         Button cmntBtn = (Button) findViewById(R.id.comBtn);
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
-        ImageButton appA = (ImageButton) findViewById(R.id.aImage);
+        ImageButton appA = (ImageButton) findViewById(R.id.bImage);
 
         devBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {

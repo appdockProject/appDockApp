@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     tools:context="com.appdockproject.appdock.appA">
 
+    <fragment
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:id="@+id/navBar"
+        android:name="com.appdockproject.appdock.navbar"
+        tools:layout="@layout/fragment_navbar"
+        android:layout_margin="0dp" />
+
     <LinearLayout
         android:padding="50dp"
         android:orientation="horizontal"
@@ -13,10 +21,11 @@
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/line"
+            android:paddingRight="3dp"
             >
 
             <ImageView android:layout_width="wrap_content"
@@ -30,16 +39,17 @@
                 android:layout_height="wrap_content"
                 android:text="Keywords: #Jeu #Education #Divertissement"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 />
 
             <TextView
-                android:layout_width="491dp"
+                android:layout_width="match_parent"
                 android:layout_height="288dp"
+                android:paddingTop="10dp"
                 android:text="@string/descript"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="23dp"
+                android:textSize="18dp"
 
                 />
 
@@ -47,20 +57,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            >
 
-
-            <ImageView android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/b"
+            <ImageView android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/dev1"
                 android:id="@+id/devLogo" />
-
-            <ImageView android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/b"
-                android:id="@+id/compLogo"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -71,7 +75,7 @@
                 android:textStyle="bold"
                 android:id="@+id/obtainApp"
                 android:layout_below="@+id/devLogo"
-                android:layout_toStartOf="@+id/compLogo" />
+                 />
 
             <TextView
                 android:layout_width="match_parent"
@@ -82,7 +86,7 @@
                 android:textSize="23dp"
                 android:textStyle="bold"
                 android:layout_centerVertical="true"
-                android:layout_alignStart="@+id/textView6" />
+                 />
 
             <TextView
                 android:layout_width="match_parent"
@@ -111,15 +115,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_orange_dark"
+                android:padding="5dp"
+                android:textColor="#3399CC"
                 android:text="Votre numéro de téléphone"
                 android:id="@+id/smsNumber"
-                android:textSize="23dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_below="@+id/parSms"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/border"
                 android:layout_centerVertical="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wolofTop"
+                android:src="@drawable/wolof"
+                android:background="@color/colorLightColor"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
 
