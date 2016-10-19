@@ -5,11 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-<<<<<<< HEAD
-        classpath 'com.android.tools.build:gradle:2.2.0'
-=======
         classpath 'com.android.tools.build:gradle:2.2.1'
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
         classpath 'com.google.gms:google-services:3.0.0' //for firebase
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

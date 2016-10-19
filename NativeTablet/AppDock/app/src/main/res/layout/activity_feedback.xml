@@ -25,11 +25,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:text="Applications"
-=======
             android:text="@string/appTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:id="@+id/appBtn"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
@@ -41,11 +37,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:text="Développeurs"
-=======
             android:text="@string/devTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:id="@+id/devBtn"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
@@ -56,11 +48,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:text="Education"
-=======
             android:text="@string/eduTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:id="@+id/eduBtn"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
@@ -71,11 +59,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:text="Commentaires"
-=======
             android:text="@string/surveyTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:id="@+id/comBtn"
             android:layout_weight="1"
             android:background="@color/highlighted"
@@ -86,11 +70,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:text="Facebook"
-=======
             android:text="@string/facebookTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:id="@+id/fbBtn"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"

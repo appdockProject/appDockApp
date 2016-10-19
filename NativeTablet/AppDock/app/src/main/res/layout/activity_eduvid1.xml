@@ -31,11 +31,7 @@
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
             android:clickable="true"
-<<<<<<< HEAD
-            android:text="Applications"
-=======
             android:text="@string/appTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:textColor="@color/abc_primary_text_material_dark"
             android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog" />
 
@@ -46,11 +42,7 @@
             android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-<<<<<<< HEAD
-            android:text="Développeurs"
-=======
             android:text="@string/devTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:textColor="@color/abc_primary_text_material_dark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
@@ -61,11 +53,7 @@
             android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/highlighted"
-<<<<<<< HEAD
-            android:text="Education"
-=======
             android:text="@string/eduTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:textColor="@color/abc_primary_text_material_dark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
@@ -76,11 +64,7 @@
             android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-<<<<<<< HEAD
-            android:text="Commentaires"
-=======
             android:text="@string/surveyTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:textColor="@color/abc_primary_text_material_dark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
@@ -91,11 +75,7 @@
             android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-<<<<<<< HEAD
-            android:text="Facebook"
-=======
             android:text="@string/facebookTitleBtn"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:textColor="@color/abc_primary_text_material_dark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
     </LinearLayout>
@@ -116,11 +96,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginRight="0dp"
             android:paddingTop="5dp"
-<<<<<<< HEAD
-            android:text="Créer un compte Gmail"
-=======
             android:text="@string/video1Title"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
             android:textColor="@android:color/holo_orange_dark"
             android:textSize="25dp"
             android:textStyle="bold"
@@ -128,11 +104,6 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true" />
 
-<<<<<<< HEAD
-            <VideoView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-=======
             <Button
                 android:id="@+id/videoBtn"
                 android:layout_width="wrap_content"
@@ -144,7 +115,6 @@
             <VideoView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
->>>>>>> e1efdef8fedf7a4fbc649b7db072f19fa95e389b
                 android:id="@+id/videoView"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/title" />
