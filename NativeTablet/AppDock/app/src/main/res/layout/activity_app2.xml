@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.appdockproject.appdock.App2Activity"
+>
+
+    <fragment
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:id="@+id/navBar"
+        android:name="com.appdockproject.appdock.navbar"
+        tools:layout="@layout/fragment_navbar"
+        android:layout_margin="0dp" />
+
+    <LinearLayout
+        android:padding="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/line"
+            android:paddingRight="3dp"
+            >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/b"
+                    android:id="@+id/appLogo"
+                    android:layout_weight="1" />
+
+                <ImageView android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/dev1"
+                    android:id="@+id/devLogo"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app2"
+                    android:id="@+id/appTitle"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold"
+                    android:textAlignment="textStart"
+                    android:textSize="26dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app2Key"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold"
+                    android:textAlignment="textStart"
+                    android:textSize="21dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:text="@string/app2Desc"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="22dp"
+                    android:paddingRight="5dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <EditText
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/stringColorBlue"
+                    android:hint="@string/getPhoneNum"
+                    android:id="@+id/smsNumber"
+                    android:textSize="20dp"
+                    android:ems="10"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/parSms"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/border"
+                    android:layout_centerVertical="true"
+                    android:inputType="phone"
+                    android:layout_alignParentStart="true"
+                     />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:text="@string/app2Link"
+                    android:id="@+id/bitly"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/parlien"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:text="@string/getPhoneNumBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:id="@+id/getAppPhoneBtn"
+                    android:layout_below="@+id/smsNumber"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#fff"
+                    android:background="@color/colorPrimaryDark"
+                    android:theme="@style/Base.Widget.AppCompat.ActionButton"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/getAppTitle"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold"
+                    android:id="@+id/obtainApp"
+
+                    android:layout_marginTop="66dp"
+                    android:textSize="26dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:text="@string/viaWeb"
+                    android:id="@+id/parlien"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="27dp"
+                    android:layout_below="@+id/obtainApp"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:text="@string/viaText"
+                    android:id="@+id/parSms"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/bitly"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="17dp" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wolofTop"
+                android:src="@drawable/wolof"
+                android:background="@color/colorLightColor"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

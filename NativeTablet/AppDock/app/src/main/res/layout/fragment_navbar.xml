@@ -59,7 +59,8 @@
             android:background="@color/colorPrimaryDark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton"
             android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textSize="14sp" />
 
         <Button
             android:layout_width="match_parent"
