@@ -206,7 +206,8 @@
                 android:layout_gravity="fill_horizontal|center_horizontal"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="13dp" />
+                android:textSize="13dp"
+                android:textAlignment="center" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -223,7 +224,7 @@
                 android:layout_gravity="center_horizontal" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="146dp"
                 android:layout_height="wrap_content"
                 android:text="@string/app6"
                 android:id="@+id/fText"
@@ -300,7 +301,7 @@
                 android:layout_gravity="center_horizontal" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="138dp"
                 android:layout_height="wrap_content"
                 android:text="@string/app9"
                 android:id="@+id/iText"

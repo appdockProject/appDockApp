@@ -21,26 +21,38 @@
     <string name="surveyTitleBtn">COMMENTAIRES</string>
     <string name="facebookTitleBtn">FACEBOOK</string>
 
-    <!-- Featured Developer Names -->
-    <string name="dev1">Developer Name</string>
+    <!-- Get App Text -->
+    <string name="getAppTitle">Obtenir l\'application </string>
+    <string name="viaWeb">Par lien : </string>
+    <string name="viaText">Par SMS : </string>
+    <string name="getPhoneNum">Votre numéro de téléphone</string>
+    <string name="getPhoneNumBtn">Envoyer par SMS</string>
+
+    <!-- Featured Developers -->
+    <string name="dev1">Moussa Diallo,  Hamid Mahamat Abdoulaye et Pape Modou Gane Ndiaye</string>
+    <string name="dev1desc">Développeur d’Andando</string>
+    <string name="dev1bio">Developer01 Bio</string>
+
     <string name="dev2">Ousseynou Khadim Bèye</string>
+    <string name="dev2desc">Développeur de Cross Dakar City</string>
+    <string name="dev2bio">Developer02 Bio</string>
+
     <string name="dev3">Developer Name</string>
-    <string name="dev4">Developer Name</string>
-    <string name="dev5">Developer Name</string>
-    <string name="dev6">Developer Name</string>
-    <string name="dev7">Developer Name</string>
-    <string name="dev8">Developer Name</string>
-    <string name="dev9">Developer Name</string>
+    <string name="dev3desc"></string>
+    <string name="dev3bio">Developer03 Bio</string>
+
 
     <!-- survey titles -->
     <string name="survey">Laissez vos commentaires. Merci! </string>
+    <string name="age">Age </string>
+    <string name="prof"> Profession </string>
+    <string name="first">C\'est votre primer temps avec l\'AppDock? </string>
+    <string name="time">Combien de temps avez-vous passé? </string>
 
-    <!-- Featured Developer Bio Descriptions -->
-    <string name="dev1bio">Developer Bio</string>
-    <string name="dev2bio">Developer Bio</string>
-    <string name="dev3bio">Developer Bio</string>
 
-    <!-- Featured App Names -->
+
+
+    <!-- Featured Apps-->
 
     <!-- APP 1 -->
     <string name="app1">Andando | Réseaux sociaux</string>
@@ -49,14 +61,18 @@
         à ses soucis de déplacements. Andando permet de transporter des personnes aussi
         bien sur des trajets courts en ville que sur des trajets un peu plus longs de
         ville en ville.</string>
-    <string name="app1Key">#Covoiturage #Réseau social #Communauté #Partage #Ecologie</string>
+    <string name="app1Key">Covoiturage, Réseau social, Communauté, Partage, Ecologie</string>
     <string name="app1Link">http://bit.ly/appliandando</string>
     <string name="app1SMSLink">http://bit.ly/appandando</string>
 
     <!-- APP 2 -->
     <string name="app2">Cross Dakar City | Jeu</string>
-    <string name="app2Desc">Description</string>
-    <string name="app2Key">#Jeu #Education #Divertissement</string>
+    <string name="app2Desc">Cross Dakar City est un jeu dont le héros est un enfant des rues
+        de Dakar, un Talibé. Le héros du jeu a décidé de rompre les chaînes de la mendicité
+        et d\’aller à la recherche de ses parents. Son périple consistera à se faufiler entre
+        les voitures à travers Dakar. Le jeu est sur 16 niveaux et est volontairement difficile
+        pour refléter le quotidien de ces enfants.</string>
+    <string name="app2Key">Jeu, Education, Divertissement</string>
     <string name="app2Link">http://bit.ly/applicrossdakar</string>
     <string name="app2SMSLink">http://bit.ly/appcrossdakar</string>
 
@@ -67,7 +83,7 @@
         acheter ou simplement rechercher biens allant de l\’électroménager à l\’immobilier.
         Le but est de mettre les utilisateurs en contact avec des milliers de particuliers
         partout au Sénégal.</string>
-    <string name="app3Key">#Shopping #Petites annonces #Achat #Vente #Emploi</string>
+    <string name="app3Key">Shopping, Petites annonces, Achat, Vente, Emploi</string>
     <string name="app3Link">http://bit.ly/appliexpatdakar</string>
     <string name="app3SMSLink">http://bit.ly/appexpatdakar</string>
 
@@ -78,7 +94,7 @@
         changer ses habitudes pour économiser. Elle permet de calculer sa prochaine
         facture, simuler sa consommation, et envoyer des conseils pour économiser en
  suivant des gestes simples.</string>
-    <string name="app4Key">#Gestion #Ecologie #Finance #Conseils</string>
+    <string name="app4Key">Gestion, Ecologie, Finance, Conseils</string>
     <string name="app4Link">http://bit.ly/applisakanal</string>
     <string name="app4SMSLink">http://bit.ly/appsakanal</string>
 
@@ -87,7 +103,7 @@
     <string name="app5Desc">Senego est un application d\’information. Elle couvre l\’actualité
         du Sénégal et de l\’Afrique de l\’Ouest. Elle traite de politique, de sports et de people
         et possède même un onglet Senego TV consacré à l\'actualité en vidéo.</string>
-    <string name="app5Key">#Actualité #Politique #Sport #People #International #TV</string>
+    <string name="app5Key">Actualité, Politique, Sport, People, International, TV</string>
     <string name="app5Link">http://bit.ly/applisenego</string>
     <string name="app5SMSLink">http://bit.ly/appsenego</string>
 
@@ -97,7 +113,7 @@
         et en particulier l\’actualité sénégalaise sur son mobile. La rédaction est basée
         au Sénégal mais a aussi des branches à l\'étranger pour couvrir l\’actualité
         internationales et celle des expatriés.</string>
-    <string name="app6Key">#Actualité #International #Expatriés #Politique #Sport #People</string>
+    <string name="app6Key">Actualité, International, Expatriés, Politique, Sport, People</string>
     <string name="app6Link">http://bit.ly/applisenenews</string>
     <string name="app6SMSLink">http://bit.ly/appsenenews</string>
 
@@ -107,7 +123,7 @@
         de trouver le meilleur chemin possible en bus pour se rendre à tous ses rendez-vous.
         Elle peut être utilisée à Dakar, Thiès et Kaolack. L\’application propose aussi des
         endroits à proximité qui pourraient être intéressants. </string>
-    <string name="app7Key">#Transport #Itinéraire #Plan #Tourisme</string>
+    <string name="app7Key">Transport, Itinéraire, Plan, Tourisme</string>
     <string name="app7Link">http://bit.ly/applitalibi</string>
     <string name="app7SMSLink">http://bit.ly/apptalibi</string>
 
@@ -117,7 +133,7 @@
         sur l\’Afrique. On y trouve: des dictionnaires de langues africaines; des présentations
         de pays africains et de personnalités qui ont marqué le continent; des citations et
         proverbes africains; et des quizz pour tester ses connaissances.</string>
-    <string name="app8Key">#Afrique #Education #Quizz #Dictionnaire #Citations</string>
+    <string name="app8Key">Afrique, Education, Quizz, Dictionnaire, Citations</string>
     <string name="app8Link">http://bit.ly/appliteere</string>
     <string name="app8SMSLink">http://bit.ly/appteere</string>
 
@@ -128,22 +144,14 @@
         sécurité. Elle permet également de payer ses factures et abonnements mais aussi
         de faire des achats et des transferts, et de suivre les mouvements de fonds en temps
         réel.</string>
-    <string name="app9Key">#Finance #Transfert d\’argent #Achat #Paiement</string>
+    <string name="app9Key">Finance, Transfert d\’argent, Achat, Paiement</string>
     <string name="app9Link">http://bit.ly/applivitfe</string>
     <string name="app9SMSLink">http:// bit.ly/appvitfe</string>
 
 
-    <!-- survey titles -->
-    <string name="age">Age </string>
-    <string name="prof"> Profession </string>
-    <string name="first">Cest votre primer temps avec lappDock? </string>
-    <string name="time">Combien de temps avez-vous passe </string>
 
 
-    <!--App descriptions-->
-    <string name="descript">Cross Dakar City est un jeu dont le héros est un enfant des rues de Dakar, un Talibé. Le héros du jeu a décidé de rompre les chaînes de la mendicité
-        et d\’aller à la recherche de ses parents. Son périple consistera à se faufiler entre les voitures à travers Dakar. Le jeu est sur 16 niveaux et est volontairement difficile
-        pour refléter le quotidien de ces enfants. </string>
+
     <!-- Developer Activity -->
     <string name="devTitle">Découvrez des développeuses et développeurs sénégalais</string>
 

@@ -26,9 +26,21 @@ public class appPage extends AppCompatActivity {
         Button eduBtn = (Button) findViewById(R.id.eduBtn);
         Button cmntBtn = (Button) findViewById(R.id.comBtn);
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
-        ImageButton appA = (ImageButton) findViewById(R.id.bImage);
+
+        //Buttons to the app pages
+        ImageButton app1 = (ImageButton) findViewById(R.id.aImage);
+        ImageButton app2 = (ImageButton) findViewById(R.id.bImage);
+        ImageButton app3 = (ImageButton) findViewById(R.id.cImage);
+        ImageButton app4 = (ImageButton) findViewById(R.id.dImage);
+        ImageButton app5 = (ImageButton) findViewById(R.id.eImage);
+        ImageButton app6 = (ImageButton) findViewById(R.id.fImage);
+        ImageButton app7 = (ImageButton) findViewById(R.id.gImage);
+        ImageButton app8 = (ImageButton) findViewById(R.id.hImage);
+        ImageButton app9 = (ImageButton) findViewById(R.id.iImage);
 
 
+
+        //navigation bar buttons
         devBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent = new Intent(appPage.this, devActivity.class);
@@ -58,9 +70,67 @@ public class appPage extends AppCompatActivity {
             }
         });
 
-        appA.setOnClickListener(new View.OnClickListener(){
+
+        //Listeners to navigate to the app activities
+        app1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(appPage.this, appA.class);
+                Intent intent = new Intent(appPage.this, App1Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app2.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app3.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app4.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App4Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app5.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App5Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app6.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App6Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app7.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App7Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app8.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App8Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        app9.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(appPage.this, App9Activity.class);
                 startActivity(intent);
             }
         });

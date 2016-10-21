@@ -463,6 +463,7 @@
         android:layout_gravity="center"
         android:background="@color/highlighted"
         android:layout_marginTop="25dp"
+        android:theme="@style/Base.Widget.AppCompat.ActionButton"
         />
 
 
