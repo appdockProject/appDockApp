@@ -28,11 +28,16 @@
     <string name="getPhoneNum">Votre numéro de téléphone</string>
     <string name="getPhoneNumBtn">Envoyer par SMS</string>
 
+<<<<<<< HEAD
     <!-- Featured Developers -->
     <string name="dev1">Moussa Diallo,  Hamid Mahamat Abdoulaye et Pape Modou Gane Ndiaye</string>
     <string name="dev1desc">Développeur d’Andando</string>
     <string name="dev1bio">Developer01 Bio</string>
 
+=======
+    <!-- Featured Developer Names -->
+    <string name="dev1">Developer Name</string>
+>>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
     <string name="dev2">Ousseynou Khadim Bèye</string>
     <string name="dev2desc">Développeur de Cross Dakar City</string>
     <string name="dev2bio">Developer02 Bio</string>
@@ -149,9 +154,19 @@
     <string name="app9SMSLink">http:// bit.ly/appvitfe</string>
 
 
+<<<<<<< HEAD
 
 
 
+=======
+    <!-- survey titles -->
+    <string name="age">Age </string>
+    <string name="prof"> Profession </string>
+    <string name="first">C\'est votre primer temps avec l\'AppDock? </string>
+    <string name="time">Combien de temps avez-vous passé? </string>
+
+
+>>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
     <!-- Developer Activity -->
     <string name="devTitle">Découvrez des développeuses et développeurs sénégalais</string>
 
