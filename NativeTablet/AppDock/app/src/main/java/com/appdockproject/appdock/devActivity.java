@@ -57,13 +57,6 @@ public class devActivity extends AppCompatActivity {
         });
 
 
-        //go to developer pages
-        dev1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(devActivity.this, dev1Activity.class);
-                startActivity(intent);
-            }
-        });
 
     }
 }

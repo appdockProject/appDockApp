@@ -215,6 +215,22 @@
                             android:id="@+id/dev2desc" />
 
                         <ImageButton
+                            android:id="@+id/dev2"
+                            android:src="@drawable/dev2"
+                            android:scaleType="fitCenter"
+                            android:layout_width="170dp"
+                            android:layout_column="2"
+                            android:layout_row="2"
+                            android:background="@color/colorLightColor"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="69dp"
+                            android:layout_height="170dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="206dp" />
+
+                        <ImageButton
                             android:id="@+id/dev1"
                             android:src="@drawable/dev1"
                             android:scaleType="fitCenter"
@@ -225,26 +241,10 @@
                             android:layout_marginLeft="0dp"
                             android:layout_marginRight="0dp"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginStart="122dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="69dp"
                             android:layout_alignTop="@+id/dev2"
-                            android:layout_alignParentStart="true"
-                            android:layout_height="170dp" />
-
-                        <ImageButton
-                            android:id="@+id/dev2"
-                            android:src="@drawable/dev2"
-                            android:scaleType="fitCenter"
-                            android:layout_width="170dp"
-                            android:layout_column="2"
-                            android:layout_row="2"
-                            android:background="@color/colorLightColor"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginRight="0dp"
-                            android:layout_marginTop="96dp"
-                            android:layout_marginStart="169dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/dev1"
-                            android:layout_height="170dp" />
+                            android:layout_alignParentStart="true" />
 
                     </RelativeLayout>
                 </LinearLayout>

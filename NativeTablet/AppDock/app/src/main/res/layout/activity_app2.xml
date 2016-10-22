@@ -25,12 +25,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/line"
-<<<<<<< HEAD
-            android:padding="10dp">
-=======
+            android:padding="10dp"
             android:paddingRight="3dp"
             >
->>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
+
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -46,11 +44,7 @@
 
                 <ImageView android:layout_width="150dp"
                     android:layout_height="150dp"
-<<<<<<< HEAD
                     android:src="@drawable/dev2"
-=======
-                    android:src="@drawable/dev1"
->>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
                     android:id="@+id/devLogo"
                     android:layout_weight="1" />
             </LinearLayout>
@@ -86,12 +80,9 @@
                     android:text="@string/app2Desc"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="22dp"
-<<<<<<< HEAD
                     android:paddingRight="5dp"
                     android:textAlignment="viewStart" />
-=======
-                    android:paddingRight="5dp" />
->>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
+
             </LinearLayout>
 
         </LinearLayout>

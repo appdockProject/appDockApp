@@ -28,7 +28,6 @@ public class appPage extends AppCompatActivity {
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
 
         //Buttons to the app pages
-<<<<<<< HEAD
         ImageButton app1 = (ImageButton) findViewById(R.id.aImage);
         ImageButton app2 = (ImageButton) findViewById(R.id.bImage);
         ImageButton app3 = (ImageButton) findViewById(R.id.cImage);
@@ -41,11 +40,6 @@ public class appPage extends AppCompatActivity {
 
 
 
-=======
-        ImageButton app2 = (ImageButton) findViewById(R.id.bImage);
-
-
->>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
         //navigation bar buttons
         devBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
@@ -78,7 +72,6 @@ public class appPage extends AppCompatActivity {
 
 
         //Listeners to navigate to the app activities
-<<<<<<< HEAD
         app1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent = new Intent(appPage.this, App1Activity.class);
@@ -135,15 +128,9 @@ public class appPage extends AppCompatActivity {
             }
         });
 
-        app9.setOnClickListener(new View.OnClickListener(){
+        app9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(appPage.this, App9Activity.class);
-=======
-        app2.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(appPage.this, App2Activity.class);
->>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
-                startActivity(intent);
             }
         });
 

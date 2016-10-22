@@ -66,7 +66,6 @@
             android:authorities="com.facebook.app.FacebookContentProvider203732883030353"
             android:exported="true" />
 
-<<<<<<< HEAD
         <activity
             android:name=".App1Activity"
             android:screenOrientation="landscape" />
@@ -93,9 +92,6 @@
             android:screenOrientation="landscape" />
         <activity android:name=".App9Activity"
             android:screenOrientation="landscape" />
-=======
-        <activity android:name=".App2Activity"></activity>
->>>>>>> 6293deed19b5ca20d29c4f6811e0593ae84ab699
     </application>
 
 </manifest>
