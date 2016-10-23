@@ -20,13 +20,13 @@ public class feedbackActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
-    RadioButton selectedAge, selectedProfession, selectedQuestion, selectedTime;
-    RadioGroup age, profession, question, time;
+    RadioButton selectedAge, selectedGender, selectedEdu, selectedProfession, selectedPhone, selectedTime, selectedRating, selectedUse;
+    RadioGroup ageGroup, genderGroup, eduGroup, professionGroup, phoneGroup, timeGroup, ratingGroup, useGroup;
     Button submit;
     int selectedId;
     boolean send;
 
-    String ageString, professionString, questionString, timeString;
+    String ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString;
 
 
 
@@ -78,10 +78,14 @@ public class feedbackActivity extends AppCompatActivity {
         //Submit button
         submit = (Button) findViewById(R.id.submit);
 
-        age = (RadioGroup) findViewById(R.id.typeGroup);
-        profession = (RadioGroup)findViewById(R.id.profession);
-        question = (RadioGroup)findViewById(R.id.question);
-        time = (RadioGroup)findViewById(R.id.time);
+        ageGroup = (RadioGroup) findViewById(R.id.ageGroup);
+        genderGroup = (RadioGroup) findViewById(R.id.genderGroup);
+        eduGroup = (RadioGroup) findViewById(R.id.eduGroup);
+        professionGroup = (RadioGroup)findViewById(R.id.professionGroup);
+        phoneGroup = (RadioGroup)findViewById(R.id.phoneGroup);
+        timeGroup = (RadioGroup)findViewById(R.id.timeGroup);
+        ratingGroup = (RadioGroup) findViewById(R.id.ratingGroup);
+        useGroup = (RadioGroup) findViewById(R.id.useGroup);
 
 
 
@@ -93,36 +97,64 @@ public class feedbackActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //age and make sure value is not null (in this case -1)
-                if (age.getCheckedRadioButtonId() != -1) {
-                    selectedId = age.getCheckedRadioButtonId();
+                if (ageGroup.getCheckedRadioButtonId() != -1) {
+                    selectedId = ageGroup.getCheckedRadioButtonId();
                     selectedAge = (RadioButton) findViewById(selectedId);
                     ageString = selectedAge.getText().toString();
                 }
 
-                //profession
-                if (profession.getCheckedRadioButtonId() != -1) {
+                //gender
+                if (genderGroup.getCheckedRadioButtonId() != -1) {
+                    selectedId = genderGroup.getCheckedRadioButtonId();
+                    selectedGender = (RadioButton) findViewById(selectedId);
+                    genderString = selectedGender.getText().toString();
+                }
 
-                    selectedId = profession.getCheckedRadioButtonId();
+                //edu level
+                if (eduGroup.getCheckedRadioButtonId() != -1) {
+                    selectedId = eduGroup.getCheckedRadioButtonId();
+                    selectedEdu = (RadioButton) findViewById(selectedId);
+                    eduString = selectedEdu.getText().toString();
+                }
+
+                //occupation
+                if (professionGroup.getCheckedRadioButtonId() != -1) {
+
+                    selectedId = professionGroup.getCheckedRadioButtonId();
                     selectedProfession = (RadioButton) findViewById(selectedId);
                     professionString = selectedProfession.getText().toString();
                 }
 
-                //question
-                if (question.getCheckedRadioButtonId() != -1) {
-                    selectedId = question.getCheckedRadioButtonId();
-                    selectedQuestion = (RadioButton) findViewById(selectedId);
-                    questionString = selectedQuestion.getText().toString();
+                //phone type
+                if (phoneGroup.getCheckedRadioButtonId() != -1) {
+                    selectedId = phoneGroup.getCheckedRadioButtonId();
+                    selectedPhone = (RadioButton) findViewById(selectedId);
+                    phoneString = selectedPhone.getText().toString();
                 }
 
-                //time
-                if (time.getCheckedRadioButtonId() != -1) {
-                    selectedId = time.getCheckedRadioButtonId();
+                //time spent
+                if (timeGroup.getCheckedRadioButtonId() != -1) {
+                    selectedId = timeGroup.getCheckedRadioButtonId();
                     selectedTime = (RadioButton) findViewById(selectedId);
                     timeString = selectedTime.getText().toString();
                 }
 
-                if ((age.getCheckedRadioButtonId() != -1) && (profession.getCheckedRadioButtonId() != -1) && (question.getCheckedRadioButtonId() != -1) && (time.getCheckedRadioButtonId() != -1)) {
-                    addData(ageString, professionString, questionString, timeString);
+                //rating
+                if (ratingGroup.getCheckedRadioButtonId() != -1) {
+                    selectedId = ratingGroup.getCheckedRadioButtonId();
+                    selectedRating = (RadioButton) findViewById(selectedId);
+                    ratingString = selectedRating.getText().toString();
+                }
+
+                //use of appdock
+                if (useGroup.getCheckedRadioButtonId() != -1) {
+                    selectedId = useGroup.getCheckedRadioButtonId();
+                    selectedUse = (RadioButton) findViewById(selectedId);
+                    useString = selectedUse.getText().toString();
+                }
+
+                if ((ageGroup.getCheckedRadioButtonId() != -1) && (genderGroup.getCheckedRadioButtonId() != -1) && (eduGroup.getCheckedRadioButtonId() != -1) && (professionGroup.getCheckedRadioButtonId() != -1) && (phoneGroup.getCheckedRadioButtonId() != -1) && (timeGroup.getCheckedRadioButtonId() != -1) && (ratingGroup.getCheckedRadioButtonId() != -1) && (useGroup.getCheckedRadioButtonId() != -1)) {
+                    addData(ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString);
 
                     //Send user to facebook page to take a picture?
                     Intent intent = new Intent(feedbackActivity.this, facebookActivity.class);
@@ -141,12 +173,16 @@ public class feedbackActivity extends AppCompatActivity {
         });}
 
 
-    private void addData(String age, String profession, String question, String time){
+    private void addData(String age, String gender, String edu, String profession, String phone, String time, String rating, String use){
         Answer a = new Answer();
         a.setAge(age);
+        a.setGender(gender);
+        a.setEdu(edu);
         a.setProfession(profession);
-        a.setQuestion(question);
+        a.setPhone(phone);
         a.setTime(time);
+        a.setRating(rating);
+        a.setUse(use);
 
         myRef.child("Answer").push().setValue(a);
     }
