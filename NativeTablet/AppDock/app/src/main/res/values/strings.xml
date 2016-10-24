@@ -162,8 +162,11 @@
     <string name="video4Title">Comment installer une application?</string>
 
     <!-- Facebook Activity -->
+    <string name="facebookTitle">Partagez votre expérience avec AppDock en photo sur Facebook</string>
     <string name="facebook_app_id">203732883030353</string>
-    <string name="take_a_photo">Prenez Une Photo</string>
+    <string name="facebook_take_a_photo">Prenez Une Photo</string>
     <string name="upload_to_facebook">Partagez sur Facebook</string>
+    <string name="facebook_no_photo">Aucune Photo Prise!</string>
+    <string name="facebook_sample_text">J’ai visité #appdock #senegal, un espace d’interaction entre développeurs et utilisateurs d’#applis #mobile</string>
 
 </resources>

@@ -27,9 +27,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookActivity;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.share.model.ShareHashtag;
 import com.facebook.share.model.ShareLinkContent;
@@ -45,6 +48,8 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.karumi.dexter.listener.single.PermissionListener;
+
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,6 +67,7 @@ public class facebookActivity extends AppCompatActivity {
     private File output = null;
     private ImageView imPreview;
     private String mCurrentPhotoPath = "";
+    private AccessToken accessToken;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -92,7 +98,6 @@ public class facebookActivity extends AppCompatActivity {
             }
         });
 
-
         eduBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(facebookActivity.this, eduActivity.class);
@@ -118,8 +123,8 @@ public class facebookActivity extends AppCompatActivity {
         Log.i(TAG, "Setting up facebook");
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(getApplication());
-        FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
+        accessToken = AccessToken.getCurrentAccessToken();
         shareDialog = new ShareDialog(this);
 
         Log.i(TAG, "Initializing permissions");
@@ -161,7 +166,9 @@ public class facebookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mCurrentPhotoPath.equals("")) {
-                    Toast.makeText(facebookActivity.this, "No photo taken!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(facebookActivity.this,
+                            getResources().getString(R.string.facebook_no_photo),
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -234,6 +241,7 @@ public class facebookActivity extends AppCompatActivity {
                 .setBitmap(image)
                 .setCaption("Loving the Appdock from Pace University!")
                 .build();
+
         Log.i(TAG, "Sharephoto set");
         SharePhotoContent content = new SharePhotoContent.Builder()
                 .addPhoto(photo)
