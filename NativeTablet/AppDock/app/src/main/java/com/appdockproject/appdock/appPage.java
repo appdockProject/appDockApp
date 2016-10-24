@@ -131,6 +131,7 @@ public class appPage extends AppCompatActivity {
         app9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(appPage.this, App9Activity.class);
+                startActivity(intent);
             }
         });
 
