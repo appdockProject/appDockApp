@@ -21,10 +21,12 @@ public class feedbackActivity extends AppCompatActivity {
     DatabaseReference myRef;
 
     RadioButton selectedAge, selectedGender, selectedEdu, selectedProfession, selectedPhone, selectedTime, selectedRating, selectedUse;
-    RadioGroup ageGroup, genderGroup, eduGroup, professionGroup, phoneGroup, timeGroup, ratingGroup, useGroup;
+    RadioGroup ageGroup, genderGroup, eduGroup, professionGroup, professionGroup2, phoneGroup, timeGroup, ratingGroup, useGroup;
     Button submit;
     int selectedId;
     boolean send;
+
+    private RadioGroup.OnCheckedChangeListener listener1, listener2;
 
     String ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString;
 
@@ -82,10 +84,41 @@ public class feedbackActivity extends AppCompatActivity {
         genderGroup = (RadioGroup) findViewById(R.id.genderGroup);
         eduGroup = (RadioGroup) findViewById(R.id.eduGroup);
         professionGroup = (RadioGroup)findViewById(R.id.professionGroup);
+        professionGroup2 = (RadioGroup) findViewById(R.id.professionGroup2);
         phoneGroup = (RadioGroup)findViewById(R.id.phoneGroup);
         timeGroup = (RadioGroup)findViewById(R.id.timeGroup);
         ratingGroup = (RadioGroup) findViewById(R.id.ratingGroup);
         useGroup = (RadioGroup) findViewById(R.id.useGroup);
+
+        listener1 = new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1) {
+                    professionGroup2.setOnCheckedChangeListener(null); // remove the listener before clearing so we don't throw that stackoverflow exception(like Vladimir Volodin pointed out)
+                    professionGroup2.clearCheck(); // clear the second RadioGroup!
+                    professionGroup2.setOnCheckedChangeListener(listener2); //reset the listener
+
+                }
+            }
+        };
+
+       listener2 = new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1) {
+                    professionGroup.setOnCheckedChangeListener(null);
+                    professionGroup.clearCheck();
+                    professionGroup.setOnCheckedChangeListener(listener1);
+                }
+            }
+        };
+
+        professionGroup.clearCheck(); // this is so we can start fresh, with no selection on both RadioGroups
+        professionGroup2.clearCheck();
+        professionGroup.setOnCheckedChangeListener(listener1);
+        professionGroup2.setOnCheckedChangeListener(listener2);
 
 
 
@@ -125,6 +158,14 @@ public class feedbackActivity extends AppCompatActivity {
                     professionString = selectedProfession.getText().toString();
                 }
 
+                //2nd occupation group
+                if (professionGroup2.getCheckedRadioButtonId() != -1) {
+
+                    selectedId = professionGroup2.getCheckedRadioButtonId();
+                    selectedProfession = (RadioButton) findViewById(selectedId);
+                    professionString = selectedProfession.getText().toString();
+                }
+
                 //phone type
                 if (phoneGroup.getCheckedRadioButtonId() != -1) {
                     selectedId = phoneGroup.getCheckedRadioButtonId();
@@ -153,7 +194,7 @@ public class feedbackActivity extends AppCompatActivity {
                     useString = selectedUse.getText().toString();
                 }
 
-                if ((ageGroup.getCheckedRadioButtonId() != -1) && (genderGroup.getCheckedRadioButtonId() != -1) && (eduGroup.getCheckedRadioButtonId() != -1) && (professionGroup.getCheckedRadioButtonId() != -1) && (phoneGroup.getCheckedRadioButtonId() != -1) && (timeGroup.getCheckedRadioButtonId() != -1) && (ratingGroup.getCheckedRadioButtonId() != -1) && (useGroup.getCheckedRadioButtonId() != -1)) {
+                if ((ageGroup.getCheckedRadioButtonId() != -1) && (genderGroup.getCheckedRadioButtonId() != -1) && (eduGroup.getCheckedRadioButtonId() != -1) && (professionGroup.getCheckedRadioButtonId() != -1 || professionGroup2.getCheckedRadioButtonId() != -1) && (phoneGroup.getCheckedRadioButtonId() != -1) && (timeGroup.getCheckedRadioButtonId() != -1) && (ratingGroup.getCheckedRadioButtonId() != -1) && (useGroup.getCheckedRadioButtonId() != -1)) {
                     addData(ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString);
 
                     //Send user to facebook page to take a picture?
@@ -186,6 +227,8 @@ public class feedbackActivity extends AppCompatActivity {
 
         myRef.child("Answer").push().setValue(a);
     }
+
+
 }
 
 

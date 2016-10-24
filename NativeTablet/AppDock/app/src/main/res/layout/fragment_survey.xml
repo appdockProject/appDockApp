@@ -326,7 +326,7 @@
 
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -383,6 +383,15 @@
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
                 android:textColor="@android:color/white" />
+
+                </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/professionGroup2"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <RadioButton
                 android:layout_width="wrap_content"
