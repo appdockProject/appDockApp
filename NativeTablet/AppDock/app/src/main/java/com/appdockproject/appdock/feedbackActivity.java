@@ -1,5 +1,7 @@
 package com.appdockproject.appdock;
 
+import android.*;
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -42,6 +44,7 @@ public class feedbackActivity extends AppCompatActivity {
     private double locationLatitude = 0.0;
     private double locationLongitude = 0.0;
     private String gpsData = "";
+    private String latit, longit;
 
 
     @Override
@@ -206,7 +209,7 @@ public class feedbackActivity extends AppCompatActivity {
                 }
 
                 if ((ageGroup.getCheckedRadioButtonId() != -1) && (genderGroup.getCheckedRadioButtonId() != -1) && (eduGroup.getCheckedRadioButtonId() != -1) && (professionGroup.getCheckedRadioButtonId() != -1 || professionGroup2.getCheckedRadioButtonId() != -1) && (phoneGroup.getCheckedRadioButtonId() != -1) && (timeGroup.getCheckedRadioButtonId() != -1) && (ratingGroup.getCheckedRadioButtonId() != -1) && (useGroup.getCheckedRadioButtonId() != -1)) {
-                    addData(ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString);
+                    addData(ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString, latit, longit);
 
                     //Send user to facebook page to take a picture?
                     Intent intent = new Intent(feedbackActivity.this, facebookActivity.class);
@@ -224,8 +227,8 @@ public class feedbackActivity extends AppCompatActivity {
             }
         });
 
-        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
-            ActivityCompat.requestPermissions( this, new String[] {  android.Manifest.permission.ACCESS_COARSE_LOCATION  },
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
+            ActivityCompat.requestPermissions( this, new String[] {  Manifest.permission.ACCESS_FINE_LOCATION  },
                     1);
         }
 
@@ -236,7 +239,8 @@ public class feedbackActivity extends AppCompatActivity {
                 // Called when a new location is found by the network location provider.
                 locationLatitude = location.getLatitude();
                 locationLongitude = location.getLongitude();
-                gpsData = location.toString();
+                latit = Double.toString(locationLatitude);
+                longit = Double.toString(locationLongitude);
             }
 
             public void onStatusChanged(String provider, int status, Bundle extras) {}
@@ -246,12 +250,12 @@ public class feedbackActivity extends AppCompatActivity {
             public void onProviderDisabled(String provider) {}
         };
 
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0 ,locationListener);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5 ,locationListener);
 
     }
 
 
-    private void addData(String age, String gender, String edu, String profession, String phone, String time, String rating, String use){
+    private void addData(String age, String gender, String edu, String profession, String phone, String time, String rating, String use, String lat, String longit){
         Answer a = new Answer();
         a.setAge(age);
         a.setGender(gender);
@@ -261,6 +265,7 @@ public class feedbackActivity extends AppCompatActivity {
         a.setTime(time);
         a.setRating(rating);
         a.setUse(use);
+        a.setLocation(lat, longit);
 
         myRef.child("Answer").push().setValue(a);
     }

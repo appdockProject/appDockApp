@@ -14,6 +14,7 @@ public class Answer {
     private String time;
     private String rating;
     private String use;
+    private String latitude, longitude;
 
     public Answer(){
 
@@ -43,6 +44,8 @@ public class Answer {
     public void setRating(String rating) {this.rating = rating; }
 
     public void setUse(String use) {this.use = use; }
+
+    public void setLocation(String latitude, String longitude) {this.latitude = latitude; this.longitude = longitude; }
 
 
 //Getters
@@ -75,4 +78,6 @@ public class Answer {
     public String getUse(){
         return use;
     }
+
+    public String getLocation() {return "Latitude: " + latitude + " Longitude: " + longitude;}
 }
