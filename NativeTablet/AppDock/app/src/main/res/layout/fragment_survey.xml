@@ -326,19 +326,18 @@
 
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="1"
         android:layout_gravity="center_horizontal"
         android:gravity="center" >
 
-        <RadioGroup
+        <LinearLayout
             android:id="@+id/professionGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="6">
+            android:weightSum="7">
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -386,6 +385,15 @@
                 android:paddingRight="2dp"
                 android:textColor="@android:color/white" />
 
+
+</LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" >
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
