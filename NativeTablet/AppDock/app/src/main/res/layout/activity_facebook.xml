@@ -88,7 +88,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="52dp">
+            android:layout_height="65dp">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -98,19 +98,16 @@
 
                 <TextView
                     android:id="@+id/textView5"
-                    android:layout_width="477dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="0dp"
+                    android:layout_marginEnd="0dp"
                     android:paddingTop="5dp"
-                    android:text="Partagez Une Photo Sur Facebook"
+                    android:text="@string/facebookTitle"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_weight="0.87" />
+                    android:layout_weight="1.1" />
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -121,13 +118,11 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:id="@+id/imageButton3"
                         android:src="@drawable/wolof"
-                        android:layout_marginLeft="0dp"
-                        android:background="@color/colorLightColor"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_weight="1.75" />
+                        android:layout_marginStart="0dp"
+                        android:background="@color/colorLightColor" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -149,21 +144,24 @@
                 android:layout_centerHorizontal="true"/>
 
             <Button
-                android:text="@string/take_a_photo"
-                android:layout_below="@id/imFacebookphoto"
-                android:layout_alignStart="@id/imFacebookphoto"
+                android:text="@string/upload_to_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bShareToFacebook"
+                android:textAllCaps="false"
+                android:onClick="shareToFacebook"
+                android:layout_below="@+id/imFacebookphoto"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:text="@string/facebook_take_a_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/bTakePhoto"
-                android:onClick="takePicture"/>
-            <Button
-                android:text="@string/upload_to_facebook"
-                android:layout_below="@id/imFacebookphoto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@id/imFacebookphoto"
-                android:id="@+id/bShareToFacebook"
-                android:onClick="shareToFacebook"/>
+                android:textAllCaps="false"
+                android:onClick="takePicture"
+                android:layout_below="@+id/imFacebookphoto"
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
 
