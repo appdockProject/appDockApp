@@ -2,14 +2,23 @@ package com.appdockproject.appdock;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appdockproject.appdock.Data.Answer;
@@ -28,7 +37,9 @@ public class feedbackActivity extends AppCompatActivity {
 
     String ageString, professionString, questionString, timeString;
 
-
+    private double locationLatitude = 0.0;
+    private double locationLongitude = 0.0;
+    private String gpsData = "";
 
 
     @Override
@@ -138,7 +149,33 @@ public class feedbackActivity extends AppCompatActivity {
                     toast.show();
                 }
             }
-        });}
+        });
+
+        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
+            ActivityCompat.requestPermissions( this, new String[] {  android.Manifest.permission.ACCESS_COARSE_LOCATION  },
+                    1);
+        }
+
+        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        LocationListener locationListener = new LocationListener() {
+            public void onLocationChanged(Location location) {
+                // Called when a new location is found by the network location provider.
+                locationLatitude = location.getLatitude();
+                locationLongitude = location.getLongitude();
+                gpsData = location.toString();
+            }
+
+            public void onStatusChanged(String provider, int status, Bundle extras) {}
+
+            public void onProviderEnabled(String provider) {}
+
+            public void onProviderDisabled(String provider) {}
+        };
+
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0 ,locationListener);
+
+    }
 
 
     private void addData(String age, String profession, String question, String time){
@@ -150,6 +187,8 @@ public class feedbackActivity extends AppCompatActivity {
 
         myRef.child("Answer").push().setValue(a);
     }
+
+
 }
 
 
