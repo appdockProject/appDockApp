@@ -1,76 +1,62 @@
 package com.appdockproject.appdock;
 
 import android.Manifest;
-import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Environment;
-import android.provider.ContactsContract;
-import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
-import com.facebook.FacebookActivity;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
 import com.facebook.appevents.AppEventsLogger;
-import com.facebook.share.model.ShareHashtag;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
-import com.facebook.share.widget.ShareButton;
 import com.facebook.share.widget.ShareDialog;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.karumi.dexter.listener.single.PermissionListener;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import static android.os.Build.VERSION_CODES.M;
-
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static com.appdockproject.appdock.R.drawable.e;
+import static com.appdockproject.appdock.R.drawable.i;
 
 public class facebookActivity extends AppCompatActivity {
 
     private static final int CONTENT_REQUEST = 1337;
     private final String TAG = "fbPhotoActivity";
-    private File output = null;
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
     private ImageView imPreview;
     private String mCurrentPhotoPath = "";
     private AccessToken accessToken;
-
-    CallbackManager callbackManager;
-    ShareDialog shareDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,17 +124,14 @@ public class facebookActivity extends AppCompatActivity {
                 Dexter.checkPermissions(new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
-                        if(report.areAllPermissionsGranted()){
+                        if (report.areAllPermissionsGranted()) {
                             Log.i(TAG, "Storage and camera permission granted");
-                            try {
-                                takePicture();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        } else if (report.isAnyPermissionPermanentlyDenied()){
+
+                            takePicture();
+
+                        } else if (report.isAnyPermissionPermanentlyDenied()) {
                             Log.e(TAG, "Permissions permanently denied!");
-                        } else
-                        {
+                        } else {
                             Toast.makeText(facebookActivity.this,
                                     "You need to activate permissions!", Toast.LENGTH_SHORT).show();
                         }
@@ -169,34 +152,38 @@ public class facebookActivity extends AppCompatActivity {
                     Toast.makeText(facebookActivity.this,
                             getResources().getString(R.string.facebook_no_photo),
                             Toast.LENGTH_SHORT).show();
+                    Log.i(TAG, "No photo taken");
                     return;
                 }
 
                 Log.i(TAG, "Checking for internet permission.");
                 Dexter.checkPermissions(new MultiplePermissionsListener() {
-                    @Override public void onPermissionsChecked(MultiplePermissionsReport report) {
-                        if(report.areAllPermissionsGranted()){
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport report) {
+                        if (report.areAllPermissionsGranted()) {
                             Log.i(TAG, "Internet permission granted");
-                            try {
-                                shareToFacebook();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        } else if (report.isAnyPermissionPermanentlyDenied()){
+
+                            shareToFacebook();
+
+                        } else if (report.isAnyPermissionPermanentlyDenied()) {
                             Log.e(TAG, "Permissions permanently denied!");
-                        } else
-                         {
+                        } else {
                             Toast.makeText(facebookActivity.this,
                                     "You need to activate permissions!", Toast.LENGTH_SHORT).show();
                         }
                     }
-                    @Override public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {token.continuePermissionRequest();}
+
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
                 }, Manifest.permission.INTERNET, Manifest.permission.READ_EXTERNAL_STORAGE);
             }
         });
     }
 
-    public void takePicture() throws IOException {
+
+    public void takePicture() {
 
         //access camera, tell where to save
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -206,7 +193,7 @@ public class facebookActivity extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String picName = "APPDOCK_" + timeStamp + ".jpg";
 
-        output = new File(dir, picName);
+        File output = new File(dir, picName);
 
         mCurrentPhotoPath = output.getAbsolutePath();
 
@@ -226,7 +213,103 @@ public class facebookActivity extends AppCompatActivity {
         }
     }
 
-    public void shareToFacebook() throws IOException {
+    public void testFace(View v) {
+
+        Log.i(TAG, "Making API call ");
+
+        GraphRequest request = GraphRequest.newGraphPathRequest(
+                AccessToken.getCurrentAccessToken(),
+                "/633842056719432",
+                new GraphRequest.Callback() {
+                    @Override
+                    public void onCompleted(GraphResponse response) {
+                        // Insert your code here
+                        Log.i(TAG, "Got response: " + response.toString());
+
+                        boolean canPost = false;
+
+                        if (response.getJSONObject().has("can_post")) {
+                            try {
+                                canPost = response.getJSONObject().getBoolean("can_post");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        Log.i(TAG, "Can post: " + canPost);
+
+                        if (canPost)
+                            postToFace(null);
+
+                    }
+                });
+
+        Bundle parameters = new Bundle();
+        parameters.putString("access_token", getResources().getString(R.string.facebook_access_token));
+        parameters.putString("fields", "about,can_post");
+        request.setParameters(parameters);
+        request.executeAsync();
+
+    }
+
+    private void postToFace(byte[] image) {
+        Log.i(TAG, "Starting to post to Page. ");
+
+        String path;
+        if (image == null)
+            path = "feed";
+        else
+            path = "photos";
+
+        JSONObject obj;
+
+        try {
+            obj = new JSONObject("{\"message\":\"" + getResources().getString(R.string.facebook_sample_text) + "\"}");
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e(TAG, e.toString());
+            return;
+        }
+
+        GraphRequest request = GraphRequest.newPostRequest(
+                accessToken,
+                "/633842056719432/" + path,
+                obj,
+                new GraphRequest.Callback() {
+                    @Override
+                    public void onCompleted(GraphResponse response) {
+                        // Insert your code here
+                        Log.i(TAG, "Got response: " + response);
+
+                        String txt;
+
+                        try {
+                            if (response.getConnection().getResponseCode() == 200)
+                                txt = getResources().getString(R.string.facebook_upload_success);
+                            else
+                                txt = getResources().getString(R.string.facebook_upload_failure);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Log.e(TAG, e.toString());
+                            txt = "Something went wrong..";
+                        }
+
+                        Log.i(TAG, txt);
+                        Toast.makeText(facebookActivity.this, txt, Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+        Bundle parameters = new Bundle();
+        parameters.putString("access_token", getResources().getString(R.string.facebook_access_token));
+
+        if (image != null)
+            parameters.putByteArray("picture", image);
+
+        request.setParameters(parameters);
+        request.executeAsync();
+    }
+
+    public void shareToFacebook() {
 
         Bitmap image;
         try {
@@ -236,19 +319,26 @@ public class facebookActivity extends AppCompatActivity {
             return;
         }
 
-        Log.i(TAG, "Bitmap set");
-        SharePhoto photo = new SharePhoto.Builder()
-                .setBitmap(image)
-                .setCaption("Loving the Appdock from Pace University!")
-                .build();
+//        Log.i(TAG, "Bitmap set");
+//        SharePhoto photo = new SharePhoto.Builder()
+//                .setBitmap(image)
+//                .setCaption("Loving the Appdock from Pace University!")
+//                .build();
+//
+//        Log.i(TAG, "Sharephoto set");
+//        SharePhotoContent content = new SharePhotoContent.Builder()
+//                .addPhoto(photo)
+//                .build();
+//
+//        Log.i(TAG, "Showing sharedialog");
+//        shareDialog.show(content);
 
-        Log.i(TAG, "Sharephoto set");
-        SharePhotoContent content = new SharePhotoContent.Builder()
-                .addPhoto(photo)
-                .build();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        image.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] b = baos.toByteArray();
 
-        Log.i(TAG, "Showing sharedialog");
-        shareDialog.show(content);
+        Log.i(TAG, "Image converted to byteArray");
+        postToFace(b);
 
     }
 

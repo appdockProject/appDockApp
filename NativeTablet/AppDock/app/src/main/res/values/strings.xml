@@ -164,9 +164,11 @@
     <!-- Facebook Activity -->
     <string name="facebookTitle">Partagez votre expérience avec AppDock en photo sur Facebook</string>
     <string name="facebook_app_id">165226117264719</string>
+    <string name="facebook_access_token">EAACWRbQG9U8BAIc2Ad1er5P4300kada4z95r4RMtQNkn70TVZBgVT70m7vIjivvZBRT7rgzQYmZCXlPMKqGu5ZB35yW4IDk36SVcgOF3O6yBuMAbfCklWWUwQmBSO4QZAYyfRdeVVpwITZBZBN1GTX8ffgHjMYCNnP1UZAaWaUXfkgZDZD</string>
     <string name="facebook_take_a_photo">Prenez Une Photo</string>
     <string name="upload_to_facebook">Partagez sur Facebook</string>
     <string name="facebook_no_photo">Vous devez prendre une photo d\'abord!</string>
     <string name="facebook_sample_text">J\'ai visité #appdock #senegal, un espace d\'interaction entre développeurs et utilisateurs d\'#applis #mobile</string>
-
+    <string name="facebook_upload_success">French: Upload success!</string>
+    <string name="facebook_upload_failure">French: Upload failed..</string>
 </resources>
