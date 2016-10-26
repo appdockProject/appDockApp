@@ -1,6 +1,7 @@
 package com.appdockproject.appdock;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
@@ -47,6 +49,7 @@ import java.util.List;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 import static com.appdockproject.appdock.R.drawable.e;
 import static com.appdockproject.appdock.R.drawable.i;
+import static com.appdockproject.appdock.R.id.bShareToFacebook;
 
 public class facebookActivity extends AppCompatActivity {
 
@@ -57,6 +60,7 @@ public class facebookActivity extends AppCompatActivity {
     private ImageView imPreview;
     private String mCurrentPhotoPath = "";
     private AccessToken accessToken;
+    Button bShareToFacebook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,17 +148,10 @@ public class facebookActivity extends AppCompatActivity {
                 }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE);
             }
         });
-        Button bShareToFacebook = (Button) findViewById(R.id.bShareToFacebook);
+        bShareToFacebook = (Button) findViewById(R.id.bShareToFacebook);
         bShareToFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mCurrentPhotoPath.equals("")) {
-                    Toast.makeText(facebookActivity.this,
-                            getResources().getString(R.string.facebook_no_photo),
-                            Toast.LENGTH_SHORT).show();
-                    Log.i(TAG, "No photo taken");
-                    return;
-                }
 
                 Log.i(TAG, "Checking for internet permission.");
                 Dexter.checkPermissions(new MultiplePermissionsListener() {
@@ -232,6 +229,7 @@ public class facebookActivity extends AppCompatActivity {
                             try {
                                 canPost = response.getJSONObject().getBoolean("can_post");
                             } catch (JSONException e) {
+                                Log.e(TAG, e.toString());
                                 e.printStackTrace();
                             }
                         }
@@ -297,6 +295,9 @@ public class facebookActivity extends AppCompatActivity {
                         Log.i(TAG, txt);
                         Toast.makeText(facebookActivity.this, txt, Toast.LENGTH_SHORT).show();
 
+                        //Enable button after getting results
+                        bShareToFacebook.setEnabled(true);
+
                     }
                 });
         Bundle parameters = new Bundle();
@@ -311,34 +312,56 @@ public class facebookActivity extends AppCompatActivity {
 
     public void shareToFacebook() {
 
-        Bitmap image;
-        try {
-            image = BitmapFactory.decodeFile(mCurrentPhotoPath);
-        } catch (Error e) {
-            Log.e(TAG, "Couldn't find image when sharing to facebook..");
+        if (mCurrentPhotoPath.equals("")) {
+            Toast.makeText(facebookActivity.this,
+                    getResources().getString(R.string.facebook_no_photo),
+                    Toast.LENGTH_SHORT).show();
+            Log.i(TAG, "No photo taken");
             return;
         }
 
-//        Log.i(TAG, "Bitmap set");
-//        SharePhoto photo = new SharePhoto.Builder()
-//                .setBitmap(image)
-//                .setCaption("Loving the Appdock from Pace University!")
-//                .build();
-//
-//        Log.i(TAG, "Sharephoto set");
-//        SharePhotoContent content = new SharePhotoContent.Builder()
-//                .addPhoto(photo)
-//                .build();
-//
-//        Log.i(TAG, "Showing sharedialog");
-//        shareDialog.show(content);
+        AlertDialog.Builder builder = new AlertDialog.Builder(facebookActivity.this);
+        builder.setTitle(getString(R.string.facebook_upload_to_facebook));
+        builder.setMessage(getString(R.string.facebook_upload_confirm_text));
 
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        image.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-        byte[] b = baos.toByteArray();
+        String positiveText = getString(R.string.yes);
+        builder.setPositiveButton(positiveText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // positive button logic
+                        Bitmap image;
+                        try {
+                            image = BitmapFactory.decodeFile(mCurrentPhotoPath);
+                        } catch (Error e) {
+                            Log.e(TAG, "Couldn't find image when sharing to facebook..");
+                            return;
+                        }
 
-        Log.i(TAG, "Image converted to byteArray");
-        postToFace(b);
+                        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                        image.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                        byte[] b = baos.toByteArray();
+
+                        Log.i(TAG, "Image converted to byteArray");
+                        postToFace(b);
+
+                        //Disable button while getting results
+                        bShareToFacebook.setEnabled(false);
+                    }
+                });
+
+        String negativeText = getString(R.string.cancel);
+        builder.setNegativeButton(negativeText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // negative button logic
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
+        // display dialog
+        dialog.show();
 
     }
 
