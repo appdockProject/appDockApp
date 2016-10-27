@@ -173,5 +173,6 @@
     <string name="facebook_sample_text">J\'ai visité #appdock #senegal, un espace d\'interaction entre développeurs et utilisateurs d\'#applis #mobile</string>
     <string name="facebook_upload_success">La photo a été téléchargée avec succès.</string>
     <string name="facebook_upload_failure">Un problème est survenu.</string>
+    <string name="facebook_no_internet">Pas de connexion Internet</string>
     <string name="facebook_upload_confirm_text">Votre photo va être publiée sur la page facebook d\'Appdock. Voulez-vous continuer?</string>
 </resources>

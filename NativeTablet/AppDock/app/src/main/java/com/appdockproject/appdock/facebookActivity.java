@@ -272,7 +272,6 @@ public class facebookActivity extends AppCompatActivity {
 
         try {
             obj = new JSONObject("{\"message\":\"" + getResources().getString(R.string.facebook_sample_text) + "\"}");
-            Log.i(TAG, "JSONObject posting to Facebook: \n" + obj.toString(1));
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e(TAG, e.toString());
@@ -290,6 +289,13 @@ public class facebookActivity extends AppCompatActivity {
                         Log.i(TAG, "Got response: " + response);
 
                         String txt;
+
+                        if (response.getError() != null )
+                            if (response.getError().getErrorCode() == -1){
+                                Toast.makeText(facebookActivity.this, R.string.facebook_no_internet, Toast.LENGTH_SHORT).show();
+                                bShareToFacebook.setEnabled(true);
+                                return;
+                        }
 
                         try {
                             if (response.getConnection().getResponseCode() == 200)
