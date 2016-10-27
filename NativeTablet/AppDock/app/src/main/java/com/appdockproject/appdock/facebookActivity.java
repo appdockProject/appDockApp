@@ -50,6 +50,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 import static com.appdockproject.appdock.R.drawable.e;
 import static com.appdockproject.appdock.R.drawable.i;
 import static com.appdockproject.appdock.R.id.bShareToFacebook;
+import static com.appdockproject.appdock.R.id.devBtn;
 
 public class facebookActivity extends AppCompatActivity {
 
@@ -59,8 +60,10 @@ public class facebookActivity extends AppCompatActivity {
     ShareDialog shareDialog;
     private ImageView imPreview;
     private String mCurrentPhotoPath = "";
+    boolean photoTaken;
     private AccessToken accessToken;
     Button bShareToFacebook;
+    File output;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +76,8 @@ public class facebookActivity extends AppCompatActivity {
             int UI_OPTIONS = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
+
+        photoTaken = false;
 
         Button devBtn = (Button) findViewById(R.id.devBtn);
         Button eduBtn = (Button) findViewById(R.id.eduBtn);
@@ -190,7 +195,7 @@ public class facebookActivity extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String picName = "APPDOCK_" + timeStamp + ".jpg";
 
-        File output = new File(dir, picName);
+        output = new File(dir, picName);
 
         mCurrentPhotoPath = output.getAbsolutePath();
 
@@ -205,8 +210,11 @@ public class facebookActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
 
                 Log.i(TAG, "Got photo in OnActivityResult");
+                photoTaken = true;
                 setPic();
             }
+        } else{
+            Log.e(TAG, "Did not take photo. Requestcode: " + requestCode);
         }
     }
 
@@ -251,7 +259,6 @@ public class facebookActivity extends AppCompatActivity {
     }
 
     private void postToFace(byte[] image) {
-        Log.i(TAG, "Starting to post to Page. ");
 
         String path;
         if (image == null)
@@ -259,10 +266,13 @@ public class facebookActivity extends AppCompatActivity {
         else
             path = "photos";
 
+        Log.i(TAG, "Starting to post to Page/" + path);
+
         JSONObject obj;
 
         try {
             obj = new JSONObject("{\"message\":\"" + getResources().getString(R.string.facebook_sample_text) + "\"}");
+            Log.i(TAG, "JSONObject posting to Facebook: \n" + obj.toString(1));
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e(TAG, e.toString());
@@ -312,7 +322,7 @@ public class facebookActivity extends AppCompatActivity {
 
     public void shareToFacebook() {
 
-        if (mCurrentPhotoPath.equals("")) {
+        if (!photoTaken) {
             Toast.makeText(facebookActivity.this,
                     getResources().getString(R.string.facebook_no_photo),
                     Toast.LENGTH_SHORT).show();
