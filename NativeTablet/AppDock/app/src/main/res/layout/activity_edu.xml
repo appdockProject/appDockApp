@@ -87,52 +87,43 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
 
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginRight="0dp"
-                    android:paddingTop="5dp"
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
                     android:text="@string/eduTitle"
-                    android:textAlignment="textStart"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
 
                 <ImageButton
-                    android:id="@+id/wolofBtn"
+                    android:id="@+id/imageButton3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:paddingTop="5dp"
-                    android:layout_gravity="end"
-                    android:layout_marginLeft="0dp"
+                    android:layout_gravity="center_vertical"
                     android:background="@color/colorLightColor"
                     android:src="@drawable/wolof" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
-
-        </LinearLayout>
-
+        </RelativeLayout>
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -144,13 +135,11 @@
             android:rowCount="4">
 
 
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingEnd="100dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingEnd="100dp">
 
                 <ImageButton
                     android:id="@+id/gmail"
@@ -208,8 +197,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingEnd="100dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingEnd="100dp">
 
                 <ImageButton
                     android:id="@+id/play"
@@ -275,5 +264,6 @@
 
     </LinearLayout>
 
-
 </LinearLayout>
+
+

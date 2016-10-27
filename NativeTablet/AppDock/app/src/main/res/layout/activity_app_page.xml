@@ -18,54 +18,43 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:gravity="center"
-            android:layout_marginTop="0dp"
-            android:weightSum="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
 
-
-            <TextView
-                android:layout_width="521dp"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="5dp"
-                android:text="@string/appTitle"
-                android:id="@+id/title"
-                android:textStyle="bold"
-                android:layout_marginRight="0dp"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textAlignment="center" />
+                android:weightSum="3">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A propos d&apos;AppDock"
-                android:id="@+id/button"
-                android:background="@color/colorPrimaryDark"
-                android:textColor="@color/abc_primary_text_disable_only_material_dark"
-                android:layout_weight="0.15" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/wolofBtn"
-                android:src="@drawable/wolof"
-                android:layout_marginLeft="0dp"
-                android:background="@color/colorLightColor"/>
-
-            <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/scrollView2" />
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="@string/appTitle"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
 
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorLightColor"
+                    android:src="@drawable/wolof" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
 
         <GridLayout

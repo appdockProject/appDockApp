@@ -12,152 +12,146 @@
         android:orientation="vertical">
 
         <ImageButton
+            android:id="@+id/logo"
             android:layout_width="152dp"
             android:layout_height="150dp"
-            android:id="@+id/logo"
-            android:src="@drawable/logo"
+            android:layout_margin="10dp"
             android:layout_weight="2"
             android:background="@color/highlighted"
 
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="10dp" />
+            android:src="@drawable/logo"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/appTitleBtn"
             android:id="@+id/appBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog"
-            android:layout_margin="15dp"
+            android:clickable="true"
+            android:text="@string/appTitleBtn"
             android:textColor="@color/abc_primary_text_material_dark"
-            android:clickable="true" />
+            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/devTitleBtn"
             android:id="@+id/devBtn"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/eduTitleBtn"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/devTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+        <Button
             android:id="@+id/eduBtn"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/surveyTitleBtn"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/eduTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+        <Button
             android:id="@+id/comBtn"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/facebookTitleBtn"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/surveyTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+        <Button
             android:id="@+id/fbBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@color/highlighted"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
+            android:text="@string/facebookTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorLightColor"
-        android:weightSum="1">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="65dp">
+            android:layout_height="70dp">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:weightSum="1">
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:weightSum="3">
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="0dp"
-                    android:paddingTop="5dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
                     android:text="@string/facebookTitle"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_weight="1.01" />
+                    android:textStyle="bold" />
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="160dp"
-                    android:layout_height="match_parent"
-                    android:weightSum="1">
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:id="@+id/imageButton3"
-                        android:src="@drawable/wolof"
-                        android:layout_marginStart="0dp"
-                        android:background="@color/colorLightColor" />
-                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorLightColor"
+                    android:src="@drawable/wolof" />
 
             </LinearLayout>
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:padding="50dp"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="800dp">
+            android:layout_height="800dp"
+            android:orientation="vertical"
+            android:padding="50dp">
 
             <ImageView
+                android:id="@+id/imFacebookphoto"
                 android:layout_width="650dp"
                 android:layout_height="350dp"
-                android:id="@+id/imFacebookphoto"
-                android:background="@color/com_facebook_button_background_color_focused_disabled"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:background="@color/com_facebook_button_background_color_focused_disabled" />
 
             <Button
-                android:text="@string/facebook_upload_to_facebook"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/bShareToFacebook"
-                android:layout_below="@id/imFacebookphoto"
-                android:layout_alignParentEnd="true" />
-
-            <Button
-                android:text="@string/facebook_take_a_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/imFacebookphoto"
+                android:text="@string/facebook_upload_to_facebook" />
+
+            <Button
                 android:id="@+id/bTakePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/imFacebookphoto"
-                android:layout_alignParentStart="true" />
+                android:text="@string/facebook_take_a_photo" />
 
         </RelativeLayout>
 
