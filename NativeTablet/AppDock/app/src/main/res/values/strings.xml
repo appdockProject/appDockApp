@@ -3,8 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title">Découvrez des applications mobiles sénégalaises</string>
-    <string name="appTitle">Découvrez des applications mobiles sénégalaises</string>
+    <string name="title">Applications mobiles du Sénégal</string>
+    <string name="appTitle">Applications mobiles du Sénégal/string>
     <string name="and">Hello blank fragment</string>
     <string name="cross">Hello blank fragment</string>
     <string name="expat">Hello blank fragment</string>
@@ -23,8 +23,8 @@
 
     <!-- Get App Text -->
     <string name="getAppTitle">Obtenir l\'application </string>
-    <string name="viaWeb">Par lien : </string>
-    <string name="viaText">Par SMS : </string>
+    <string name="viaWeb">Par lien: </string>
+    <string name="viaText">Par SMS: </string>
     <string name="getPhoneNum">Votre numéro de téléphone</string>
     <string name="getPhoneNumBtn">Envoyer par SMS</string>
 
@@ -152,7 +152,7 @@
     <string name="devTitle">Développeurs du Sénégal</string>
 
     <!-- Education Activity -->
-    <string name="eduTitle">Education sur l’utilisation des téléphones</string>
+    <string name="eduTitle">Vidéos sur l’utilisation des téléphones</string>
 
     <string name="video1Title">Créer un compte Gmail</string>
     <string name="video2Title">Qu\'est-ce qu\'une application mobile?</string>
