@@ -49,9 +49,7 @@
     <string name="prof"> Profession </string>
     <string name="first">C\'est votre primer temps avec l\'AppDock? </string>
     <string name="time">Combien de temps avez-vous passé? </string>
-
-
-
+    <string name="survey_submit">Envoyer l\'Enquete</string>
 
     <!-- Featured Apps-->
 
