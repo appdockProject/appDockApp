@@ -25,6 +25,17 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/eduTitleBtn"
+            android:id="@+id/eduBtn"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton"
+            android:layout_margin="15dp"
+            android:textColor="@color/abc_primary_text_material_dark" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/appTitleBtn"
             android:id="@+id/appBtn"
             android:layout_weight="1"
@@ -39,17 +50,6 @@
             android:layout_height="wrap_content"
             android:text="@string/devTitleBtn"
             android:id="@+id/devBtn"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/eduTitleBtn"
-            android:id="@+id/eduBtn"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton"
