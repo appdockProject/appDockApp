@@ -10,6 +10,8 @@
 
     <!--button colors -->
     <color name="buttonText">#E8EAF6</color>
+    <color name="buttonNormal">#388E3C</color>
+    <color name="buttonHighlighted">#4CAF50</color>
 
     <!-- activity colors -->
     <color name="stringColorBlue">#3399CC</color>

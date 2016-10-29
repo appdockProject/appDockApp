@@ -8,8 +8,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class App9Activity extends AppCompatActivity {
+
+    EditText phoneNumInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +34,21 @@ public class App9Activity extends AppCompatActivity {
 
         //Activity Elements
         Button smsBtn = (Button) findViewById(R.id.getAppPhoneBtn);
-        EditText phoneNumInput = (EditText) findViewById(R.id.smsNumber);
-        String userSMSNum = phoneNumInput.getText().toString(); //user input number as a string
+        phoneNumInput = (EditText) findViewById(R.id.smsNumber);
 
         //get number by Text
         smsBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                //to send the text
+                String userSMSNum = phoneNumInput.getText().toString(); //user input number as a string
+
+                TwilioSMS ts = new TwilioSMS(App9Activity.this);
+
+                if (ts.verifyNumber(userSMSNum) &&
+                        ts.sendSMS(userSMSNum, getString(R.string.app9SMSLink)))
+
+                    Toast.makeText(App9Activity.this, getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(App9Activity.this, getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -53,6 +53,13 @@
 
     <!-- Featured Apps-->
 
+    <string name="twilio_account">ASDFASDFASDFASDF</string>
+    <string name="twilio_auth">AUTHCODE</string>
+    <string name="twilio_number">215214562456245</string>
+
+    <string name="twilio_Invalid_number">French: You need to input a valid phone number</string>
+    <string name="twilio_SMS_Sent">French: SMS sent successfully</string>
+
     <!-- APP 1 -->
     <string name="app1">Andando | Réseaux sociaux</string>
     <string name="app1Desc">Andando est une solution pour faciliter le covoiturage.

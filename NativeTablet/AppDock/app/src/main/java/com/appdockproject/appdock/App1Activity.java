@@ -8,8 +8,14 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import static com.appdockproject.appdock.R.drawable.i;
 
 public class App1Activity extends AppCompatActivity {
+
+    Button smsBtn;
+    EditText phoneNumInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,25 +35,36 @@ public class App1Activity extends AppCompatActivity {
         Button appBtn = (Button) findViewById(R.id.appBtn);
 
         //Activity Elements
-        Button smsBtn = (Button) findViewById(R.id.getAppPhoneBtn);
-        EditText phoneNumInput = (EditText) findViewById(R.id.smsNumber);
-        String userSMSNum = phoneNumInput.getText().toString(); //user input number as a string
+        smsBtn = (Button) findViewById(R.id.getAppPhoneBtn);
+        phoneNumInput = (EditText) findViewById(R.id.smsNumber);
 
         //get number by Text
-        smsBtn.setOnClickListener(new View.OnClickListener(){
+        smsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 //to send the text
+
+                String userSMSNum = phoneNumInput.getText().toString(); //user input number as a string
+
+                TwilioSMS ts = new TwilioSMS(App1Activity.this);
+
+                if (ts.verifyNumber(userSMSNum) &&
+                        ts.sendSMS(userSMSNum, getString(R.string.app1SMSLink)))
+
+                    Toast.makeText(App1Activity.this, getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(App1Activity.this, getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
+
             }
         });
 
-        appBtn.setOnClickListener(new View.OnClickListener(){
+        appBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App1Activity.this, appPage.class);
                 startActivity(intent);
             }
         });
 
-        devBtn.setOnClickListener(new View.OnClickListener(){
+        devBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App1Activity.this, devActivity.class);
                 startActivity(intent);
@@ -55,21 +72,21 @@ public class App1Activity extends AppCompatActivity {
         });
 
 
-        eduBtn.setOnClickListener(new View.OnClickListener(){
+        eduBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App1Activity.this, eduActivity.class);
                 startActivity(intent);
             }
         });
 
-        cmntBtn.setOnClickListener(new View.OnClickListener(){
+        cmntBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App1Activity.this, feedbackActivity.class);
                 startActivity(intent);
             }
         });
 
-        fbBtn.setOnClickListener(new View.OnClickListener(){
+        fbBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App1Activity.this, facebookActivity.class);
                 startActivity(intent);
