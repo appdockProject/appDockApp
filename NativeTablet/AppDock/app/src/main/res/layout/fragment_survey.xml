@@ -836,9 +836,8 @@
         android:id="@+id/submit"
         android:text="@string/survey_submit"
         android:layout_gravity="center"
-        android:background="@color/highlighted"
         android:layout_marginTop="25dp"
-        android:theme="@style/Base.Widget.AppCompat.ActionButton"
+        android:theme="@style/buttonStyle"
         />
 
 </LinearLayout>
