@@ -16,9 +16,9 @@
 
     <!-- Fragment Button Titles -->
     <string name="appTitleBtn">APPLICATIONS</string>
-    <string name="devTitleBtn">DÉVELOPPEURS</string>
-    <string name="eduTitleBtn">ÉDUCATION</string>
-    <string name="surveyTitleBtn">COMMENTAIRES</string>
+    <string name="devTitleBtn">DEVELOPPEURS</string>
+    <string name="eduTitleBtn">EDUCATION</string>
+    <string name="surveyTitleBtn">ENQUETE</string>
     <string name="facebookTitleBtn">FACEBOOK</string>
 
     <!-- Get App Text -->
@@ -44,7 +44,7 @@
 
 
     <!-- survey titles -->
-    <string name="survey">Laissez vos commentaires. Merci! </string>
+    <string name="survey">Enquête sur AppDock</string>
     <string name="age">Age </string>
     <string name="prof"> Profession </string>
     <string name="first">C\'est votre primer temps avec l\'AppDock? </string>
@@ -151,10 +151,10 @@
 
 
     <!-- Developer Activity -->
-    <string name="devTitle">Découvrez des développeuses et développeurs sénégalais</string>
+    <string name="devTitle">Développeurs du Sénégal</string>
 
     <!-- Education Activity -->
-    <string name="eduTitle">Comment télécharger et installer un application mobile</string>
+    <string name="eduTitle">Education sur l’utilisation des téléphones</string>
 
     <string name="video1Title">Créer un compte Gmail</string>
     <string name="video2Title">Qu\'est-ce qu\'une application mobile?</string>
@@ -164,7 +164,7 @@
     <!-- Facebook Activity -->
     <string name="yes">Oui</string>
     <string name="cancel">Annuler</string>
-    <string name="facebookTitle">Partagez votre expérience avec AppDock en photo sur Facebook</string>
+    <string name="facebookTitle">Partage d’expérience en photo</string>
     <string name="facebook_app_id">165226117264719</string>
     <string name="facebook_access_token">EAACWRbQG9U8BAIc2Ad1er5P4300kada4z95r4RMtQNkn70TVZBgVT70m7vIjivvZBRT7rgzQYmZCXlPMKqGu5ZB35yW4IDk36SVcgOF3O6yBuMAbfCklWWUwQmBSO4QZAYyfRdeVVpwITZBZBN1GTX8ffgHjMYCNnP1UZAaWaUXfkgZDZD</string>
     <string name="facebook_take_a_photo">Prenez Une Photo</string>
