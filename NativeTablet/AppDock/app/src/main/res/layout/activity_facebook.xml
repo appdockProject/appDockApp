@@ -141,6 +141,7 @@
                 android:id="@+id/bShareToFacebook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/imFacebookphoto"
                 android:text="@string/facebook_upload_to_facebook" />
@@ -149,6 +150,7 @@
                 android:id="@+id/bTakePhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/imFacebookphoto"
                 android:text="@string/facebook_take_a_photo" />
