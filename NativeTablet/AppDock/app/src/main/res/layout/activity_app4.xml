@@ -41,7 +41,7 @@
 
                 <ImageView android:layout_width="150dp"
                     android:layout_height="150dp"
-
+                    android:src="@drawable/dev4"
                     android:id="@+id/devLogo"
                     android:layout_weight="1" />
             </LinearLayout>
