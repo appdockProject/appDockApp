@@ -70,13 +70,13 @@ public class TwilioSMS {
             @Override
             public void onResponse(String response) {
                 Log.i(TAG, "Sent SMS!");
-                Toast.makeText(context, context.getString(R.string.twilio_SMS_Sent) + number, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.twilio_SMS_Sent) + " " + number, Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error code: " + error.networkResponse.statusCode);
-                Toast.makeText(context, context.getString(R.string.twilio_SMS_Error) + number, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.twilio_SMS_Error) + " " + number, Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
@@ -98,7 +98,7 @@ public class TwilioSMS {
         };
         queue.add(sr);
 
-        Toast.makeText(context, context.getString(R.string.twilio_SMS_Sending), Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, context.getString(R.string.twilio_SMS_Sending) + " " + number, Toast.LENGTH_SHORT).show();
 
         return true;
     }
