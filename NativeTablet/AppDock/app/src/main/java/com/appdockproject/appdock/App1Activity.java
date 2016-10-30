@@ -47,10 +47,18 @@ public class App1Activity extends AppCompatActivity {
 
                 TwilioSMS ts = new TwilioSMS(App1Activity.this);
 
+                if (!ts.isConnectedToInternet()){
+                    Toast.makeText(App1Activity.this, getString(R.string.facebook_no_internet), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (ts.verifyNumber(userSMSNum) &&
-                        ts.sendSMS(userSMSNum, getString(R.string.app1SMSLink)))
+                        ts.sendSMS(userSMSNum, getString(R.string.app1SMSLink))){
 
                     Toast.makeText(App1Activity.this, getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
+                    phoneNumInput.getText().clear();
+                }
+
                 else
                     Toast.makeText(App1Activity.this, getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
 

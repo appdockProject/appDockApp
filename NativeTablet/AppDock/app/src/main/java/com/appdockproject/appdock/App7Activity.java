@@ -43,10 +43,17 @@ public class App7Activity extends AppCompatActivity {
 
                 TwilioSMS ts = new TwilioSMS(App7Activity.this);
 
+                if (!ts.isConnectedToInternet()){
+                    Toast.makeText(App7Activity.this, getString(R.string.facebook_no_internet), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (ts.verifyNumber(userSMSNum) &&
-                        ts.sendSMS(userSMSNum, getString(R.string.app7SMSLink)))
+                        ts.sendSMS(userSMSNum, getString(R.string.app7SMSLink))) {
 
                     Toast.makeText(App7Activity.this, getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
+                    phoneNumInput.getText().clear();
+                }
                 else
                     Toast.makeText(App7Activity.this, getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
             }

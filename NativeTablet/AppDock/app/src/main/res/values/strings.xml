@@ -53,12 +53,12 @@
 
     <!-- Featured Apps-->
 
-    <string name="twilio_account">ASDFASDFASDFASDF</string>
-    <string name="twilio_auth">AUTHCODE</string>
-    <string name="twilio_number">215214562456245</string>
+    <string name="twilio_account">ACcadae614fef12e05937aae72cfa0f6e2</string>
+    <string name="twilio_auth">9290205651d3ee8eea99ae791c4c61a8</string>
+    <string name="twilio_number">+16465767590</string>
 
-    <string name="twilio_Invalid_number">French: You need to input a valid phone number</string>
-    <string name="twilio_SMS_Sent">French: SMS sent successfully</string>
+    <string name="twilio_Invalid_number">Entrer un numéro de téléphone valide</string>
+    <string name="twilio_SMS_Sent">SMS envoyé avec succès</string>
 
     <!-- APP 1 -->
     <string name="app1">Andando | Réseaux sociaux</string>

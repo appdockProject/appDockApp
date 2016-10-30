@@ -7,8 +7,11 @@ package com.appdockproject.appdock;
 // You may want to be more specific in your imports
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.util.Base64;
+import android.util.Log;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -25,25 +28,33 @@ import static android.Manifest.permission_group.SMS;
 
 public class TwilioSMS {
 
-    // Find your Account Sid and Auth Token at twilio.com/console
-    private static String ACCOUNT_SID = null;
-    private static String AUTH_TOKEN = null;
-    private static String PHONE_NUMBER = null;
-
     private Context context;
+    private final String TAG = "Twilio";
 
-    public TwilioSMS(Context context){
+    public TwilioSMS(Context context) {
 
-        ACCOUNT_SID = context.getResources().getString(R.string.twilio_account);
-        AUTH_TOKEN = context.getResources().getString(R.string.twilio_auth);
-        PHONE_NUMBER = context.getResources().getString(R.string.twilio_number);
         this.context = context;
 
     }
 
     public boolean sendSMS(final String number, final String text) {
-        if (ACCOUNT_SID == null || AUTH_TOKEN == null || PHONE_NUMBER == null)
+
+        if (!verifyNumber(number)) {
+            Log.e(TAG, "Phone number invalid format");
             return false;
+        } else if (!isConnectedToInternet()) {
+            Log.e(TAG, "Not Connected to internet");
+            return false;
+        }
+
+        String ACCOUNT_SID = context.getResources().getString(R.string.twilio_account);
+        String AUTH_TOKEN = context.getResources().getString(R.string.twilio_auth);
+        final String PHONE_NUMBER = context.getResources().getString(R.string.twilio_number);
+
+        Log.i(TAG, "SID: " + ACCOUNT_SID);
+        Log.i(TAG, "Auth: " + AUTH_TOKEN);
+        Log.i(TAG, "Number: " + PHONE_NUMBER);
+        Log.i(TAG, "Sending to: " + number);
 
         final String base64EncodedCredentials = "Basic "
                 + Base64.encodeToString(
@@ -51,20 +62,20 @@ public class TwilioSMS {
                 Base64.NO_WRAP);
 
         RequestQueue queue = Volley.newRequestQueue(context);
-        StringRequest sr = new StringRequest(Request.Method.POST,"https://api.twilio.com/2010-04-01/Accounts/"+ ACCOUNT_SID +"/SMS/Messages", new Response.Listener<String>() {
+        StringRequest sr = new StringRequest(Request.Method.POST, "https://api.twilio.com/2010-04-01/Accounts/" + ACCOUNT_SID + "/SMS/Messages", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                System.out.println("Sent SMS!");
+                Log.i(TAG, "Sent SMS!");
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Log.e(TAG, error.getLocalizedMessage());
             }
-        }){
+        }) {
             @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params = new HashMap<String, String>();
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
                 params.put("From", PHONE_NUMBER);
                 params.put("To", number);
                 params.put("Body", text);
@@ -74,7 +85,7 @@ public class TwilioSMS {
 
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String,String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<String, String>();
                 params.put("Authorization", base64EncodedCredentials);
                 return params;
             }
@@ -85,14 +96,25 @@ public class TwilioSMS {
     }
 
     // TODO: Improve phone-number verification
-    public boolean verifyNumber(String number){
+    public boolean verifyNumber(String number) {
 
         // Senegal phone number: +221 xxx xx
 
         if (number.contains("+221"))
             return number.length() == 11;
+        else if (number.contains("+1"))
+            return number.length() == 12;
 
         return number.length() == 7;
 
+    }
+
+    public boolean isConnectedToInternet(){
+        ConnectivityManager cm =
+                (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        return activeNetwork != null &&
+                activeNetwork.isConnectedOrConnecting();
     }
 }

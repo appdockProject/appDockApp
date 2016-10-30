@@ -36,29 +36,35 @@ public class App3Activity extends AppCompatActivity {
         phoneNumInput = (EditText) findViewById(R.id.smsNumber);
 
         //get number by Text
-        smsBtn.setOnClickListener(new View.OnClickListener(){
+        smsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 String userSMSNum = phoneNumInput.getText().toString(); //user input number as a string
 
                 TwilioSMS ts = new TwilioSMS(App3Activity.this);
 
+                if (!ts.isConnectedToInternet()){
+                    Toast.makeText(App3Activity.this, getString(R.string.facebook_no_internet), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (ts.verifyNumber(userSMSNum) &&
-                        ts.sendSMS(userSMSNum, getString(R.string.app3SMSLink)))
+                        ts.sendSMS(userSMSNum, getString(R.string.app3SMSLink))) {
 
                     Toast.makeText(App3Activity.this, getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
-                else
+                    phoneNumInput.getText().clear();
+                } else
                     Toast.makeText(App3Activity.this, getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
             }
         });
 
-        appBtn.setOnClickListener(new View.OnClickListener(){
+        appBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App3Activity.this, appPage.class);
                 startActivity(intent);
             }
         });
 
-        devBtn.setOnClickListener(new View.OnClickListener(){
+        devBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App3Activity.this, devActivity.class);
                 startActivity(intent);
@@ -66,21 +72,21 @@ public class App3Activity extends AppCompatActivity {
         });
 
 
-        eduBtn.setOnClickListener(new View.OnClickListener(){
+        eduBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App3Activity.this, eduActivity.class);
                 startActivity(intent);
             }
         });
 
-        cmntBtn.setOnClickListener(new View.OnClickListener(){
+        cmntBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App3Activity.this, feedbackActivity.class);
                 startActivity(intent);
             }
         });
 
-        fbBtn.setOnClickListener(new View.OnClickListener(){
+        fbBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(App3Activity.this, facebookActivity.class);
                 startActivity(intent);
