@@ -44,20 +44,16 @@ public class TwilioSMS {
             Log.e(TAG, "Not Connected to internet");
             Toast.makeText(context, context.getString(R.string.facebook_no_internet), Toast.LENGTH_SHORT).show();
             return false;
-        } else if (!verifyNumber(number)) {
+        } else if (!verifyNumber(formatPhoneNumber(number))) {
             Log.e(TAG, "Phone number invalid format");
             Toast.makeText(context, context.getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
             return false;
         }
 
-        if (number.length() == 7)
-            number = "+221" + number;
-
         String ACCOUNT_SID = context.getResources().getString(R.string.twilio_account);
         String AUTH_TOKEN = context.getResources().getString(R.string.twilio_auth);
         final String PHONE_NUMBER = context.getResources().getString(R.string.twilio_number);
-        final String NUMBER_TO = number;
-
+        final String NUMBER_TO = formatPhoneNumber(number);
 
         Log.i(TAG, "SID: " + ACCOUNT_SID);
         Log.i(TAG, "Auth: " + AUTH_TOKEN);
@@ -119,6 +115,16 @@ public class TwilioSMS {
 
         return number.length() == 7;
 
+    }
+
+    private String formatPhoneNumber(String number){
+
+        if (number.contains("+1"))
+            return number.trim();
+        else if (!number.contains("+211"))
+            return "+221" + number.trim();
+
+        return number.trim();
     }
 
     boolean isConnectedToInternet(){
