@@ -38,7 +38,7 @@ public class TwilioSMS {
 
     }
 
-    public boolean sendSMS(String number, final String text) {
+    public boolean sendSMS(final String number, final String text) {
 
         if (!isConnectedToInternet()) {
             Log.e(TAG, "Not Connected to internet");
@@ -70,13 +70,13 @@ public class TwilioSMS {
             @Override
             public void onResponse(String response) {
                 Log.i(TAG, "Sent SMS!");
-                Toast.makeText(context, context.getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.twilio_SMS_Sent) + number, Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error code: " + error.networkResponse.statusCode);
-                Toast.makeText(context, context.getString(R.string.twilio_SMS_Error), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.twilio_SMS_Error) + number, Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
