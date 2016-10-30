@@ -109,11 +109,11 @@ public class TwilioSMS {
         // Senegal phone number: +221 xxx xxxx
 
         if (number.contains("+221"))
-            return number.length() == 11;
+            return number.length() == 13;
         else if (number.contains("+1"))
             return number.length() == 12;
 
-        return number.length() == 7;
+        return number.length() == 9;
 
     }
 
