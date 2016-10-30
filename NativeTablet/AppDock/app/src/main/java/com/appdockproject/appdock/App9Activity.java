@@ -43,19 +43,8 @@ public class App9Activity extends AppCompatActivity {
 
                 TwilioSMS ts = new TwilioSMS(App9Activity.this);
 
-                if (!ts.isConnectedToInternet()){
-                    Toast.makeText(App9Activity.this, getString(R.string.facebook_no_internet), Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                if (ts.verifyNumber(userSMSNum) &&
-                        ts.sendSMS(userSMSNum, getString(R.string.app9SMSLink))) {
-
-                    Toast.makeText(App9Activity.this, getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
+                if (ts.sendSMS(userSMSNum, getString(R.string.app9SMSLink)))
                     phoneNumInput.getText().clear();
-                }
-                else
-                    Toast.makeText(App9Activity.this, getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
             }
         });
 

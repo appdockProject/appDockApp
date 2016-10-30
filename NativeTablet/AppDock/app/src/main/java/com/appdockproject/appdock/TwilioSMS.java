@@ -12,6 +12,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.util.Base64;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -37,19 +38,26 @@ public class TwilioSMS {
 
     }
 
-    public boolean sendSMS(final String number, final String text) {
+    public boolean sendSMS(String number, final String text) {
 
-        if (!verifyNumber(number)) {
-            Log.e(TAG, "Phone number invalid format");
-            return false;
-        } else if (!isConnectedToInternet()) {
+        if (!isConnectedToInternet()) {
             Log.e(TAG, "Not Connected to internet");
+            Toast.makeText(context, context.getString(R.string.facebook_no_internet), Toast.LENGTH_SHORT).show();
+            return false;
+        } else if (!verifyNumber(number)) {
+            Log.e(TAG, "Phone number invalid format");
+            Toast.makeText(context, context.getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
             return false;
         }
+
+        if (number.length() == 7)
+            number = "+221" + number;
 
         String ACCOUNT_SID = context.getResources().getString(R.string.twilio_account);
         String AUTH_TOKEN = context.getResources().getString(R.string.twilio_auth);
         final String PHONE_NUMBER = context.getResources().getString(R.string.twilio_number);
+        final String NUMBER_TO = number;
+
 
         Log.i(TAG, "SID: " + ACCOUNT_SID);
         Log.i(TAG, "Auth: " + AUTH_TOKEN);
@@ -66,18 +74,20 @@ public class TwilioSMS {
             @Override
             public void onResponse(String response) {
                 Log.i(TAG, "Sent SMS!");
+                Toast.makeText(context, context.getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, error.getLocalizedMessage());
+                Log.e(TAG, "Error code: " + error.networkResponse.statusCode);
+                Toast.makeText(context, context.getString(R.string.twilio_SMS_Error), Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("From", PHONE_NUMBER);
-                params.put("To", number);
+                params.put("To", NUMBER_TO);
                 params.put("Body", text);
 
                 return params;
@@ -92,13 +102,15 @@ public class TwilioSMS {
         };
         queue.add(sr);
 
+        Toast.makeText(context, context.getString(R.string.twilio_SMS_Sending), Toast.LENGTH_SHORT).show();
+
         return true;
     }
 
     // TODO: Improve phone-number verification
-    public boolean verifyNumber(String number) {
+    boolean verifyNumber(String number) {
 
-        // Senegal phone number: +221 xxx xx
+        // Senegal phone number: +221 xxx xxxx
 
         if (number.contains("+221"))
             return number.length() == 11;
@@ -109,7 +121,7 @@ public class TwilioSMS {
 
     }
 
-    public boolean isConnectedToInternet(){
+    boolean isConnectedToInternet(){
         ConnectivityManager cm =
                 (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
 

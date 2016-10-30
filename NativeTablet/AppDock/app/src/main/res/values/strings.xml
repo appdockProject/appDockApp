@@ -59,6 +59,8 @@
 
     <string name="twilio_Invalid_number">Entrer un numéro de téléphone valide</string>
     <string name="twilio_SMS_Sent">SMS envoyé avec succès</string>
+    <string name="twilio_SMS_Sending">FRENCH: Sending sms</string>
+    <string name="twilio_SMS_Error">FRENCH: Error sending sms</string>
 
     <!-- APP 1 -->
     <string name="app1">Andando | Réseaux sociaux</string>
