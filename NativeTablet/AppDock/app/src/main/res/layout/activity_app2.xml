@@ -111,7 +111,7 @@
                     android:textStyle="bold"
                     android:layout_below="@+id/parSms"
                     android:layout_alignParentEnd="true"
-                    android:background="@drawable/border"
+
                     android:layout_centerVertical="true"
                     android:inputType="phone"
                     android:layout_alignParentStart="true"
@@ -131,14 +131,15 @@
                 <Button
                     android:text="@string/getPhoneNumBtn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="55dp"
                     android:layout_marginTop="19dp"
                     android:id="@+id/getAppPhoneBtn"
                     android:layout_below="@+id/smsNumber"
                     android:layout_alignParentEnd="true"
                     android:textColor="#fff"
                     android:background="@color/colorPrimaryDark"
-                    android:theme="@style/Base.Widget.AppCompat.ActionButton"/>
+                    android:theme="@style/Base.Widget.AppCompat.ActionButton"
+                    android:layout_alignParentStart="true" />
 
                 <TextView
                     android:layout_width="match_parent"
