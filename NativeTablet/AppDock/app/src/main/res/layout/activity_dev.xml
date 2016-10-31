@@ -198,29 +198,6 @@
                             android:layout_alignEnd="@+id/dev1"
                             android:layout_below="@+id/dev1" />
 
-                        <TextView
-                            android:text="@string/dev1desc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/dev1Text"
-                            android:id="@+id/dev1desc"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="13dp"
-                            android:textAlignment="viewStart"
-                            android:layout_alignStart="@+id/dev1Text" />
-
-                        <TextView
-                            android:text="@string/dev2desc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/dev2Text"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="13dp"
-                            android:layout_alignStart="@+id/dev2Text"
-                            android:id="@+id/dev2desc" />
-
                         <ImageButton
                             android:id="@+id/dev2"
                             android:src="@drawable/dev2"

@@ -30,7 +30,7 @@
 
 
     <!-- Featured Developers -->
-    <string name="dev1">Moussa Diallo,  Hamid Mahamat Abdoulaye et Pape Modou Gane Ndiaye</string>
+    <string name="dev1">Moussa Diallo\nHamid Mahamat Abdoulaye\nPape Modou Gane Ndiaye</string>
     <string name="dev1desc">Développeur d’Andando</string>
     <string name="dev1bio">Developer01 Bio</string>
 
@@ -38,9 +38,13 @@
     <string name="dev2desc">Développeur de Cross Dakar City</string>
     <string name="dev2bio">Developer02 Bio</string>
 
-    <string name="dev3">Developer Name</string>
-    <string name="dev3desc"></string>
+    <string name="dev3">Assane Mbengue</string>
+    <string name="dev3desc">Sakanal</string>
     <string name="dev3bio">Developer03 Bio</string>
+
+    <string name="dev4">Amadou Sall\nSeydina Hane</string>
+    <string name="dev4desc">Talibi</string>
+    <string name="dev4bio">Developer04 Bio</string>
 
 
     <!-- survey titles -->
