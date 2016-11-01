@@ -224,7 +224,7 @@ public class facebookActivity extends AppCompatActivity {
 
         GraphRequest request = GraphRequest.newGraphPathRequest(
                 AccessToken.getCurrentAccessToken(),
-                "/633842056719432",
+                getString(R.string.facebook_page_id),
                 new GraphRequest.Callback() {
                     @Override
                     public void onCompleted(GraphResponse response) {
@@ -262,11 +262,11 @@ public class facebookActivity extends AppCompatActivity {
 
         String path;
         if (image == null)
-            path = "feed";
+            path = "/feed";
         else
-            path = "photos";
+            path = "/photos";
 
-        Log.i(TAG, "Starting to post to Page/" + path);
+        Log.i(TAG, "Starting to post to Page" + path);
 
         JSONObject obj;
 
@@ -280,7 +280,7 @@ public class facebookActivity extends AppCompatActivity {
 
         GraphRequest request = GraphRequest.newPostRequest(
                 accessToken,
-                "/633842056719432/" + path,
+                getString(R.string.facebook_page_id) + path,
                 obj,
                 new GraphRequest.Callback() {
                     @Override

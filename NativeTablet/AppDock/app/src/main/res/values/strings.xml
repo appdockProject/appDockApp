@@ -177,7 +177,9 @@
     <string name="cancel">Annuler</string>
     <string name="facebookTitle">Partage d’expérience en photo</string>
     <string name="facebook_app_id">165226117264719</string>
-    <string name="facebook_access_token">EAACWRbQG9U8BAIc2Ad1er5P4300kada4z95r4RMtQNkn70TVZBgVT70m7vIjivvZBRT7rgzQYmZCXlPMKqGu5ZB35yW4IDk36SVcgOF3O6yBuMAbfCklWWUwQmBSO4QZAYyfRdeVVpwITZBZBN1GTX8ffgHjMYCNnP1UZAaWaUXfkgZDZD</string>
+    <string name="facebook_page_id">931226710284728</string>
+    <string name="facebook_access_token">EAACWRbQG9U8BAPHKVMD6ciEVbBEfpYFK3nlpAVFFXJ9LZCzo9ZBa4NmGP53B6gKa0HW611d71bxOlYKA9C90zsIOuzAQGSzxI8fJ43l9TsXdbh5b16UPHSz3ZBe2dTwS4dyJBfNd8wbhFupWd9SLDUiSAureJLXykLZCkY0yEAZDZD</string>
+    <string name="facebook_access_token_old">EAACWRbQG9U8BAIc2Ad1er5P4300kada4z95r4RMtQNkn70TVZBgVT70m7vIjivvZBRT7rgzQYmZCXlPMKqGu5ZB35yW4IDk36SVcgOF3O6yBuMAbfCklWWUwQmBSO4QZAYyfRdeVVpwITZBZBN1GTX8ffgHjMYCNnP1UZAaWaUXfkgZDZD</string>
     <string name="facebook_take_a_photo">Prendre Une Photo</string>
     <string name="facebook_upload_to_facebook">Partager sur Facebook</string>
     <string name="facebook_no_photo">Vous devez prendre une photo d\'abord!</string>
