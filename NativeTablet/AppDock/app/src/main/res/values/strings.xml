@@ -64,7 +64,7 @@
     <string name="twilio_Invalid_number">Entrer un numéro de téléphone valide</string>
     <string name="twilio_SMS_Sent">SMS envoyé avec succès à : </string>
     <string name="twilio_SMS_Sending">Envoi du lien pour télécharger l\’application par SMS à : </string>
-    <string name="twilio_SMS_Error">Erreur d'envoi de SMS à : </string>
+    <string name="twilio_SMS_Error">Erreur d\'envoi de SMS à : </string>
 
     <!-- APP 1 -->
     <string name="app1">Andando | Réseaux sociaux</string>
