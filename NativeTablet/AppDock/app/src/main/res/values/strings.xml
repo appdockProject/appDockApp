@@ -67,7 +67,7 @@
     <string name="twilio_SMS_Error">Erreur d\'envoi de SMS à : </string>
 
     <!-- APP 1 -->
-    <string name="app1">Andando | Réseaux sociaux</string>
+    <string name="app1">Andando | Transport</string>
     <string name="app1Desc">Andando est une solution pour faciliter le covoiturage.
         Que l\’on soit passager ou conducteur, Andando est la solution économe et écolo
         à ses soucis de déplacements. Andando permet de transporter des personnes aussi
@@ -140,7 +140,7 @@
     <string name="app7SMSLink">http://bit.ly/apptalibi</string>
 
     <!-- APP 8 -->
-    <string name="app8">Teere | Éducation</string>
+    <string name="app8">Teere | Education</string>
     <string name="app8Desc">Teere propose aux utilisateurs d\’améliorer leurs connaissances
         sur l\’Afrique. On y trouve: des dictionnaires de langues africaines; des présentations
         de pays africains et de personnalités qui ont marqué le continent; des citations et
