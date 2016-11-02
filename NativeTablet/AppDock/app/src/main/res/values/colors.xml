@@ -6,6 +6,7 @@
     <color name="colorAccent">#c8e6c9</color>
     <color name="colorDividerColor">#b6b6b6</color>
     <color name="highlighted">#FFC107</color>
+    <color name="titles">@android:color/holo_orange_dark</color>
     <color name="text">#FFFFFF</color>
 
     <!--button colors -->

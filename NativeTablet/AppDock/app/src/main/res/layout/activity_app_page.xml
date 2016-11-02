@@ -39,7 +39,7 @@
                     android:layout_weight="3"
                     android:gravity="center_vertical"
                     android:text="@string/appTitle"
-                    android:textColor="@android:color/holo_orange_dark"
+                    android:textColor="@color/titles"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -91,7 +91,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@color/colorLightColor"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp" />
 
             <ImageButton
@@ -117,7 +117,7 @@
                 android:layout_column="1"
                 android:layout_gravity="fill_horizontal|center_horizontal"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp" />
 
             <ImageButton
@@ -142,7 +142,7 @@
                 android:layout_row="1"
                 android:layout_column="2"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp"
                 android:textAlignment="center"
                 android:layout_gravity="fill" />
@@ -168,7 +168,7 @@
                 android:layout_column="0"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp" />
 
             <ImageButton
@@ -194,7 +194,7 @@
                 android:layout_column="1"
                 android:layout_gravity="fill_horizontal|center_horizontal"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp"
                 android:textAlignment="center" />
 
@@ -220,7 +220,7 @@
                 android:layout_row="3"
                 android:layout_column="2"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal|right" />
@@ -246,7 +246,7 @@
                 android:layout_column="0"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp" />
 
             <ImageButton
@@ -272,7 +272,7 @@
                 android:layout_column="1"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp" />
 
             <ImageButton
@@ -297,7 +297,7 @@
                 android:layout_row="6"
                 android:layout_column="2"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_orange_dark"
+                android:textColor="@color/titles"
                 android:textSize="13dp"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal|right" />
