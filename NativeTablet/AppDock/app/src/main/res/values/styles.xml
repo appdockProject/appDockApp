@@ -9,12 +9,11 @@
 
     </style>
 
-    <style name="buttonStyle" parent="Theme.AppCompat.Light">
+    <style name="buttonStyle" parent="Widget.AppCompat.ActionButton">
 
         <item name="colorButtonNormal">@color/buttonNormal</item>
         <item name="colorControlHighlight">@color/buttonHighlighted</item>
         <item name="android:textColor">@color/buttonText</item>
-        <item name="android:height">40dp</item>
 
     </style>
 

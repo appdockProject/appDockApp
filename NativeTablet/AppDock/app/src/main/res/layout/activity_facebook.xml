@@ -28,10 +28,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:text="@string/eduTitleBtn"
-            android:textColor="@color/abc_primary_text_material_dark"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+            android:textColor="@color/buttonText"
+            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog" />
 
         <Button
             android:id="@+id/appBtn"
@@ -39,10 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:clickable="true"
             android:text="@string/appTitleBtn"
-            android:textColor="@color/abc_primary_text_material_dark"
+            android:textColor="@color/buttonText"
             android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog" />
 
         <Button
@@ -138,22 +138,29 @@
                 android:background="@color/com_facebook_button_background_color_focused_disabled" />
 
             <Button
-                android:id="@+id/bShareToFacebook"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@id/imFacebookphoto"
-                android:text="@string/facebook_upload_to_facebook"
-                android:theme="@style/buttonStyle" />
-
-            <Button
                 android:id="@+id/bTakePhoto"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/button_height"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/imFacebookphoto"
+                android:layout_marginTop="@dimen/button_padding_top"
+                android:background="@color/buttonNormal"
                 android:text="@string/facebook_take_a_photo"
-                android:theme="@style/buttonStyle" />
+                android:textColor="@color/buttonText"
+                android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+            <Button
+                android:id="@+id/bShareToFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/imFacebookphoto"
+                android:layout_marginTop="@dimen/button_padding_top"
+                android:background="@color/buttonNormal"
+                android:text="@string/facebook_upload_to_facebook"
+                android:textColor="@color/buttonText"
+                android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
 
         </RelativeLayout>
 

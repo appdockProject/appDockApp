@@ -3,844 +3,846 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="com.appdockproject.appdock.survey"
-    android:columnCount="7"
-    android:rowCount="11"
-    android:weightSum="1"
-    android:background="@color/colorAccent"
-    android:fillViewport="false"
-    android:textAlignment="center"
-    android:showDividers="end">
-
-    <TableRow
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/age"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center">
-
-
-        <RadioGroup android:id="@+id/ageGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="5">
-
-
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Moins de 12 ans"
-                android:buttonTint="@color/highlighted"
-                android:id="@+id/button3"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12-15 ans"
-                android:buttonTint="@color/highlighted"
-                android:id="@+id/button2"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15-18 ans"
-                android:buttonTint="@color/highlighted"
-                android:id="@+id/button4"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="18-25 ans"
-                android:id="@+id/button5"
-                android:buttonTint="@color/highlighted"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Plus de 40 ans"
-                android:id="@+id/button6"
-                android:buttonTint="@color/highlighted"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Genre"
-        android:id="@+id/genreText"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center" >
-
-        <RadioGroup
-            android:id="@+id/genderGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Fille / Femme"
-                android:id="@+id/femaleBtn"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Garçon / Homme"
-                android:id="@+id/female"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Niveau d’instruction"
-        android:id="@+id/genre"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center" >
-
-        <RadioGroup
-            android:id="@+id/eduGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Aucun"
-                android:id="@+id/aucun"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Primaire"
-                android:id="@+id/primaire"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Secondaire"
-                android:id="@+id/secondaire"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Supérieur"
-                android:id="@+id/superiur"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-        </RadioGroup>
-
-
-    </LinearLayout>
-
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Occupation"
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-
-
-    <LinearLayout
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:columnCount="7"
+        android:fillViewport="false"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center" >
-
-            <RadioGroup
-                android:id="@+id/professionGroup"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Elève / Etudiant"
-                android:id="@+id/button7"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Enseignant"
-                android:id="@+id/button8"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Employé (secteur formel)"
-                android:id="@+id/button9"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-                </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/professionGroup2"
-            android:orientation="horizontal"
-            android:paddingTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Secteur informel"
-                android:id="@+id/button10"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Sans emploi"
-                android:id="@+id/sans"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Autre"
-                android:id="@+id/autre"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-        </RadioGroup>
-
-
-    </LinearLayout>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Avez-vous un téléphone"
-        android:id="@+id/telephoneText"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:rowCount="11"
+        android:showDividers="end"
+        android:textAlignment="center"
         android:weightSum="1"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center" >
+        tools:context="com.appdockproject.appdock.survey">
 
-        <RadioGroup
-            android:id="@+id/phoneGroup"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="5">
-        <RadioButton
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/highlighted"
-            android:text="Simple"
-            android:id="@+id/simple"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/age"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:paddingLeft="2dp"
-            android:paddingRight="2dp"
-            android:textColor="@android:color/white" />
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <RadioButton
-                android:layout_width="wrap_content"
+
+            <RadioGroup
+                android:id="@+id/ageGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Android"
-                android:id="@+id/android"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+                android:orientation="horizontal"
+                android:weightSum="5">
 
-            <RadioButton
-                android:layout_width="wrap_content"
+
+                <RadioButton
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Moins de 12 ans"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="12-15 ans"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="15-18 ans"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="18-25 ans"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Plus de 40 ans"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+
+        <TextView
+            android:id="@+id/genreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Genre"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/genderGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="iPhone"
-                android:id="@+id/iphone"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <RadioButton
-                android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/femaleBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Fille / Femme"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Garçon / Homme"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Niveau d’instruction"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/eduGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Windows"
-                android:id="@+id/windows"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+                android:orientation="horizontal"
+                android:weightSum="4">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Autre"
-                android:id="@+id/other"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+                <RadioButton
+                    android:id="@+id/aucun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Aucun"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
 
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/primaire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Primaire"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/secondaire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Secondaire"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/superiur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Supérieur"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+            </RadioGroup>
+
 
         </LinearLayout>
 
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Occupation"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="@color/highlighted"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Temps passé dans AppDock"
-        android:id="@+id/textView4"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center" >
-
-        <RadioGroup
-            android:id="@+id/timeGroup"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Moins de 30 minutes"
-                android:id="@+id/button17"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="30 - 60 minutes"
-                android:id="@+id/button18"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+            <RadioGroup
+                android:id="@+id/professionGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Plus de 60 minutes"
-                android:id="@+id/button19"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+                <RadioButton
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Elève / Etudiant"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
 
 
+                <RadioButton
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Enseignant"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
 
 
-        </RadioGroup>
-    </LinearLayout>
+                <RadioButton
+                    android:id="@+id/button9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Employé (secteur formel)"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
+            </RadioGroup>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="J’aime AppDock"
-        android:id="@+id/textView3"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
+            <RadioGroup
+                android:id="@+id/professionGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center" >
+                <RadioButton
+                    android:id="@+id/button10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Secteur informel"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
 
-        <RadioGroup android:id="@+id/ratingGroup"
+
+                <RadioButton
+                    android:id="@+id/sans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Sans emploi"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/autre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Autre"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/telephoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Avez-vous un téléphone"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="5">
-            <RadioButton
-                android:layout_width="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/phoneGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="1 - Pas du tout"
-                android:id="@+id/button12"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RadioButton
+                    android:id="@+id/simple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Simple"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Android"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/iphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="iPhone"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/windows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Windows"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Autre"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+            </RadioGroup>
+
+        </LinearLayout>
 
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="2 - Un peu"
-                android:id="@+id/button13"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="3 - Beaucoup"
-                android:id="@+id/button14"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:buttonTint="@color/highlighted"
+            android:text="Temps passé dans AppDock"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:layout_weight="1"
-                android:text="4 - A la folie"
-                android:id="@+id/button15"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="5 - Passionnément"
-                android:layout_weight="1"
-                android:id="@+id/button16"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="J’aime AppDock pour"
-        android:id="@+id/jaimeText"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textStyle="bold"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center" >
-
-        <RadioGroup android:id="@+id/useGroup"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="5">
-            <RadioButton
-                android:layout_width="wrap_content"
+            android:weightSum="1">
+
+            <RadioGroup
+                android:id="@+id/timeGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Apprendre à utiliser mon téléphone"
-                android:id="@+id/op1"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/button17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Moins de 30 minutes"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="30 - 60 minutes"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Plus de 60 minutes"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
 
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Découvrir des applis sénégalaises "
-                android:id="@+id/op2"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+            </RadioGroup>
+        </LinearLayout>
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Charger mon téléphone "
-                android:id="@+id/op3"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:layout_weight="1"
-                android:text="Me connecter à internet"
-                android:id="@+id/op4"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="J’aime AppDock"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/ratingGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/highlighted"
-                android:text="Rencontrer des personnes "
-                android:layout_weight="1"
-                android:id="@+id/op5"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@color/colorPrimaryDark"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:textColor="@android:color/white" />
-        </RadioGroup>
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RadioButton
+                    android:id="@+id/button12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="1 - Pas du tout"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+
+                <RadioButton
+                    android:id="@+id/button13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="2 - Un peu"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="3 - Beaucoup"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="4 - A la folie"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/button16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="5 - Passionnément"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/jaimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="J’aime AppDock pour"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/useGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RadioButton
+                    android:id="@+id/op1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Apprendre à utiliser mon téléphone"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+
+                <RadioButton
+                    android:id="@+id/op2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Découvrir des applis sénégalaises "
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/op3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Charger mon téléphone "
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/op4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Me connecter à internet"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/op5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:buttonTint="@color/highlighted"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Rencontrer des personnes "
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imFacebookphoto"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/button_padding_top"
+            android:background="@color/buttonNormal"
+            android:text="@string/survey_submit"
+            android:textColor="@color/buttonText"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
     </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/submit"
-        android:text="@string/survey_submit"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        android:theme="@style/buttonStyle"
-        />
-
-</LinearLayout>
 
 
 </ScrollView>

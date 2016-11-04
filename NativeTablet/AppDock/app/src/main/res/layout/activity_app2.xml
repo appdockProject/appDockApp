@@ -131,8 +131,8 @@
                 <Button
                     android:text="@string/getPhoneNumBtn"
                     android:layout_width="wrap_content"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="19dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/button_padding_top"
                     android:id="@+id/getAppPhoneBtn"
                     android:layout_below="@+id/smsNumber"
                     android:layout_alignParentEnd="true"
