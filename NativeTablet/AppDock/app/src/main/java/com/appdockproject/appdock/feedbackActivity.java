@@ -211,15 +211,29 @@ public class feedbackActivity extends AppCompatActivity {
                 if ((ageGroup.getCheckedRadioButtonId() != -1) && (genderGroup.getCheckedRadioButtonId() != -1) && (eduGroup.getCheckedRadioButtonId() != -1) && (professionGroup.getCheckedRadioButtonId() != -1 || professionGroup2.getCheckedRadioButtonId() != -1) && (phoneGroup.getCheckedRadioButtonId() != -1) && (timeGroup.getCheckedRadioButtonId() != -1) && (ratingGroup.getCheckedRadioButtonId() != -1) && (useGroup.getCheckedRadioButtonId() != -1)) {
                     addData(ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString, latit, longit);
 
-                    //Send user to facebook page to take a picture?
-                    Intent intent = new Intent(feedbackActivity.this, facebookActivity.class);
-                    startActivity(intent);
+                    Context context = getApplicationContext();
+                    CharSequence text = "Merci!";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+
+                    ageGroup.clearCheck();
+                    genderGroup.clearCheck();
+                    eduGroup.clearCheck();
+                    professionGroup.clearCheck();
+                    professionGroup2.clearCheck();
+                    phoneGroup.clearCheck();
+                    timeGroup.clearCheck();
+                    ratingGroup.clearCheck();
+                    useGroup.clearCheck();
+
                 }
                 else{
                     //Add toast here?
                     Context context = getApplicationContext();
                     CharSequence text = "Please fill out all information";
-                    int duration = Toast.LENGTH_SHORT;
+                    int duration = Toast.LENGTH_LONG;
 
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
