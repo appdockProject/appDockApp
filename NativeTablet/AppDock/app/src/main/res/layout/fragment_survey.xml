@@ -7,7 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent"
+        android:background="@color/actBg"
         android:columnCount="7"
         android:fillViewport="false"
         android:orientation="vertical"
@@ -32,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/age"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -142,7 +142,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Genre"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -205,7 +205,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Niveau d’instruction"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -300,7 +300,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Occupation"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -435,7 +435,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Avez-vous un téléphone"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -547,7 +547,7 @@
             android:buttonTint="@color/highlighted"
             android:text="Temps passé dans AppDock"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -626,7 +626,7 @@
             android:layout_gravity="center_horizontal"
             android:text="J’aime AppDock"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -733,7 +733,7 @@
             android:layout_gravity="center_horizontal"
             android:text="J’aime AppDock pour"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/holo_orange_dark"
+            android:textColor="@color/titles"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -837,9 +837,9 @@
             android:layout_below="@+id/imFacebookphoto"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/button_padding_top"
-            android:background="@color/buttonNormal"
+            android:background="@color/buttonHighlighted"
             android:text="@string/survey_submit"
-            android:textColor="@color/buttonText"
+            android:textColor="@color/btnHighlightTxt"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
     </LinearLayout>

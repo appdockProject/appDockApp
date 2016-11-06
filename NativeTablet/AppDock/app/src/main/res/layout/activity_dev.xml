@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         tools:context="com.appdockproject.appdock.navbar"
         android:translationZ="@dimen/abc_action_bar_content_inset_material"
-        android:background="@color/colorAccent"
+        android:background="@color/actBg"
         >
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:weightSum="7"
-            android:background="@android:color/holo_green_dark"
+            android:background="@color/navBarBg"
             android:transitionGroup="true">
 
 
@@ -29,7 +29,7 @@
                 android:id="@+id/logo"
                 android:src="@drawable/logo"
                 android:layout_weight="2"
-                android:background="@color/highlighted"
+                android:background="@color/navBarBg"
 
                 android:theme="@style/Base.Widget.AppCompat.ActionButton"
                 android:layout_margin="10dp" />
@@ -40,7 +40,7 @@
                 android:text="@string/eduTitleBtn"
                 android:id="@+id/eduBtn"
                 android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/buttonNormal"
                 android:theme="@style/Base.Widget.AppCompat.ActionButton"
                 android:layout_margin="15dp"
                 android:textColor="@color/abc_primary_text_material_dark" />
@@ -51,7 +51,7 @@
                 android:text="@string/appTitleBtn"
                 android:id="@+id/appBtn"
                 android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/buttonNormal"
                 android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:layout_margin="15dp"
                 android:textColor="@color/abc_primary_text_material_dark"
@@ -66,7 +66,7 @@
                 android:background="@color/highlighted"
                 android:theme="@style/Base.Widget.AppCompat.ActionButton"
                 android:layout_margin="15dp"
-                android:textColor="@color/abc_primary_text_material_dark" />
+                android:textColor="@color/btnHighlightTxt" />
 
 
 
@@ -76,7 +76,7 @@
                 android:text="@string/surveyTitleBtn"
                 android:id="@+id/comBtn"
                 android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/buttonNormal"
                 android:theme="@style/Base.Widget.AppCompat.ActionButton"
                 android:layout_margin="15dp"
                 android:textColor="@color/abc_primary_text_material_dark" />
@@ -87,7 +87,7 @@
                 android:text="@string/facebookTitleBtn"
                 android:id="@+id/fbBtn"
                 android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/buttonNormal"
                 android:theme="@style/Base.Widget.AppCompat.ActionButton"
                 android:layout_margin="15dp"
                 android:textColor="@color/abc_primary_text_material_dark" />
@@ -143,7 +143,7 @@
                                 android:layout_weight="3"
                                 android:gravity="center_vertical"
                                 android:text="@string/devTitle"
-                                android:textColor="@android:color/holo_orange_dark"
+                                android:textColor="@color/titles"
                                 android:textSize="25sp"
                                 android:textStyle="bold" />
 
@@ -176,7 +176,7 @@
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorLightColor"
                             android:textStyle="bold"
-                            android:textColor="@android:color/holo_orange_dark"
+                            android:textColor="@color/titles"
                             android:textSize="13dp"
                             android:layout_below="@+id/dev2"
                             android:layout_alignStart="@+id/dev2" />
@@ -192,7 +192,7 @@
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorLightColor"
                             android:textStyle="bold"
-                            android:textColor="@android:color/holo_orange_dark"
+                            android:textColor="@color/titles"
                             android:textSize="13dp"
                             android:layout_alignStart="@+id/dev1"
                             android:layout_alignEnd="@+id/dev1"

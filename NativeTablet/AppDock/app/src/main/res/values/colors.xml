@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#4CAF50</color>
-    <color name="colorPrimaryDark">#388E3C</color>
-    <color name="colorLightColor">#C8E6C9</color>
+    <color name="colorPrimaryDark">#bddb39</color>
+    <color name="colorLightColor">#208a71</color>
     <color name="colorAccent">#c8e6c9</color>
     <color name="colorDividerColor">#b6b6b6</color>
-    <color name="highlighted">#FFC107</color>
-    <color name="titles">@android:color/holo_orange_dark</color>
+    <color name="highlighted">#fa7300</color>
+    <color name="titles">#fbe21a</color>
     <color name="text">#FFFFFF</color>
 
     <!--button colors -->
     <color name="buttonText">#E8EAF6</color>
-    <color name="buttonNormal">#388E3C</color>
-    <color name="buttonHighlighted">#FFC107</color>
+    <color name="buttonNormal">#208a71</color>
+    <color name="buttonHighlighted">#fa7300</color>
+    <color name="btnHighlightTxt">#0e4459</color>
+
+    <!-- screen background -->
+    <color name="actBg">#208a71</color>
+    <color name="navBarBg">#bddb39</color>
 
     <!-- activity colors -->
     <color name="stringColorBlue">#3399CC</color>
+
+
 </resources>

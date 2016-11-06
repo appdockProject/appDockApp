@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/colorLightColor"
+    android:background="@color/actBg"
     android:theme="@android:style/Widget.Toolbar.Button.Navigation"
     tools:context="com.appdockproject.appdock.appPage">
 
@@ -79,7 +79,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="0"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/a" />
 
             <TextView
@@ -89,7 +89,7 @@
                 android:layout_column="0"
                 android:layout_gravity="center_horizontal"
                 android:layout_row="1"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:text="@string/app1"
                 android:textAlignment="center"
                 android:textColor="@color/titles"
@@ -107,7 +107,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="0"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/b" />
 
             <TextView
@@ -133,7 +133,7 @@
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="0"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/c" />
 
             <TextView
@@ -157,7 +157,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="2"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/d" />
 
             <TextView
@@ -183,7 +183,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="2"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/e" />
 
             <TextView
@@ -210,7 +210,7 @@
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="2"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/f" />
 
             <TextView
@@ -235,7 +235,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="5"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/g" />
 
             <TextView
@@ -261,7 +261,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="5"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/h" />
 
             <TextView
@@ -287,7 +287,7 @@
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_row="5"
-                android:background="@color/colorLightColor"
+                android:background="@color/actBg"
                 android:src="@drawable/i" />
 
             <TextView

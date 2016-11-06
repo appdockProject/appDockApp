@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/navBarBg"
         android:orientation="vertical">
 
         <ImageButton
@@ -17,7 +17,7 @@
             android:layout_height="150dp"
             android:layout_margin="10dp"
             android:layout_weight="2"
-            android:background="@color/highlighted"
+            android:background="@color/navBarBg"
 
             android:src="@drawable/logo"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:text="@string/devTitleBtn"
             android:textColor="@color/abc_primary_text_material_dark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:text="@string/surveyTitleBtn"
             android:textColor="@color/abc_primary_text_material_dark"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
@@ -75,7 +75,7 @@
             android:layout_weight="1"
             android:background="@color/highlighted"
             android:text="@string/facebookTitleBtn"
-            android:textColor="@color/abc_primary_text_material_dark"
+            android:textColor="@color/btnHighlightTxt"
             android:theme="@style/Base.Widget.AppCompat.ActionButton" />
     </LinearLayout>
 
@@ -106,7 +106,7 @@
                     android:layout_weight="3"
                     android:gravity="center_vertical"
                     android:text="@string/facebookTitle"
-                    android:textColor="@android:color/holo_orange_dark"
+                    android:textColor="@color/titles"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -144,9 +144,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/imFacebookphoto"
                 android:layout_marginTop="@dimen/button_padding_top"
-                android:background="@color/buttonNormal"
+                android:background="@color/buttonHighlighted"
                 android:text="@string/facebook_take_a_photo"
-                android:textColor="@color/buttonText"
+                android:textColor="@color/btnHighlightTxt"
                 android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
             <Button
@@ -156,9 +156,9 @@
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/imFacebookphoto"
                 android:layout_marginTop="@dimen/button_padding_top"
-                android:background="@color/buttonNormal"
+                android:background="@color/buttonHighlighted"
                 android:text="@string/facebook_upload_to_facebook"
-                android:textColor="@color/buttonText"
+                android:textColor="@color/btnHighlightTxt"
                 android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
 

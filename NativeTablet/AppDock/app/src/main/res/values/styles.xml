@@ -13,7 +13,7 @@
 
         <item name="colorButtonNormal">@color/buttonNormal</item>
         <item name="colorControlHighlight">@color/buttonHighlighted</item>
-        <item name="android:textColor">@color/buttonText</item>
+        <item name="android:textColor">@color/btnHighlightTxt</item>
 
     </style>
 

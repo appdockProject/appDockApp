@@ -133,7 +133,7 @@
                     android:layout_below="@+id/smsNumber"
                     android:layout_alignParentEnd="true"
                     android:textColor="#fff"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@color/buttonNormal"
                     android:theme="@style/Base.Widget.AppCompat.ActionButton"
                     android:layout_alignParentStart="true" />
 
