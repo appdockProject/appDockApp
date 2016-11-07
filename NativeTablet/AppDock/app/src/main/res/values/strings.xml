@@ -185,7 +185,7 @@
     <string name="facebook_take_a_photo">Prendre Une Photo</string>
     <string name="facebook_upload_to_facebook">Partager sur Facebook</string>
     <string name="facebook_no_photo">Vous devez prendre une photo d\'abord!</string>
-    <string name="facebook_sample_text">J\'ai visité #appdock #senegal, un espace d\'interaction entre développeurs et utilisateurs d\'#applis #mobile</string>
+    <string name="facebook_sample_text">J\'ai visité #appdock #senegal, un espace d\'interaction entre développeurs et utilisateurs d\'#applis #mobiles</string>
     <string name="facebook_upload_success">La photo a été téléchargée avec succès</string>
     <string name="facebook_upload_failure">Un problème est survenu.</string>
     <string name="facebook_no_internet">Pas de connexion Internet</string>
