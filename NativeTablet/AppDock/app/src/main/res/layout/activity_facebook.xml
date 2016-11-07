@@ -17,6 +17,8 @@
             android:layout_height="150dp"
             android:layout_margin="10dp"
             android:layout_weight="2"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
             android:background="@color/navBarBg"
 
             android:src="@drawable/logo"

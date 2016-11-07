@@ -13,6 +13,8 @@
     <string name="SeneNews">Hello blank fragment</string>
     <string name="talibi">Hello blank fragment</string>
 
+    <!-- for video page -->
+    <string name="back">Retourner</string>
 
     <!-- Fragment Button Titles -->
     <string name="appTitleBtn">APPLICATIONS</string>

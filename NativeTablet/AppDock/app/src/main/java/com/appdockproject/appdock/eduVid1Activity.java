@@ -26,14 +26,32 @@ public class eduVid1Activity extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
 
+
+        //buttons
         Button devBtn = (Button) findViewById(R.id.devBtn);
         Button homeBtn = (Button) findViewById(R.id.appBtn);
         Button cmntBtn = (Button) findViewById(R.id.comBtn);
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
+        Button eduBtn = (Button) findViewById(R.id.eduBtn);
+        Button back = (Button) findViewById(R.id.backbtn);
 
         devBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent = new Intent(eduVid1Activity.this, devActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        eduBtn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(eduVid1Activity.this, eduActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(eduVid1Activity.this, eduActivity.class);
                 startActivity(intent);
             }
         });
@@ -64,6 +82,13 @@ public class eduVid1Activity extends AppCompatActivity {
         final VideoView videoView = (VideoView) findViewById(R.id.videoView);
 
         videoView.setVideoPath(videoLink);
+
+        MediaController mediaController = new
+                MediaController(this);
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
+
+
 
         videoView.start();
 
