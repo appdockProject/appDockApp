@@ -43,19 +43,8 @@ public class App4Activity extends AppCompatActivity {
 
                 TwilioSMS ts = new TwilioSMS(App4Activity.this);
 
-                if (!ts.isConnectedToInternet()){
-                    Toast.makeText(App4Activity.this, getString(R.string.facebook_no_internet), Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                if (ts.verifyNumber(userSMSNum) &&
-                        ts.sendSMS(userSMSNum, getString(R.string.app4SMSLink))) {
-
-                    Toast.makeText(App4Activity.this, getString(R.string.twilio_SMS_Sent), Toast.LENGTH_SHORT).show();
+                if (ts.sendSMS(userSMSNum, getString(R.string.app3SMSLink)))
                     phoneNumInput.getText().clear();
-                }
-                else
-                    Toast.makeText(App4Activity.this, getString(R.string.twilio_Invalid_number), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -94,5 +83,21 @@ public class App4Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    // Needs this to remove statusbar and navigation layout after focus of activity regains focus
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        View decorView = getWindow().getDecorView();
+        if (hasFocus) {
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
     }
 }
