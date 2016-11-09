@@ -8,19 +8,21 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/navBarBg"
         android:orientation="vertical">
 
         <ImageButton
+            android:id="@+id/logo"
             android:layout_width="152dp"
             android:layout_height="150dp"
-            android:id="@+id/logo"
-            android:src="@drawable/logo"
+            android:layout_margin="10dp"
             android:layout_weight="2"
-            android:background="@color/highlighted"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@color/navBarBg"
 
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="10dp" />
+            android:src="@drawable/logo"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
 
         <Button
             android:layout_width="match_parent"
@@ -28,7 +30,7 @@
             android:text="@string/eduTitleBtn"
             android:id="@+id/eduBtn"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:theme="@style/Base.Widget.AppCompat.ActionButton"
             android:layout_margin="15dp"
             android:textColor="@color/abc_primary_text_material_dark" />
@@ -39,7 +41,7 @@
             android:text="@string/appTitleBtn"
             android:id="@+id/appBtn"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog"
             android:layout_margin="15dp"
             android:textColor="@color/abc_primary_text_material_dark"
@@ -51,7 +53,7 @@
             android:text="@string/devTitleBtn"
             android:id="@+id/devBtn"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:theme="@style/Base.Widget.AppCompat.ActionButton"
             android:layout_margin="15dp"
             android:textColor="@color/abc_primary_text_material_dark" />
@@ -65,7 +67,7 @@
             android:background="@color/highlighted"
             android:theme="@style/Base.Widget.AppCompat.ActionButton"
             android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
+            android:textColor="@color/btnHighlightTxt" />
 
         <Button
             android:layout_width="match_parent"
@@ -73,7 +75,7 @@
             android:text="@string/facebookTitleBtn"
             android:id="@+id/fbBtn"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/buttonNormal"
             android:theme="@style/Base.Widget.AppCompat.ActionButton"
             android:layout_margin="15dp"
             android:textColor="@color/abc_primary_text_material_dark" />
@@ -106,7 +108,7 @@
                     android:layout_weight="3"
                     android:gravity="center_vertical"
                     android:text="@string/survey"
-                    android:textColor="@android:color/holo_orange_dark"
+                    android:textColor="@color/titles"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 

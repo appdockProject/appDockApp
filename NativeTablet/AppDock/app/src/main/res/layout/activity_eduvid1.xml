@@ -108,13 +108,14 @@
                 android:layout_height="match_parent"
                 android:weightSum="1">
 
+
                 <TextView
                     android:id="@+id/title"
-                    android:layout_width="match_parent"
+                    android:layout_width="667dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_marginRight="0dp"
-                    android:paddingTop="5dp"
+                    android:paddingTop="20dp"
                     android:text="@string/video1Title"
                     android:textColor="@color/titles"
                     android:textSize="25dp"
@@ -122,7 +123,10 @@
                     android:gravity="center"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_weight="0.14" />
+                    android:textAlignment="viewStart"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="20dp" />
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -142,7 +146,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:layout_width="255dp"
+                    android:layout_width="136dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/backbtn"
                     android:text="@string/back"
