@@ -64,7 +64,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Moins de 12 ans"
+                    android:text="@string/ageA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -79,7 +79,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="12-15 ans"
+                    android:text="@string/ageB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -94,7 +94,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="15-18 ans"
+                    android:text="@string/ageC"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -108,7 +108,7 @@
                     android:buttonTint="@color/highlighted"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="18-25 ans"
+                    android:text="@string/ageD"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -123,7 +123,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Plus de 40 ans"
+                    android:text="@string/ageE"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
             </RadioGroup>
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Genre"
+            android:text="@string/genre"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/titles"
             android:textSize="25sp"
@@ -171,7 +171,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Fille / Femme"
+                    android:text="@string/genreA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -186,7 +186,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Garçon / Homme"
+                    android:text="@string/genreB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -203,7 +203,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Niveau d’instruction"
+            android:text="@string/niv"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/titles"
             android:textSize="25sp"
@@ -234,7 +234,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Aucun"
+                    android:text="@string/nivA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -249,7 +249,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Primaire"
+                    android:text="@string/nivB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -264,7 +264,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Secondaire"
+                    android:text="@string/nivC"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -279,7 +279,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Supérieur"
+                    android:text="@string/nivD"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -298,7 +298,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Occupation"
+            android:text="@string/occ"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/titles"
             android:textSize="25sp"
@@ -329,7 +329,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Elève / Etudiant"
+                    android:text="@string/occA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -345,7 +345,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Enseignant"
+                    android:text="@string/occB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -361,7 +361,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Employé (secteur formel)"
+                    android:text="@string/occC"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -384,7 +384,7 @@
                     android:buttonTint="@color/highlighted"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Secteur informel"
+                    android:text="@string/occD"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -400,7 +400,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Sans emploi"
+                    android:text="@string/occE"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -415,7 +415,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Autre"
+                    android:text="@string/occF"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -433,7 +433,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Avez-vous un téléphone"
+            android:text="@string/tele"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/titles"
             android:textSize="25sp"
@@ -466,7 +466,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Simple"
+                    android:text="@string/teleA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -481,7 +481,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Android"
+                    android:text="@string/teleB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -496,7 +496,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="iPhone"
+                    android:text="@string/teleC"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -511,7 +511,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Windows"
+                    android:text="@string/teleD"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -526,7 +526,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Autre"
+                    android:text="@string/teleE"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -545,7 +545,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:buttonTint="@color/highlighted"
-            android:text="Temps passé dans AppDock"
+            android:text="@string/temps"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/titles"
             android:textSize="25sp"
@@ -577,7 +577,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Moins de 30 minutes"
+                    android:text="@string/tempsA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -592,7 +592,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="30 - 60 minutes"
+                    android:text="@string/tempsB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -607,7 +607,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Plus de 60 minutes"
+                    android:text="@string/tempsC"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -624,7 +624,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="J’aime AppDock"
+            android:text="@string/jaime"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/titles"
             android:textSize="25sp"
@@ -655,7 +655,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="1 - Pas du tout"
+                    android:text="@string/jaimeA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -671,7 +671,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="2 - Un peu"
+                    android:text="@string/jaimeB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -686,7 +686,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="3 - Beaucoup"
+                    android:text="@string/jaimeC"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -700,7 +700,7 @@
                     android:buttonTint="@color/highlighted"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="4 - A la folie"
+                    android:text="@string/jaimeD"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -715,7 +715,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="5 - Passionnément"
+                    android:text="@string/jaimeE"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
             </RadioGroup>
@@ -731,7 +731,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="J’aime AppDock pour"
+            android:text="@string/app"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/titles"
             android:textSize="25sp"
@@ -762,7 +762,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Apprendre à utiliser mon téléphone"
+                    android:text="@string/appA"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -778,7 +778,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Découvrir des applis sénégalaises "
+                    android:text="@string/appB"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -793,7 +793,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Charger mon téléphone "
+                    android:text="@string/appC"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -807,7 +807,7 @@
                     android:buttonTint="@color/highlighted"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Me connecter à internet"
+                    android:text="@string/appD"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
 
@@ -822,7 +822,7 @@
                     android:gravity="center"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
-                    android:text="Rencontrer des personnes "
+                    android:text="@string/appE"
                     android:textAlignment="center"
                     android:textColor="@android:color/white" />
             </RadioGroup>

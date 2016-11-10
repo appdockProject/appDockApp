@@ -16,6 +16,79 @@
     <!-- for video page -->
     <string name="back">Retourner</string>
 
+    <!-- SURVEY QUESTIONS -->
+
+    <!-- survey titles -->
+    <string name="survey">Enquête sur AppDock</string>
+
+    <!-- 1 -->
+    <string name="age">Age </string>
+    <string name="ageA">Moins de 12 ans</string>
+    <string name="ageB">12-15 ans</string>
+    <string name="ageC">15-18 ans</string>
+    <string name="ageD">18-25 ans</string>
+    <string name="ageE">Plus de 40 ans</string>
+
+    <!-- 2 -->
+    <string name="genre">Genre</string>
+    <string name="genreA">Fille / Femme</string>
+    <string name="genreB">Garçon / Homme</string>
+
+
+    <string name="prof"> Profession </string>
+    <!-- 3 -->
+    <string name="niv">Niveau d’instruction</string>
+    <string name="nivA">Aucun</string>
+    <string name="nivB">Primaire</string>
+    <string name="nivC">Secondaire</string>
+    <string name="nivD">Supérieur</string>
+
+    <!-- 4 -->
+    <string name="occ">Occupation</string>
+    <string name="occA">Elève / Etudiant</string>
+    <string name="occB">Enseignant</string>
+    <string name="occC">Employé (secteur formel)</string>
+    <string name="occD">Secteur informel</string>
+    <string name="occE">Sans emploi</string>
+    <string name="occF">Autre</string>
+
+    <!-- 5 -->
+    <string name="tele">Avez-vous un téléphone</string>
+    <string name="teleA">Simple</string>
+    <string name="teleB">Android</string>
+    <string name="teleC">iPhone</string>
+    <string name="teleD">Windows</string>
+    <string name="teleE">Autre</string>
+
+    <!-- 6 -->
+    <string name="temps">Temps passé dans AppDock</string>
+    <string name="tempsA">Moins de 30 minutes</string>
+    <string name="tempsB">30 - 60 minutes</string>
+    <string name="tempsC">Plus de 60 minutes</string>
+
+    <!-- 7 -->
+    <string name="jaime">J\’aime AppDock</string>
+    <string name="jaimeA">1 - Pas du tout</string>
+    <string name="jaimeB">2 - Un peu</string>
+    <string name="jaimeC">3 - Beaucoup</string>
+    <string name="jaimeD">4 - A la folie</string>
+    <string name="jaimeE">5 - Passionnément</string>
+
+    <!-- 8 -->
+    <string name="app">J’aime AppDock pour</string>
+    <string name="appA">Apprendre à utiliser mon téléphone</string>
+    <string name="appB">Découvrir des applis sénégalaises</string>
+    <string name="appC">Charger mon téléphone </string>
+    <string name="appD">Me connecter à internet </string>
+    <string name="appE">Rencontrer des personnes </string>
+
+
+
+    <string name="first">C\'est votre primer temps avec l\'AppDock? </string>
+    <string name="time">Combien de temps avez-vous passé? </string>
+    <string name="survey_submit">Envoyer l\'Enquete</string>
+
+
     <!-- Fragment Button Titles -->
     <string name="appTitleBtn">APPLICATIONS</string>
     <string name="devTitleBtn">DEVELOPPEURS</string>
@@ -49,13 +122,7 @@
     <string name="dev4bio">Developer04 Bio</string>
 
 
-    <!-- survey titles -->
-    <string name="survey">Enquête sur AppDock</string>
-    <string name="age">Age </string>
-    <string name="prof"> Profession </string>
-    <string name="first">C\'est votre primer temps avec l\'AppDock? </string>
-    <string name="time">Combien de temps avez-vous passé? </string>
-    <string name="survey_submit">Envoyer l\'Enquete</string>
+
 
     <!-- Featured Apps-->
 
