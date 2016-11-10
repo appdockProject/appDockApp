@@ -169,10 +169,12 @@
     <!-- Education Activity -->
     <string name="eduTitle">Vidéos sur l’utilisation des téléphones</string>
 
-    <string name="video1Title">Créer un compte Gmail</string>
-    <string name="video2Title">Qu\'est-ce qu\'une application mobile?</string>
-    <string name="video3Title">Qu\'est-ce qu\'un magasin?</string>
-    <string name="video4Title">Comment installer une application?</string>
+    <string name="video1Title">Qu\’est-ce qu\'Android ?</string>
+    <string name="video2Title">Qu\’est ce qu\’une appli ?</string>
+    <string name="video3Title">Qu\’est-ce que Google Play ?</string>
+    <string name="video4Title">Qu\’est-ce qu\’une adresse email ?</string>
+    <string name="video5Title">Comment créer une adresse email ?</string>
+    <string name="video6Title">Comment installer une appli ?</string>
 
     <!-- Facebook Activity -->
     <string name="yes">Oui</string>

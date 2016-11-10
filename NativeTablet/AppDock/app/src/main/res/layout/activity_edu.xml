@@ -249,8 +249,8 @@
 
                 <TextView
                     android:id="@+id/downloadText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="41dp"
                     android:layout_column="1"
                     android:layout_row="3"
                     android:gravity="center_horizontal"
