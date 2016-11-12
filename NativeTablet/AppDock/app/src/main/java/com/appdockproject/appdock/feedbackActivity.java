@@ -31,6 +31,8 @@ public class feedbackActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
+    String permission = "android.permission.ACCESS_FINE_LOCATION";
+
     RadioButton selectedAge, selectedGender, selectedEdu, selectedProfession, selectedPhone, selectedTime, selectedRating, selectedUse;
     RadioGroup ageGroup, genderGroup, eduGroup, professionGroup, professionGroup2, phoneGroup, timeGroup, ratingGroup, useGroup;
     Button submit;
@@ -56,12 +58,15 @@ public class feedbackActivity extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
 
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+
+
         Button devBtn = (Button) findViewById(R.id.devBtn);
         Button eduBtn = (Button) findViewById(R.id.eduBtn);
         Button homeBtn = (Button) findViewById(R.id.appBtn);
         Button fbBtn = (Button) findViewById(R.id.fbBtn);
 
-        devBtn.setOnClickListener(new View.OnClickListener(){
+        devBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(feedbackActivity.this, devActivity.class);
                 startActivity(intent);
@@ -69,21 +74,21 @@ public class feedbackActivity extends AppCompatActivity {
         });
 
 
-        eduBtn.setOnClickListener(new View.OnClickListener(){
+        eduBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(feedbackActivity.this, eduActivity.class);
                 startActivity(intent);
             }
         });
 
-        homeBtn.setOnClickListener(new View.OnClickListener(){
+        homeBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(feedbackActivity.this, appPage.class);
                 startActivity(intent);
             }
         });
 
-        fbBtn.setOnClickListener(new View.OnClickListener(){
+        fbBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(feedbackActivity.this, facebookActivity.class);
                 startActivity(intent);
@@ -97,10 +102,10 @@ public class feedbackActivity extends AppCompatActivity {
         ageGroup = (RadioGroup) findViewById(R.id.ageGroup);
         genderGroup = (RadioGroup) findViewById(R.id.genderGroup);
         eduGroup = (RadioGroup) findViewById(R.id.eduGroup);
-        professionGroup = (RadioGroup)findViewById(R.id.professionGroup);
+        professionGroup = (RadioGroup) findViewById(R.id.professionGroup);
         professionGroup2 = (RadioGroup) findViewById(R.id.professionGroup2);
-        phoneGroup = (RadioGroup)findViewById(R.id.phoneGroup);
-        timeGroup = (RadioGroup)findViewById(R.id.timeGroup);
+        phoneGroup = (RadioGroup) findViewById(R.id.phoneGroup);
+        timeGroup = (RadioGroup) findViewById(R.id.timeGroup);
         ratingGroup = (RadioGroup) findViewById(R.id.ratingGroup);
         useGroup = (RadioGroup) findViewById(R.id.useGroup);
 
@@ -117,7 +122,7 @@ public class feedbackActivity extends AppCompatActivity {
             }
         };
 
-       listener2 = new RadioGroup.OnCheckedChangeListener() {
+        listener2 = new RadioGroup.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -133,7 +138,6 @@ public class feedbackActivity extends AppCompatActivity {
         professionGroup2.clearCheck();
         professionGroup.setOnCheckedChangeListener(listener1);
         professionGroup2.setOnCheckedChangeListener(listener2);
-
 
 
 //      Connect and initialize firebase
@@ -228,8 +232,8 @@ public class feedbackActivity extends AppCompatActivity {
                     ratingGroup.clearCheck();
                     useGroup.clearCheck();
 
-                }
-                else{
+
+                } else {
                     //Add toast here?
                     Context context = getApplicationContext();
                     CharSequence text = "Please fill out all information";
@@ -240,36 +244,36 @@ public class feedbackActivity extends AppCompatActivity {
                 }
             }
         });
-
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
-            ActivityCompat.requestPermissions( this, new String[] {  Manifest.permission.ACCESS_FINE_LOCATION  },
-                    1);
-        }
-
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
-        LocationListener locationListener = new LocationListener() {
-            public void onLocationChanged(Location location) {
-                // Called when a new location is found by the network location provider.
-                locationLatitude = location.getLatitude();
-                locationLongitude = location.getLongitude();
-                latit = Double.toString(locationLatitude);
-                longit = Double.toString(locationLongitude);
-            }
-
-            public void onStatusChanged(String provider, int status, Bundle extras) {}
-
-            public void onProviderEnabled(String provider) {}
-
-            public void onProviderDisabled(String provider) {}
-        };
-
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5 ,locationListener);
-
     }
+//        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
+//            ActivityCompat.requestPermissions( this, new String[] {  Manifest.permission.ACCESS_FINE_LOCATION  },
+//                    1);
+//        }
+//
+//        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+//
+//        LocationListener locationListener = new LocationListener() {
+//            public void onLocationChanged(Location location) {
+//                // Called when a new location is found by the network location provider.
+//                locationLatitude = location.getLatitude();
+//                locationLongitude = location.getLongitude();
+//                latit = Double.toString(locationLatitude);
+//                longit = Double.toString(locationLongitude);
+//            }
+//
+//            public void onStatusChanged(String provider, int status, Bundle extras) {}
+//
+//            public void onProviderEnabled(String provider) {}
+//
+//            public void onProviderDisabled(String provider) {}
+//        };
+//
+//        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5 ,locationListener);
+//
+//    }
 
 
-    private void addData(String age, String gender, String edu, String profession, String phone, String time, String rating, String use, String lat, String longit){
+    private void addData(String age, String gender, String edu, String profession, String phone, String time, String rating, String use, String lat, String longit) {
         Answer a = new Answer();
         a.setAge(age);
         a.setGender(gender);
@@ -284,6 +288,62 @@ public class feedbackActivity extends AppCompatActivity {
         myRef.child("Answer").push().setValue(a);
     }
 
+
+    //Get location permission
+
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+                    LocationListener locationListener = new LocationListener() {
+                        public void onLocationChanged(Location location) {
+                            // Called when a new location is found by the network location provider.
+                            locationLatitude = location.getLatitude();
+                            locationLongitude = location.getLongitude();
+                            latit = Double.toString(locationLatitude);
+                            longit = Double.toString(locationLongitude);
+                        }
+
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
+                        }
+
+                        public void onProviderEnabled(String provider) {
+                        }
+
+                        public void onProviderDisabled(String provider) {
+                        }
+                    };
+
+                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        //    ActivityCompat#requestPermissions
+                        // here to request the missing permissions, and then overriding
+                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                        //                                          int[] grantResults)
+                        // to handle the case where the user grants the permission. See the documentation
+                        // for ActivityCompat#requestPermissions for more details.
+                        return;
+                    }
+                    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, locationListener);
+
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+
+                    latit = "0.0";
+                    longit = "0.0";
+                }
+                return;
+            }
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
 
 }
 
