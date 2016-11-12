@@ -143,26 +143,25 @@
                 android:id="@+id/bTakePhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_height"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/imFacebookphoto"
-                android:layout_marginTop="@dimen/button_padding_top"
+                android:layout_marginEnd="15dp"
                 android:background="@color/buttonHighlighted"
                 android:text="@string/facebook_take_a_photo"
                 android:textColor="@color/btnHighlightTxt"
-                android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+                android:theme="@style/Base.Widget.AppCompat.ActionButton"
+                android:layout_alignBottom="@+id/bShareToFacebook"
+                android:layout_toStartOf="@+id/bShareToFacebook" />
 
             <Button
                 android:id="@+id/bShareToFacebook"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_height"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@id/imFacebookphoto"
-                android:layout_marginTop="@dimen/button_padding_top"
+                android:layout_marginTop="21dp"
                 android:background="@color/buttonHighlighted"
                 android:text="@string/facebook_upload_to_facebook"
                 android:textColor="@color/btnHighlightTxt"
-                android:theme="@style/Base.Widget.AppCompat.ActionButton" />
-
+                android:theme="@style/Base.Widget.AppCompat.ActionButton"
+                android:layout_below="@+id/imFacebookphoto"
+                android:layout_alignEnd="@+id/imFacebookphoto" />
 
         </RelativeLayout>
 
