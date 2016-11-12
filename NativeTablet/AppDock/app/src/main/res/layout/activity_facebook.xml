@@ -137,7 +137,7 @@
                 android:layout_height="350dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:background="@color/com_facebook_button_background_color_focused_disabled" />
+                android:background="@drawable/placehorlder_appdock_round" />
 
             <Button
                 android:id="@+id/bTakePhoto"
