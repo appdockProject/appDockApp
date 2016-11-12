@@ -236,7 +236,7 @@ public class feedbackActivity extends AppCompatActivity {
                 } else {
                     //Add toast here?
                     Context context = getApplicationContext();
-                    CharSequence text = "Please fill out all information";
+                    CharSequence text = "Veuillez remplir toutes les informations";
                     int duration = Toast.LENGTH_LONG;
 
                     Toast toast = Toast.makeText(context, text, duration);
@@ -245,32 +245,6 @@ public class feedbackActivity extends AppCompatActivity {
             }
         });
     }
-//        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
-//            ActivityCompat.requestPermissions( this, new String[] {  Manifest.permission.ACCESS_FINE_LOCATION  },
-//                    1);
-//        }
-//
-//        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-//
-//        LocationListener locationListener = new LocationListener() {
-//            public void onLocationChanged(Location location) {
-//                // Called when a new location is found by the network location provider.
-//                locationLatitude = location.getLatitude();
-//                locationLongitude = location.getLongitude();
-//                latit = Double.toString(locationLatitude);
-//                longit = Double.toString(locationLongitude);
-//            }
-//
-//            public void onStatusChanged(String provider, int status, Bundle extras) {}
-//
-//            public void onProviderEnabled(String provider) {}
-//
-//            public void onProviderDisabled(String provider) {}
-//        };
-//
-//        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5 ,locationListener);
-//
-//    }
 
 
     private void addData(String age, String gender, String edu, String profession, String phone, String time, String rating, String use, String lat, String longit) {
