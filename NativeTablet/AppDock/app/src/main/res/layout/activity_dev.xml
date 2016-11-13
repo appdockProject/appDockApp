@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -162,77 +163,155 @@
 
                     </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="792dp"
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-
-                        <TextView
+                        <GridLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/dev2"
-                            android:id="@+id/dev2Text"
-                            android:layout_row="1"
-                            android:layout_column="0"
-                            android:textAlignment="center"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorLightColor"
-                            android:textStyle="bold"
-                            android:textColor="@color/titles"
-                            android:textSize="13dp"
-                            android:layout_below="@+id/dev2"
-                            android:layout_alignStart="@+id/dev2" />
+                            android:layout_gravity="center"
+                            android:columnCount="2"
+                            android:orientation="horizontal"
+                            android:rowCount="4"
+                            android:padding="10dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginLeft="70dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/dev1"
-                            android:id="@+id/dev1Text"
-                            android:layout_row="1"
-                            android:layout_column="0"
-                            android:textAlignment="viewStart"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorLightColor"
-                            android:textStyle="bold"
-                            android:textColor="@color/titles"
-                            android:textSize="13dp"
-                            android:layout_alignStart="@+id/dev1"
-                            android:layout_alignEnd="@+id/dev1"
-                            android:layout_below="@+id/dev1" />
 
-                        <ImageButton
-                            android:id="@+id/dev2"
-                            android:src="@drawable/dev2"
-                            android:scaleType="fitCenter"
-                            android:layout_width="170dp"
-                            android:layout_column="2"
-                            android:layout_row="2"
-                            android:background="@color/colorLightColor"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginRight="0dp"
-                            android:layout_marginTop="69dp"
-                            android:layout_height="170dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginEnd="206dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingEnd="100dp">
 
-                        <ImageButton
-                            android:id="@+id/dev1"
-                            android:src="@drawable/dev1"
-                            android:scaleType="fitCenter"
-                            android:layout_width="170dp"
-                            android:layout_column="2"
-                            android:layout_row="2"
-                            android:background="@color/colorLightColor"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginRight="0dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="170dp"
-                            android:layout_marginStart="69dp"
-                            android:layout_alignTop="@+id/dev2"
-                            android:layout_alignParentStart="true" />
+                                <ImageButton
+                                    android:id="@+id/dev1"
+                                    android:layout_width="250dp"
+                                    android:layout_height="150dp"
+                                    android:layout_column="0"
+                                    android:layout_row="0"
+                                    android:background="@color/actBg"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/devs1"
+                                    />
 
-                    </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/dev1txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_row="1"
+                                    android:background="@color/actBg"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/dev1"
+                                    android:textColor="@color/titles"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="viewStart"
+                                    android:padding="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/dev2"
+                                    android:layout_width="250dp"
+                                    android:layout_height="150dp"
+                                    android:layout_column="1"
+                                    android:layout_row="0"
+                                    android:background="@color/actBg"
+                                    android:textColor="@color/titles"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/devs2"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/dev2txt"
+                                    android:layout_width="213dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_row="1"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/dev2"
+                                    android:textColor="@color/titles"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="viewStart"
+                                    android:padding="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingEnd="100dp">
+
+                                <ImageButton
+                                    android:id="@+id/dev3"
+                                    android:layout_width="250dp"
+                                    android:layout_height="150dp"
+                                    android:layout_column="0"
+                                    android:layout_row="2"
+                                    android:background="@color/actBg"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/devs3" />
+
+                                <TextView
+                                    android:id="@+id/dev3txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_row="3"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/dev3"
+                                    android:textColor="@color/titles"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="viewStart"
+                                    android:padding="10dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/dev4"
+                                    android:layout_width="250dp"
+                                    android:layout_height="150dp"
+                                    android:layout_column="1"
+                                    android:layout_row="2"
+                                    android:background="@color/actBg"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/devs4" />
+
+                                <TextView
+                                    android:id="@+id/dev4txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="41dp"
+                                    android:layout_column="1"
+                                    android:layout_row="3"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/dev4"
+                                    android:textColor="@color/titles"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:padding="10dp" />
+
+                            </LinearLayout>
+                        </GridLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
 
