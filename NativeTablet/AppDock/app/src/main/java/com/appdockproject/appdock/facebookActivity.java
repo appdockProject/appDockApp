@@ -322,6 +322,9 @@ public class facebookActivity extends AppCompatActivity {
         if (image != null)
             parameters.putByteArray("picture", image);
 
+        //Show uploading toast
+        Toast.makeText(this, getString(R.string.facebook_uploading), Toast.LENGTH_LONG).show();
+
         request.setParameters(parameters);
         request.executeAsync();
     }
