@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/actBg"
+    android:orientation="horizontal"
+    tools:context="com.appdockproject.appdock.eduVid4Activity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/navBarBg"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="152dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@color/navBarBg"
+
+            android:src="@drawable/logo"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+        <Button
+            android:id="@+id/eduBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/highlighted"
+            android:text="@string/eduTitleBtn"
+            android:textColor="@color/btnHighlightTxt"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+
+        <Button
+            android:id="@+id/appBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/buttonNormal"
+            android:clickable="true"
+            android:text="@string/appTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+
+        <Button
+            android:id="@+id/devBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/buttonNormal"
+            android:text="@string/devTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+
+
+        <Button
+            android:id="@+id/comBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/buttonNormal"
+            android:text="@string/surveyTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+        <Button
+            android:id="@+id/fbBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/buttonNormal"
+            android:text="@string/facebookTitleBtn"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/videoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="667dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="0dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/video4Title"
+                    android:textColor="@color/titles"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="viewStart"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="395dp"
+                    android:weightSum="1">
+
+                    <VideoView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/videoView"
+                        android:layout_below="@+id/title"
+                        android:layout_height="393dp"
+                        android:layout_alignBottom="@+id/videoBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/backbtn"
+                    android:text="@string/back"
+                    android:background="@color/highlighted"
+                    android:textColor="@color/btnHighlightTxt"
+                    android:theme="@style/Base.Widget.AppCompat.ActionButton"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

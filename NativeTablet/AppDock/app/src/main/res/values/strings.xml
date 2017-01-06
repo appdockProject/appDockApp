@@ -83,7 +83,6 @@
     <string name="appE">Rencontrer des personnes </string>
 
 
-
     <string name="first">C\'est votre primer temps avec l\'AppDock? </string>
     <string name="time">Combien de temps avez-vous passé? </string>
     <string name="survey_submit">Envoyer l\'Enquete</string>
@@ -120,8 +119,6 @@
     <string name="dev4">Assane Mbengue</string>
     <string name="dev4desc">Talibi</string>
     <string name="dev4bio">Developer04 Bio</string>
-
-
 
 
     <!-- Featured Apps-->
@@ -236,10 +233,10 @@
     <!-- Education Activity -->
     <string name="eduTitle">Vidéos sur l’utilisation des téléphones</string>
 
-    <string name="video1Title">Qu\’est-ce qu\'Android ?</string>
-    <string name="video2Title">Qu\’est ce qu\’une appli ?</string>
-    <string name="video3Title">Qu\’est-ce que Google Play ?</string>
-    <string name="video4Title">Qu\’est-ce qu\’une adresse email ?</string>
+    <string name="video1Title">Qu\'est-ce qu\'Android ?</string>
+    <string name="video2Title">Qu\'est ce qu\'une appli ?</string>
+    <string name="video3Title">Qu\'est-ce que Google Play ?</string>
+    <string name="video4Title">Qu\'est-ce qu\'une adresse email ?</string>
     <string name="video5Title">Comment créer une adresse email ?</string>
     <string name="video6Title">Comment installer une appli ?</string>
 

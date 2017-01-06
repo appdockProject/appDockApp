@@ -76,6 +76,33 @@ public class eduActivity extends AppCompatActivity {
             }
         });
 
+        vid2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(eduActivity.this, eduVid4Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        vid3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(eduActivity.this, eduVid5Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        vid4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(eduActivity.this, eduVid6Activity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

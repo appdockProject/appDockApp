@@ -11,9 +11,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
     <uses-feature android:name="android.hardware.location.gps" />
 
@@ -39,21 +38,18 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".appPage"
-            android:screenOrientation="landscape">
-
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".devActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".eduActivity"
             android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".feedbackActivity"
@@ -98,8 +94,12 @@
         <activity
             android:name=".App8Activity"
             android:screenOrientation="landscape" />
-        <activity android:name=".App9Activity"
+        <activity
+            android:name=".App9Activity"
             android:screenOrientation="landscape" />
+        <activity android:name=".eduVid4Activity" />
+        <activity android:name=".eduVid5Activity" />
+        <activity android:name=".eduVid6Activity"></activity>
     </application>
 
 </manifest>
