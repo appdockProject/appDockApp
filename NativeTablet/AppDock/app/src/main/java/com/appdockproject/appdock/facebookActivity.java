@@ -47,9 +47,11 @@ import java.util.Date;
 import java.util.List;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static com.appdockproject.appdock.R.drawable.d;
 import static com.appdockproject.appdock.R.drawable.e;
 import static com.appdockproject.appdock.R.drawable.i;
 import static com.appdockproject.appdock.R.id.bShareToFacebook;
+import static com.appdockproject.appdock.R.id.bTakePhoto;
 import static com.appdockproject.appdock.R.id.devBtn;
 
 public class facebookActivity extends AppCompatActivity {
@@ -125,7 +127,7 @@ public class facebookActivity extends AppCompatActivity {
         Log.i(TAG, "Initializing permissions");
         Dexter.initialize(this); //Used to get Permissions
 
-        Button bTakePhoto = (Button) findViewById(R.id.bTakePhoto);
+        final Button bTakePhoto = (Button) findViewById(R.id.bTakePhoto);
         bTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -180,6 +182,13 @@ public class facebookActivity extends AppCompatActivity {
                         token.continuePermissionRequest();
                     }
                 }, Manifest.permission.INTERNET, Manifest.permission.READ_EXTERNAL_STORAGE);
+            }
+        });
+
+        imPreview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bTakePhoto.performClick();
             }
         });
     }
