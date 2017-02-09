@@ -200,6 +200,9 @@ public class facebookActivity extends AppCompatActivity {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
 
+        //Start camera with front facing
+        takePictureIntent.putExtra("android.intent.extras.CAMERA_FACING", 1);
+
         //name photograph
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String picName = "APPDOCK_" + timeStamp + ".jpg";
