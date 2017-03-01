@@ -103,9 +103,11 @@ public class TwilioSMS {
     }
 
     // TODO: Improve phone-number verification
-    boolean verifyNumber(String number) {
+    private boolean verifyNumber(String number) {
 
-        // Senegal phone number: +221 xxx xxxx
+        // Senegal phone number: +221 xx xxx xxxx
+        // US number: +1xxxxxxxxxx
+        // Formated number: +221xxxxxxxxx OR xxxxxxxxx
 
         if (number.contains("+221"))
             return number.length() == 13;
@@ -113,17 +115,11 @@ public class TwilioSMS {
             return number.length() == 12;
 
         return number.length() == 9;
-
     }
 
     private String formatPhoneNumber(String number){
 
-        if (number.contains("+1"))
-            return number.trim();
-        else if (!number.contains("+211"))
-            return "+221" + number.trim();
-
-        return number.trim();
+        return number.replaceAll("\\s+","");
     }
 
     boolean isConnectedToInternet(){
