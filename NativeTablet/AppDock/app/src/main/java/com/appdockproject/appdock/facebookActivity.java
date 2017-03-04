@@ -53,6 +53,7 @@ import static com.appdockproject.appdock.R.drawable.i;
 import static com.appdockproject.appdock.R.id.bShareToFacebook;
 import static com.appdockproject.appdock.R.id.bTakePhoto;
 import static com.appdockproject.appdock.R.id.devBtn;
+import static com.appdockproject.appdock.R.id.eduBtn;
 
 public class facebookActivity extends AppCompatActivity {
 
@@ -74,47 +75,9 @@ public class facebookActivity extends AppCompatActivity {
 
         Log.i(TAG, "Starting " + this.getComponentName().getShortClassName());
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            int UI_OPTIONS = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
-            getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
-        }
-
         photoTaken = false;
 
-        Button devBtn = (Button) findViewById(R.id.devBtn);
-        Button eduBtn = (Button) findViewById(R.id.eduBtn);
-        Button cmntBtn = (Button) findViewById(R.id.comBtn);
-        Button homeBtn = (Button) findViewById(R.id.appBtn);
-
         imPreview = (ImageView) findViewById(R.id.imFacebookphoto);
-
-        devBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(facebookActivity.this, devActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        eduBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(facebookActivity.this, eduActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        cmntBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(facebookActivity.this, feedbackActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(facebookActivity.this, appPage.class);
-                startActivity(intent);
-            }
-        });
 
         //The following is needed to use facebook
         Log.i(TAG, "Setting up facebook");
@@ -429,19 +392,4 @@ public class facebookActivity extends AppCompatActivity {
         Log.i(TAG, "Image set from location: " + mCurrentPhotoPath);
     }
 
-    // Needs this to remove statusbar and navigation layout after focus of activity regains focus
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        View decorView = getWindow().getDecorView();
-        if (hasFocus) {
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        }
-    }
 }

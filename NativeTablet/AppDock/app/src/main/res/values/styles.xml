@@ -9,11 +9,14 @@
 
     </style>
 
-    <style name="buttonStyle" parent="Widget.AppCompat.ActionButton">
+    <style name="buttonStyle" parent="Theme.AppCompat.Light">
 
         <item name="colorButtonNormal">@color/buttonNormal</item>
         <item name="colorControlHighlight">@color/buttonHighlighted</item>
-        <item name="android:textColor">@color/btnHighlightTxt</item>
+        <item name="android:textColorHighlight">@color/btnHighlightTxt</item>
+        <item name="android:state_pressed">@color/buttonHighlighted</item>
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="android:textSize">14sp</item>
 
     </style>
 

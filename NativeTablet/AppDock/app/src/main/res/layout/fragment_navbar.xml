@@ -1,94 +1,56 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context="com.appdockproject.appdock.navbar"
-    android:translationZ="@dimen/abc_action_bar_content_inset_material"
-    android:background="@color/actBg"
-    >
+    android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:weightSum="7"
-        android:background="@color/navBarBg"
-        android:transitionGroup="true">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:paddingBottom="10dp"
+        android:layout_weight="1"
 
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
 
-        <ImageButton
-            android:layout_width="152dp"
-            android:layout_height="150dp"
-            app:srcCompat="@drawable/logo"
-            android:id="@+id/imageButton"
-            android:layout_margin="10dp"
-            android:layout_weight="2"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:background="@color/navBarBg"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"/>
+    <Button
+        android:id="@+id/eduBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/eduTitleBtn"
+        android:theme="@style/buttonStyle" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/eduTitleBtn"
-            android:id="@+id/eduBtn"
-            android:layout_weight="1"
-            android:background="@color/actBg"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark"
-            android:textSize="14sp" />
+    <Button
+        android:id="@+id/appBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/appTitleBtn"
+        android:theme="@style/buttonStyle" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/appTitleBtn"
-            android:id="@+id/appBtn"
-            android:layout_weight="1"
-            android:background="@color/buttonHighlighted"
-            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog"
-            android:layout_margin="15dp"
-            android:textColor="@color/btnHighlightTxt"
-            android:clickable="true" />
+    <Button
+        android:id="@+id/devBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/devTitleBtn"
+        android:theme="@style/buttonStyle" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/devTitleBtn"
-            android:id="@+id/devBtn"
-            android:layout_weight="1"
-            android:background="@color/actBg"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
+    <Button
+        android:id="@+id/comBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/surveyTitleBtn"
+        android:theme="@style/buttonStyle" />
 
+    <Button
+        android:id="@+id/fbBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/facebookTitleBtn"
+        android:theme="@style/buttonStyle" />
 
-
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/surveyTitleBtn"
-            android:id="@+id/comBtn"
-            android:layout_weight="1"
-            android:background="@color/actBg"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/facebookTitleBtn"
-            android:id="@+id/fbBtn"
-            android:layout_weight="1"
-            android:background="@color/actBg"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-    </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>

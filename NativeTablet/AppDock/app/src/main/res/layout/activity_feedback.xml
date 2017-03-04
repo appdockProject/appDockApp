@@ -6,82 +6,6 @@
     tools:context="com.appdockproject.appdock.feedbackActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@color/navBarBg"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/logo"
-            android:layout_width="152dp"
-            android:layout_height="150dp"
-            android:layout_margin="10dp"
-            android:layout_weight="2"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:background="@color/navBarBg"
-
-            android:src="@drawable/logo"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/eduTitleBtn"
-            android:id="@+id/eduBtn"
-            android:layout_weight="1"
-            android:background="@color/buttonNormal"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/appTitleBtn"
-            android:id="@+id/appBtn"
-            android:layout_weight="1"
-            android:background="@color/buttonNormal"
-            android:theme="@style/Base.Widget.AppCompat.Button.ButtonBar.AlertDialog"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/devTitleBtn"
-            android:id="@+id/devBtn"
-            android:layout_weight="1"
-            android:background="@color/buttonNormal"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/surveyTitleBtn"
-            android:id="@+id/comBtn"
-            android:layout_weight="1"
-            android:background="@color/highlighted"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/btnHighlightTxt" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/facebookTitleBtn"
-            android:id="@+id/fbBtn"
-            android:layout_weight="1"
-            android:background="@color/buttonNormal"
-            android:theme="@style/Base.Widget.AppCompat.ActionButton"
-            android:layout_margin="15dp"
-            android:textColor="@color/abc_primary_text_material_dark" />
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorLightColor"
@@ -128,7 +52,7 @@
         <fragment
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.appdockproject.appdock.survey"
+            android:name="com.appdockproject.appdock.Fragments.surveyFragment"
             android:id="@+id/fragment"
             tools:layout="@layout/fragment_survey" />
 

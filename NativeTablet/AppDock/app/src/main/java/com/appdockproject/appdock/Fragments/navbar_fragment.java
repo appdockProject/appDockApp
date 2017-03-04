@@ -1,4 +1,4 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.Fragments;
 
 
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.appdockproject.appdock.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class navbar extends Fragment {
+public class navbar_fragment extends Fragment {
 
 
-    public navbar() {
+    public navbar_fragment() {
         // Required empty public constructor
     }
 
