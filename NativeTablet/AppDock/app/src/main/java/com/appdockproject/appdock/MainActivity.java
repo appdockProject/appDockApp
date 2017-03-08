@@ -107,7 +107,7 @@ public class MainActivity extends FragmentActivity {
         facebookBtn.setPressed(false);
     }
 
-    private void changeFragment(Fragment fragment) {
+    public void changeFragment(Fragment fragment) {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
