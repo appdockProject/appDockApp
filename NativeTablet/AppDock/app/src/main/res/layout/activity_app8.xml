@@ -6,14 +6,6 @@
     tools:context="com.appdockproject.appdock.apps_activities.App8Activity"
     >
 
-    <fragment
-        android:layout_width="170dp"
-        android:layout_height="match_parent"
-        android:id="@+id/navBar"
-        android:name="com.appdockproject.appdock.navbar_fragment"
-        tools:layout="@layout/fragment_navbar"
-        android:layout_margin="0dp" />
-
     <LinearLayout
         android:padding="30dp"
         android:orientation="horizontal"
