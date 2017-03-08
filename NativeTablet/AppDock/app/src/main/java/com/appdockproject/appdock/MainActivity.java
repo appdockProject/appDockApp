@@ -39,7 +39,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed Dev");
                 resetButtons();
                 devBtn.setPressed(true);
-                changeFragment(new developersFragment());
+                changeFragment(new devActivity());
             }
         });
 
