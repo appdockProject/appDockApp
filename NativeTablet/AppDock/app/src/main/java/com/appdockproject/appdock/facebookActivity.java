@@ -10,11 +10,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -46,6 +50,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import static android.app.Activity.RESULT_OK;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 import static com.appdockproject.appdock.R.drawable.d;
 import static com.appdockproject.appdock.R.drawable.e;
@@ -54,8 +59,9 @@ import static com.appdockproject.appdock.R.id.bShareToFacebook;
 import static com.appdockproject.appdock.R.id.bTakePhoto;
 import static com.appdockproject.appdock.R.id.devBtn;
 import static com.appdockproject.appdock.R.id.eduBtn;
+import static com.facebook.FacebookSdk.getApplicationContext;
 
-public class facebookActivity extends AppCompatActivity {
+public class facebookActivity extends Fragment {
 
     private static final int CONTENT_REQUEST = 1337;
     private final String TAG = "fbPhotoActivity";
@@ -68,29 +74,36 @@ public class facebookActivity extends AppCompatActivity {
     Button bShareToFacebook;
     File output;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facebook);
+    public facebookActivity() {
+        // Required empty public constructor
+    }
 
-        Log.i(TAG, "Starting " + this.getComponentName().getShortClassName());
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+
+        View v = inflater.inflate(R.layout.activity_facebook, container, false);
+
+        Log.i(TAG, "Starting " + getActivity().getComponentName().getShortClassName());
 
         photoTaken = false;
 
-        imPreview = (ImageView) findViewById(R.id.imFacebookphoto);
+        imPreview = (ImageView) v.findViewById(R.id.imFacebookphoto);
 
         //The following is needed to use facebook
         Log.i(TAG, "Setting up facebook");
         FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(getApplication());
+        AppEventsLogger.activateApp(getActivity().getApplication());
         callbackManager = CallbackManager.Factory.create();
         accessToken = AccessToken.getCurrentAccessToken();
         shareDialog = new ShareDialog(this);
 
         Log.i(TAG, "Initializing permissions");
-        Dexter.initialize(this); //Used to get Permissions
+        Dexter.initialize(getActivity()); //Used to get Permissions
 
-        final Button bTakePhoto = (Button) findViewById(R.id.bTakePhoto);
+        final Button bTakePhoto = (Button) v.findViewById(R.id.bTakePhoto);
         bTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +119,7 @@ public class facebookActivity extends AppCompatActivity {
                         } else if (report.isAnyPermissionPermanentlyDenied()) {
                             Log.e(TAG, "Permissions permanently denied!");
                         } else {
-                            Toast.makeText(facebookActivity.this,
+                            Toast.makeText(getActivity(),
                                     "You need to activate permissions!", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -118,7 +131,7 @@ public class facebookActivity extends AppCompatActivity {
                 }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE);
             }
         });
-        bShareToFacebook = (Button) findViewById(R.id.bShareToFacebook);
+        bShareToFacebook = (Button) v.findViewById(R.id.bShareToFacebook);
         bShareToFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,7 +148,7 @@ public class facebookActivity extends AppCompatActivity {
                         } else if (report.isAnyPermissionPermanentlyDenied()) {
                             Log.e(TAG, "Permissions permanently denied!");
                         } else {
-                            Toast.makeText(facebookActivity.this,
+                            Toast.makeText(getActivity(),
                                     "You need to activate permissions!", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -154,6 +167,8 @@ public class facebookActivity extends AppCompatActivity {
                 bTakePhoto.performClick();
             }
         });
+
+        return v;
     }
 
 
@@ -179,7 +194,7 @@ public class facebookActivity extends AppCompatActivity {
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if (requestCode == CONTENT_REQUEST) {
             if (resultCode == RESULT_OK) {
@@ -267,7 +282,7 @@ public class facebookActivity extends AppCompatActivity {
 
                         if (response.getError() != null )
                             if (response.getError().getErrorCode() == -1){
-                                Toast.makeText(facebookActivity.this, R.string.facebook_no_internet, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), R.string.facebook_no_internet, Toast.LENGTH_SHORT).show();
                                 bShareToFacebook.setEnabled(true);
                                 return;
                         }
@@ -284,7 +299,7 @@ public class facebookActivity extends AppCompatActivity {
                         }
 
                         Log.i(TAG, txt);
-                        Toast.makeText(facebookActivity.this, txt, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), txt, Toast.LENGTH_SHORT).show();
 
                         //Enable button after getting results
                         bShareToFacebook.setEnabled(true);
@@ -298,7 +313,7 @@ public class facebookActivity extends AppCompatActivity {
             parameters.putByteArray("picture", image);
 
         //Show uploading toast
-        Toast.makeText(this, getString(R.string.facebook_uploading), Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), getString(R.string.facebook_uploading), Toast.LENGTH_LONG).show();
 
         request.setParameters(parameters);
         request.executeAsync();
@@ -307,14 +322,14 @@ public class facebookActivity extends AppCompatActivity {
     public void shareToFacebook() {
 
         if (!photoTaken) {
-            Toast.makeText(facebookActivity.this,
+            Toast.makeText(getActivity(),
                     getResources().getString(R.string.facebook_no_photo),
                     Toast.LENGTH_SHORT).show();
             Log.i(TAG, "No photo taken");
             return;
         }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(facebookActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(getString(R.string.facebook_upload_to_facebook));
         builder.setMessage(getString(R.string.facebook_upload_confirm_text));
 

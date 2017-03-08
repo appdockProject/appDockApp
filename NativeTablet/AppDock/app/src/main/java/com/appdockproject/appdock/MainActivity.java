@@ -1,9 +1,5 @@
 package com.appdockproject.appdock;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.nfc.Tag;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -12,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.appdockproject.appdock.Fragments.FacebookFragment;
 import com.appdockproject.appdock.Fragments.applicationFragment;
 import com.appdockproject.appdock.Fragments.developersFragment;
 import com.appdockproject.appdock.Fragments.educationFragment;
@@ -41,6 +36,7 @@ public class MainActivity extends FragmentActivity {
 
         devBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Log.i(TAG, "Pressed Dev");
                 resetButtons();
                 devBtn.setPressed(true);
                 changeFragment(new developersFragment());
@@ -49,6 +45,7 @@ public class MainActivity extends FragmentActivity {
 
         eduBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Log.i(TAG, "Pressed Edu");
                 resetButtons();
                 eduBtn.setPressed(true);
                 changeFragment(new educationFragment());
@@ -57,6 +54,7 @@ public class MainActivity extends FragmentActivity {
 
         cmntBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Log.i(TAG, "Pressed Cmnt");
                 resetButtons();
                 cmntBtn.setPressed(true);
                 changeFragment(new surveyFragment());
@@ -65,6 +63,7 @@ public class MainActivity extends FragmentActivity {
 
         appBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Log.i(TAG, "Pressed App");
                 resetButtons();
                 appBtn.setPressed(true);
                 changeFragment(new applicationFragment());
@@ -72,9 +71,10 @@ public class MainActivity extends FragmentActivity {
         });
         facebookBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Log.i(TAG, "Pressed Facebook");
                 resetButtons();
                 facebookBtn.setPressed(true);
-                changeFragment(new FacebookFragment());
+                changeFragment(new facebookActivity());
             }
         });
 
