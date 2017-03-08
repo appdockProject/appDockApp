@@ -51,35 +51,35 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="800dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="50dp">
 
             <ImageView
                 android:id="@+id/imFacebookphoto"
-                android:layout_width="650dp"
-                android:layout_height="350dp"
+                android:layout_width="580dp"
+                android:layout_height="300dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/placehorlder_appdock_round" />
 
             <Button
                 android:id="@+id/bTakePhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_height"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="20dp"
                 android:background="@color/buttonHighlighted"
                 android:text="@string/facebook_take_a_photo"
                 android:textColor="@color/btnHighlightTxt"
                 android:theme="@style/Base.Widget.AppCompat.ActionButton"
-                android:layout_alignBottom="@+id/bShareToFacebook"
+                android:layout_below="@id/imFacebookphoto"
                 android:layout_toStartOf="@+id/bShareToFacebook" />
 
             <Button
                 android:id="@+id/bShareToFacebook"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/button_height"
-                android:layout_marginTop="21dp"
                 android:background="@color/buttonHighlighted"
                 android:text="@string/facebook_upload_to_facebook"
                 android:textColor="@color/btnHighlightTxt"
