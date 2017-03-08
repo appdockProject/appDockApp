@@ -76,31 +76,31 @@
             android:exported="true" />
 
         <activity
-            android:name=".App1Activity"
+            android:name=".apps_activities.App1Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App2Activity"
+            android:name=".apps_activities.App2Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App3Activity"
+            android:name=".apps_activities.App3Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App4Activity"
+            android:name=".apps_activities.App4Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App5Activity"
+            android:name=".apps_activities.App5Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App6Activity"
+            android:name=".apps_activities.App6Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App7Activity"
+            android:name=".apps_activities.App7Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App8Activity"
+            android:name=".apps_activities.App8Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".App9Activity"
+            android:name=".apps_activities.App9Activity"
             android:screenOrientation="landscape" />
         <activity android:name=".eduVid4Activity" />
         <activity android:name=".eduVid5Activity" />

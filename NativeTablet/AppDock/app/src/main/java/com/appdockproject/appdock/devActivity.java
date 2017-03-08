@@ -17,7 +17,6 @@ public class devActivity extends Fragment {
 
         View v = inflater.inflate(R.layout.activity_dev, container, false);
 
-
         return v;
     }
 

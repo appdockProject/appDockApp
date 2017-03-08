@@ -68,8 +68,7 @@
                 android:rowCount="11"
                 android:showDividers="end"
                 android:textAlignment="center"
-                android:weightSum="1"
-                tools:context="com.appdockproject.appdock.Fragments.surveyFragment">
+                android:weightSum="1">
 
                 <TableRow
                     android:layout_width="match_parent"

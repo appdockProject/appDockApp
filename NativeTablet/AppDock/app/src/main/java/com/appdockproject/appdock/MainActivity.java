@@ -8,10 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.appdockproject.appdock.Fragments.applicationFragment;
-import com.appdockproject.appdock.Fragments.educationFragment;
-import com.appdockproject.appdock.Fragments.surveyFragment;
-
 
 public class MainActivity extends FragmentActivity {
 
@@ -47,7 +43,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed Edu");
                 resetButtons();
                 eduBtn.setPressed(true);
-                changeFragment(new educationFragment());
+                //changeFragment(new educationFragment());
             }
         });
 
@@ -65,7 +61,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed App");
                 resetButtons();
                 appBtn.setPressed(true);
-                changeFragment(new applicationFragment());
+                changeFragment(new appPage());
             }
         });
         facebookBtn.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +86,7 @@ public class MainActivity extends FragmentActivity {
             }
 
             // Create a new Fragment to be placed in the activity layout
-            surveyFragment firstFragment = new surveyFragment();
+            appPage firstFragment = new appPage();
             cmntBtn.setPressed(true);
 
             // In case this activity was started with special instructions from an

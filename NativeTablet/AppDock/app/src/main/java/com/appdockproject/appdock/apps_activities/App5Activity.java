@@ -1,4 +1,4 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.apps_activities;
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,16 +8,23 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-public class App2Activity extends AppCompatActivity {
+import com.appdockproject.appdock.R;
+import com.appdockproject.appdock.TwilioSMS;
+import com.appdockproject.appdock.appPage;
+import com.appdockproject.appdock.devActivity;
+import com.appdockproject.appdock.eduActivity;
+import com.appdockproject.appdock.facebookActivity;
+import com.appdockproject.appdock.feedbackActivity;
+
+public class App5Activity extends AppCompatActivity {
 
     EditText phoneNumInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_app2);
+        setContentView(R.layout.activity_app5);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             int UI_OPTIONS = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
@@ -37,54 +44,52 @@ public class App2Activity extends AppCompatActivity {
         phoneNumInput = (EditText) findViewById(R.id.smsNumber);
 
         //get number by Text
-        smsBtn.setOnClickListener(new View.OnClickListener(){
+        smsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 String userSMSNum = phoneNumInput.getText().toString(); //user input number as a string
 
-                TwilioSMS ts = new TwilioSMS(App2Activity.this);
+                TwilioSMS ts = new TwilioSMS(App5Activity.this);
 
-                if (ts.sendSMS(userSMSNum, getString(R.string.app2SMSLink)))
+                if (ts.sendSMS(userSMSNum, getString(R.string.app5SMSLink)))
                     phoneNumInput.getText().clear();
             }
         });
 
-        appBtn.setOnClickListener(new View.OnClickListener(){
+        appBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(App2Activity.this, appPage.class);
+                Intent intent = new Intent(App5Activity.this, appPage.class);
                 startActivity(intent);
             }
         });
 
-        devBtn.setOnClickListener(new View.OnClickListener(){
+        devBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(App2Activity.this, devActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        eduBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App2Activity.this, eduActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        cmntBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App2Activity.this, feedbackActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        fbBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App2Activity.this, facebookActivity.class);
+                Intent intent = new Intent(App5Activity.this, devActivity.class);
                 startActivity(intent);
             }
         });
 
 
+        eduBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(App5Activity.this, eduActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cmntBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(App5Activity.this, feedbackActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fbBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(App5Activity.this, facebookActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // Needs this to remove statusbar and navigation layout after focus of activity regains focus

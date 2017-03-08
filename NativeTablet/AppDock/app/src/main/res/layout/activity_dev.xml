@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.appdockproject.appdock.Fragments.navbar_fragment"
+        tools:context="com.appdockproject.appdock.navbar_fragment"
         android:translationZ="@dimen/abc_action_bar_content_inset_material"
         android:background="@color/actBg"
         >

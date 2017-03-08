@@ -11,7 +11,7 @@
         android:layout_width="170dp"
         android:layout_height="match_parent"
         android:id="@+id/navBar"
-        android:name="com.appdockproject.appdock.Fragments.navbar_fragment"
+        android:name="com.appdockproject.appdock.navbar_fragment"
         tools:layout="@layout/fragment_navbar"
         android:layout_margin="0dp" />
 
