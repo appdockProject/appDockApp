@@ -19,8 +19,6 @@ public class eduActivity extends Fragment {
 
         View v = inflater.inflate(R.layout.activity_edu, container, false);
 
-
-
         ImageButton vid1 = (ImageButton) v.findViewById(R.id.gmail);
         ImageButton vid2 = (ImageButton) v.findViewById(R.id.mobileapp);
         ImageButton vid3 = (ImageButton) v.findViewById(R.id.play);

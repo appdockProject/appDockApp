@@ -17,6 +17,8 @@ import com.appdockproject.appdock.eduActivity;
 import com.appdockproject.appdock.facebookActivity;
 import com.appdockproject.appdock.feedbackActivity;
 
+import static com.appdockproject.appdock.R.id.appBtn;
+
 public class App6Activity extends AppCompatActivity {
 
     EditText phoneNumInput;
@@ -25,19 +27,6 @@ public class App6Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app6);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            int UI_OPTIONS = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
-            getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
-            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-        }
-
-
-        Button devBtn = (Button) findViewById(R.id.devBtn);
-        Button eduBtn = (Button) findViewById(R.id.eduBtn);
-        Button cmntBtn = (Button) findViewById(R.id.comBtn);
-        Button fbBtn = (Button) findViewById(R.id.fbBtn);
-        Button appBtn = (Button) findViewById(R.id.appBtn);
 
         //Activity Elements
         Button smsBtn = (Button) findViewById(R.id.getAppPhoneBtn);
@@ -54,57 +43,5 @@ public class App6Activity extends AppCompatActivity {
                     phoneNumInput.getText().clear();
             }
         });
-
-        appBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App6Activity.this, appPage.class);
-                startActivity(intent);
-            }
-        });
-
-        devBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App6Activity.this, devActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        eduBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App6Activity.this, eduActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        cmntBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App6Activity.this, feedbackActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        fbBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view) {
-                Intent intent = new Intent(App6Activity.this, facebookActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    // Needs this to remove statusbar and navigation layout after focus of activity regains focus
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        View decorView = getWindow().getDecorView();
-        if (hasFocus) {
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        }
     }
 }

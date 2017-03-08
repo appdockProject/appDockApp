@@ -19,6 +19,8 @@ import com.appdockproject.appdock.apps_activities.App7Activity;
 import com.appdockproject.appdock.apps_activities.App8Activity;
 import com.appdockproject.appdock.apps_activities.App9Activity;
 
+import static com.appdockproject.appdock.R.drawable.g;
+
 
 public class appPage extends Fragment {
 
@@ -45,63 +47,63 @@ public class appPage extends Fragment {
         //Listeners to navigate to the app activities
         app1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App1Activity.class);
+                Intent intent = new Intent(getActivity(), App1Activity.class);
                 startActivity(intent);
             }
         });
 
         app2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App2Activity.class);
+                Intent intent = new Intent(getActivity(), App2Activity.class);
                 startActivity(intent);
             }
         });
 
         app3.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App3Activity.class);
+                Intent intent = new Intent(getActivity(), App3Activity.class);
                 startActivity(intent);
             }
         });
 
         app4.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App4Activity.class);
+                Intent intent = new Intent(getActivity(), App4Activity.class);
                 startActivity(intent);
             }
         });
 
         app5.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App5Activity.class);
+                Intent intent = new Intent(getActivity(), App5Activity.class);
                 startActivity(intent);
             }
         });
 
         app6.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App6Activity.class);
+                Intent intent = new Intent(getActivity(), App6Activity.class);
                 startActivity(intent);
             }
         });
 
         app7.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App7Activity.class);
+                Intent intent = new Intent(getActivity(), App7Activity.class);
                 startActivity(intent);
             }
         });
 
         app8.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App8Activity.class);
+                Intent intent = new Intent(getActivity(), App8Activity.class);
                 startActivity(intent);
             }
         });
 
         app9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), App9Activity.class);
+                Intent intent = new Intent(getActivity(), App9Activity.class);
                 startActivity(intent);
             }
         });
