@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.appdockproject.appdock.Fragments.applicationFragment;
-import com.appdockproject.appdock.Fragments.developersFragment;
 import com.appdockproject.appdock.Fragments.educationFragment;
 import com.appdockproject.appdock.Fragments.surveyFragment;
 
@@ -57,7 +56,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed Cmnt");
                 resetButtons();
                 cmntBtn.setPressed(true);
-                changeFragment(new surveyFragment());
+                changeFragment(new feedbackActivity());
             }
         });
 
@@ -130,6 +129,7 @@ public class MainActivity extends FragmentActivity {
         // Set the IMMERSIVE flag.
         // Set the content to appear under the system bars so that the content
         // doesn't resize when the system bars hide and show.
+        Log.i(TAG, "Hiding UI");
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -144,6 +144,7 @@ public class MainActivity extends FragmentActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
+            Log.i(TAG, "Focus changed, hiding ui");
             hideSystemUI();
         }
     }

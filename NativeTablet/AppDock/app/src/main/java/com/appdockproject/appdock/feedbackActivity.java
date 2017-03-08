@@ -11,11 +11,14 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -26,8 +29,17 @@ import android.widget.Toast;
 import com.appdockproject.appdock.Data.Answer;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
-public class feedbackActivity extends AppCompatActivity {
+import java.util.List;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
+
+public class feedbackActivity extends Fragment {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -39,6 +51,9 @@ public class feedbackActivity extends AppCompatActivity {
     int selectedId;
     boolean send;
 
+    View v;
+    String TAG = "feedback";
+
     private RadioGroup.OnCheckedChangeListener listener1, listener2;
 
     String ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString;
@@ -48,66 +63,39 @@ public class feedbackActivity extends AppCompatActivity {
     private String gpsData = "";
     private String latit, longit;
 
+    public feedbackActivity() {
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            int UI_OPTIONS = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
-            getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
-        }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
 
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        View v = inflater.inflate(R.layout.fragment_survey, container, false);
 
+        initializeUI(v);
 
-        Button devBtn = (Button) findViewById(R.id.devBtn);
-        Button eduBtn = (Button) findViewById(R.id.eduBtn);
-        Button homeBtn = (Button) findViewById(R.id.appBtn);
-        Button fbBtn = (Button) findViewById(R.id.fbBtn);
+        return v;
+    }
 
-        devBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(feedbackActivity.this, devActivity.class);
-                startActivity(intent);
-            }
-        });
+    private void initializeUI(View v) {
 
+        this.v = v;
 
-        eduBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(feedbackActivity.this, eduActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(feedbackActivity.this, appPage.class);
-                startActivity(intent);
-            }
-        });
-
-        fbBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(feedbackActivity.this, facebookActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        Dexter.initialize(getActivity()); //Used to get Permissions
 
         //Submit button
-        submit = (Button) findViewById(R.id.submit);
+        submit = (Button) v.findViewById(R.id.submit);
 
-        ageGroup = (RadioGroup) findViewById(R.id.ageGroup);
-        genderGroup = (RadioGroup) findViewById(R.id.genderGroup);
-        eduGroup = (RadioGroup) findViewById(R.id.eduGroup);
-        professionGroup = (RadioGroup) findViewById(R.id.professionGroup);
-        professionGroup2 = (RadioGroup) findViewById(R.id.professionGroup2);
-        phoneGroup = (RadioGroup) findViewById(R.id.phoneGroup);
-        timeGroup = (RadioGroup) findViewById(R.id.timeGroup);
-        ratingGroup = (RadioGroup) findViewById(R.id.ratingGroup);
-        useGroup = (RadioGroup) findViewById(R.id.useGroup);
+        ageGroup = (RadioGroup) v.findViewById(R.id.ageGroup);
+        genderGroup = (RadioGroup) v.findViewById(R.id.genderGroup);
+        eduGroup = (RadioGroup) v.findViewById(R.id.eduGroup);
+        professionGroup = (RadioGroup) v.findViewById(R.id.professionGroup);
+        professionGroup2 = (RadioGroup) v.findViewById(R.id.professionGroup2);
+        phoneGroup = (RadioGroup) v.findViewById(R.id.phoneGroup);
+        timeGroup = (RadioGroup) v.findViewById(R.id.timeGroup);
+        ratingGroup = (RadioGroup) v.findViewById(R.id.ratingGroup);
+        useGroup = (RadioGroup) v.findViewById(R.id.useGroup);
 
         listener1 = new RadioGroup.OnCheckedChangeListener() {
 
@@ -145,107 +133,169 @@ public class feedbackActivity extends AppCompatActivity {
         myRef = database.getReference();
 
         submit.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                //age and make sure value is not null (in this case -1)
-                if (ageGroup.getCheckedRadioButtonId() != -1) {
-                    selectedId = ageGroup.getCheckedRadioButtonId();
-                    selectedAge = (RadioButton) findViewById(selectedId);
-                    ageString = selectedAge.getText().toString();
-                }
 
-                //gender
-                if (genderGroup.getCheckedRadioButtonId() != -1) {
-                    selectedId = genderGroup.getCheckedRadioButtonId();
-                    selectedGender = (RadioButton) findViewById(selectedId);
-                    genderString = selectedGender.getText().toString();
-                }
+                Dexter.checkPermissions(new MultiplePermissionsListener() {
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport report) {
+                        if (report.areAllPermissionsGranted()) {
+                            Log.i(TAG, "Internet permission granted");
 
-                //edu level
-                if (eduGroup.getCheckedRadioButtonId() != -1) {
-                    selectedId = eduGroup.getCheckedRadioButtonId();
-                    selectedEdu = (RadioButton) findViewById(selectedId);
-                    eduString = selectedEdu.getText().toString();
-                }
+                            getLocationData();
+                            submitData();
 
-                //occupation
-                if (professionGroup.getCheckedRadioButtonId() != -1) {
+                        } else if (report.isAnyPermissionPermanentlyDenied()) {
+                            Log.e(TAG, "Permissions permanently denied!");
+                        } else {
+                            Toast.makeText(getActivity(),
+                                    "You need to activate permissions!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
 
-                    selectedId = professionGroup.getCheckedRadioButtonId();
-                    selectedProfession = (RadioButton) findViewById(selectedId);
-                    professionString = selectedProfession.getText().toString();
-                }
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
+                }, Manifest.permission.INTERNET, Manifest.permission.ACCESS_COARSE_LOCATION);
 
-                //2nd occupation group
-                if (professionGroup2.getCheckedRadioButtonId() != -1) {
-
-                    selectedId = professionGroup2.getCheckedRadioButtonId();
-                    selectedProfession = (RadioButton) findViewById(selectedId);
-                    professionString = selectedProfession.getText().toString();
-                }
-
-                //phone type
-                if (phoneGroup.getCheckedRadioButtonId() != -1) {
-                    selectedId = phoneGroup.getCheckedRadioButtonId();
-                    selectedPhone = (RadioButton) findViewById(selectedId);
-                    phoneString = selectedPhone.getText().toString();
-                }
-
-                //time spent
-                if (timeGroup.getCheckedRadioButtonId() != -1) {
-                    selectedId = timeGroup.getCheckedRadioButtonId();
-                    selectedTime = (RadioButton) findViewById(selectedId);
-                    timeString = selectedTime.getText().toString();
-                }
-
-                //rating
-                if (ratingGroup.getCheckedRadioButtonId() != -1) {
-                    selectedId = ratingGroup.getCheckedRadioButtonId();
-                    selectedRating = (RadioButton) findViewById(selectedId);
-                    ratingString = selectedRating.getText().toString();
-                }
-
-                //use of appdock
-                if (useGroup.getCheckedRadioButtonId() != -1) {
-                    selectedId = useGroup.getCheckedRadioButtonId();
-                    selectedUse = (RadioButton) findViewById(selectedId);
-                    useString = selectedUse.getText().toString();
-                }
-
-                if ((ageGroup.getCheckedRadioButtonId() != -1) && (genderGroup.getCheckedRadioButtonId() != -1) && (eduGroup.getCheckedRadioButtonId() != -1) && (professionGroup.getCheckedRadioButtonId() != -1 || professionGroup2.getCheckedRadioButtonId() != -1) && (phoneGroup.getCheckedRadioButtonId() != -1) && (timeGroup.getCheckedRadioButtonId() != -1) && (ratingGroup.getCheckedRadioButtonId() != -1) && (useGroup.getCheckedRadioButtonId() != -1)) {
-                    addData(ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString, latit, longit);
-
-                    Context context = getApplicationContext();
-                    CharSequence text = "Merci!";
-                    int duration = Toast.LENGTH_SHORT;
-
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-
-                    ageGroup.clearCheck();
-                    genderGroup.clearCheck();
-                    eduGroup.clearCheck();
-                    professionGroup.clearCheck();
-                    professionGroup2.clearCheck();
-                    phoneGroup.clearCheck();
-                    timeGroup.clearCheck();
-                    ratingGroup.clearCheck();
-                    useGroup.clearCheck();
-
-
-                } else {
-                    //Add toast here?
-                    Context context = getApplicationContext();
-                    CharSequence text = "Veuillez remplir toutes les informations";
-                    int duration = Toast.LENGTH_LONG;
-
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-                }
             }
         });
     }
 
+    private void submitData() {
+        //age and make sure value is not null (in this case -1)
+        if (ageGroup.getCheckedRadioButtonId() != -1) {
+            selectedId = ageGroup.getCheckedRadioButtonId();
+            selectedAge = (RadioButton) v.findViewById(selectedId);
+            ageString = selectedAge.getText().toString();
+        }
+
+        //gender
+        if (genderGroup.getCheckedRadioButtonId() != -1) {
+            selectedId = genderGroup.getCheckedRadioButtonId();
+            selectedGender = (RadioButton) v.findViewById(selectedId);
+            genderString = selectedGender.getText().toString();
+        }
+
+        //edu level
+        if (eduGroup.getCheckedRadioButtonId() != -1) {
+            selectedId = eduGroup.getCheckedRadioButtonId();
+            selectedEdu = (RadioButton) v.findViewById(selectedId);
+            eduString = selectedEdu.getText().toString();
+        }
+
+        //occupation
+        if (professionGroup.getCheckedRadioButtonId() != -1) {
+
+            selectedId = professionGroup.getCheckedRadioButtonId();
+            selectedProfession = (RadioButton) v.findViewById(selectedId);
+            professionString = selectedProfession.getText().toString();
+        }
+
+        //2nd occupation group
+        if (professionGroup2.getCheckedRadioButtonId() != -1) {
+
+            selectedId = professionGroup2.getCheckedRadioButtonId();
+            selectedProfession = (RadioButton) v.findViewById(selectedId);
+            professionString = selectedProfession.getText().toString();
+        }
+
+        //phone type
+        if (phoneGroup.getCheckedRadioButtonId() != -1) {
+            selectedId = phoneGroup.getCheckedRadioButtonId();
+            selectedPhone = (RadioButton) v.findViewById(selectedId);
+            phoneString = selectedPhone.getText().toString();
+        }
+
+        //time spent
+        if (timeGroup.getCheckedRadioButtonId() != -1) {
+            selectedId = timeGroup.getCheckedRadioButtonId();
+            selectedTime = (RadioButton) v.findViewById(selectedId);
+            timeString = selectedTime.getText().toString();
+        }
+
+        //rating
+        if (ratingGroup.getCheckedRadioButtonId() != -1) {
+            selectedId = ratingGroup.getCheckedRadioButtonId();
+            selectedRating = (RadioButton) v.findViewById(selectedId);
+            ratingString = selectedRating.getText().toString();
+        }
+
+        //use of appdock
+        if (useGroup.getCheckedRadioButtonId() != -1) {
+            selectedId = useGroup.getCheckedRadioButtonId();
+            selectedUse = (RadioButton) v.findViewById(selectedId);
+            useString = selectedUse.getText().toString();
+        }
+
+        if ((ageGroup.getCheckedRadioButtonId() != -1) && (genderGroup.getCheckedRadioButtonId() != -1) && (eduGroup.getCheckedRadioButtonId() != -1) && (professionGroup.getCheckedRadioButtonId() != -1 || professionGroup2.getCheckedRadioButtonId() != -1) && (phoneGroup.getCheckedRadioButtonId() != -1) && (timeGroup.getCheckedRadioButtonId() != -1) && (ratingGroup.getCheckedRadioButtonId() != -1) && (useGroup.getCheckedRadioButtonId() != -1)) {
+            addData(ageString, genderString, eduString, professionString, phoneString, timeString, ratingString, useString, latit, longit);
+
+            Context context = getApplicationContext();
+            CharSequence text = "Merci!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+
+            ageGroup.clearCheck();
+            genderGroup.clearCheck();
+            eduGroup.clearCheck();
+            professionGroup.clearCheck();
+            professionGroup2.clearCheck();
+            phoneGroup.clearCheck();
+            timeGroup.clearCheck();
+            ratingGroup.clearCheck();
+            useGroup.clearCheck();
+
+
+        } else {
+            //Add toast here?
+            Context context = getApplicationContext();
+            CharSequence text = "Veuillez remplir toutes les informations";
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+    }
+
+    private void getLocationData() {
+        LocationManager locationManager = (LocationManager) this.getActivity().getSystemService(Context.LOCATION_SERVICE);
+
+        LocationListener locationListener = new LocationListener() {
+            public void onLocationChanged(Location location) {
+                // Called when a new location is found by the network location provider.
+                locationLatitude = location.getLatitude();
+                locationLongitude = location.getLongitude();
+                latit = Double.toString(locationLatitude);
+                longit = Double.toString(locationLongitude);
+            }
+
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+            }
+
+            public void onProviderEnabled(String provider) {
+            }
+
+            public void onProviderDisabled(String provider) {
+            }
+        };
+
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, locationListener);
+    }
 
     private void addData(String age, String gender, String edu, String profession, String phone, String time, String rating, String use, String lat, String longit) {
         Answer a = new Answer();
@@ -260,63 +310,6 @@ public class feedbackActivity extends AppCompatActivity {
         a.setLocation(lat, longit);
 
         myRef.child("Answer").push().setValue(a);
-    }
-
-
-    //Get location permission
-
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case 1: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-
-                    LocationListener locationListener = new LocationListener() {
-                        public void onLocationChanged(Location location) {
-                            // Called when a new location is found by the network location provider.
-                            locationLatitude = location.getLatitude();
-                            locationLongitude = location.getLongitude();
-                            latit = Double.toString(locationLatitude);
-                            longit = Double.toString(locationLongitude);
-                        }
-
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-                        }
-
-                        public void onProviderEnabled(String provider) {
-                        }
-
-                        public void onProviderDisabled(String provider) {
-                        }
-                    };
-
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, locationListener);
-
-                } else {
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-
-                    latit = "0.0";
-                    longit = "0.0";
-                }
-                return;
-            }
-            // other 'case' lines to check for other
-            // permissions this app might request
-        }
     }
 
 }
