@@ -1,180 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.appdockproject.appdock.apps_activities.App3Activity"
-    >
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    tools:context="com.appdockproject.appdock.apps_activities.App3Activity">
 
     <LinearLayout
-        android:padding="30dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
 
         <LinearLayout
-            android:layout_width="398dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="@drawable/line"
+            android:orientation="vertical"
             android:padding="10dp">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:orientation="horizontal">
 
-                <ImageView android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/c"
+                <ImageView
                     android:id="@+id/appLogo"
-                    android:layout_weight="1" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/c" />
 
-                <ImageView android:layout_width="150dp"
-                    android:layout_height="150dp"
-
+                <ImageView
                     android:id="@+id/devLogo"
+                    android:layout_width="150dp"
+
+                    android:layout_height="150dp"
                     android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="380dp">
+                android:layout_height="380dp"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/appTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/app3"
-                    android:id="@+id/appTitle"
-                    android:textColor="@android:color/holo_orange_dark"
-                    android:textStyle="bold"
                     android:textAlignment="textStart"
-                    android:textSize="26dp" />
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/app3Key"
-                    android:textColor="@android:color/holo_orange_dark"
-                    android:textStyle="bold"
                     android:textAlignment="textStart"
-                    android:textSize="21dp" />
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="21dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingRight="5dp"
                     android:paddingTop="5dp"
                     android:text="@string/app3Desc"
+                    android:textAlignment="viewStart"
                     android:textColor="@android:color/holo_orange_dark"
-                    android:textSize="22dp"
-                    android:paddingRight="5dp"
-                    android:textAlignment="viewStart" />
+                    android:textSize="22dp" />
             </LinearLayout>
 
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="match_parent"
-            android:paddingLeft="5dp"
-            >
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
+        <EditText
 
-                <EditText
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textColor="@color/stringColorBlue"
-                    android:hint="@string/getPhoneNum"
-                    android:id="@+id/smsNumber"
-                    android:textSize="20dp"
-                    android:ems="10"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/parSms"
-                    android:layout_alignParentEnd="true"
-
-                    android:layout_centerVertical="true"
-                    android:inputType="phone"
-                    android:layout_alignParentStart="true"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/holo_orange_dark"
-                    android:text="@string/app3Link"
-                    android:id="@+id/bitly"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/parlien"
-                    android:layout_alignParentStart="true" />
-
-                <Button
-                    android:text="@string/getPhoneNumBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/button_height"
-                    android:layout_marginTop="@dimen/button_padding_top"
-                    android:id="@+id/getAppPhoneBtn"
-                    android:layout_below="@+id/smsNumber"
-                    android:layout_alignParentEnd="true"
-                    android:textColor="#fff"
-                    android:background="@color/buttonNormal"
-                    android:theme="@style/Base.Widget.AppCompat.ActionButton"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/getAppTitle"
-                    android:textColor="@android:color/holo_orange_dark"
-                    android:textStyle="bold"
-                    android:id="@+id/obtainApp"
-
-                    android:layout_marginTop="66dp"
-                    android:textSize="26dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/holo_orange_dark"
-                    android:text="@string/viaWeb"
-                    android:id="@+id/parlien"
-                    android:textSize="23dp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="27dp"
-                    android:layout_below="@+id/obtainApp"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/holo_orange_dark"
-                    android:text="@string/viaText"
-                    android:id="@+id/parSms"
-                    android:textSize="23dp"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/bitly"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="17dp" />
-            </RelativeLayout>
-
-            <ImageButton
+                android:id="@+id/smsNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/wolofTop"
-                android:src="@drawable/wolof"
-                android:background="@color/colorLightColor"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/parSms"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:hint="@string/getPhoneNum"
+                android:inputType="phone"
+                android:padding="5dp"
+
+                android:textColor="@color/stringColorBlue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bitly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/parlien"
+                android:text="@string/app3Link"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/getAppPhoneBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/smsNumber"
+                android:layout_marginTop="@dimen/button_padding_top"
+                android:background="@color/buttonNormal"
+                android:text="@string/getPhoneNumBtn"
+                android:textColor="#fff"
+                android:theme="@style/Base.Widget.AppCompat.ActionButton" />
+
+            <TextView
+                android:id="@+id/obtainApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="66dp"
+
+                android:text="@string/getAppTitle"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/parlien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/obtainApp"
+                android:layout_marginTop="27dp"
+                android:text="@string/viaWeb"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/parSms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/bitly"
+                android:layout_marginTop="17dp"
+                android:text="@string/viaText"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+
+            <ImageButton
+                android:id="@+id/wolofTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/com_facebook_close" />
 
         </RelativeLayout>
 
@@ -182,4 +177,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</ScrollView>
