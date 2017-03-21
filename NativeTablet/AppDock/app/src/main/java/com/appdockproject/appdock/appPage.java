@@ -16,23 +16,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
-
-import com.appdockproject.appdock.apps_activities.App1Activity;
-import com.appdockproject.appdock.apps_activities.App2Activity;
-import com.appdockproject.appdock.apps_activities.App3Activity;
-import com.appdockproject.appdock.apps_activities.App4Activity;
-import com.appdockproject.appdock.apps_activities.App5Activity;
-import com.appdockproject.appdock.apps_activities.App6Activity;
-import com.appdockproject.appdock.apps_activities.App7Activity;
-import com.appdockproject.appdock.apps_activities.App8Activity;
-import com.appdockproject.appdock.apps_activities.App9Activity;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
-import static android.os.Build.VERSION_CODES.M;
-import static com.appdockproject.appdock.R.drawable.g;
-import static com.appdockproject.appdock.R.string.app1;
-
 
 public class appPage extends Fragment {
 
