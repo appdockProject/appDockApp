@@ -1,9 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="800dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="horizontal"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:theme="@android:style/Theme.Dialog">
 
     <Button
         android:id="@+id/videoBtn"
@@ -44,8 +45,8 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="395dp"
-            android:orientation="vertical"
             android:layout_below="@+id/title"
+            android:orientation="vertical"
             android:weightSum="1">
 
             <VideoView
