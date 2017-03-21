@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +18,11 @@ import android.widget.MediaController;
 import android.widget.PopupWindow;
 import android.widget.VideoView;
 
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+
 public class eduActivity extends Fragment {
+
+    String TAG = "EduVids";
 
     private PopupWindow mPopupWindow;
     private LinearLayout mLinearLayout;
@@ -29,9 +34,14 @@ public class eduActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
+        // Set up Layoutinflater for the popup windows
+        popUpInflater = (LayoutInflater) getContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_edu, container, false);
+
+        mLinearLayout = (LinearLayout) v.findViewById(R.id.eduPage_layout);
 
         ImageButton vid1 = (ImageButton) v.findViewById(R.id.gmail);
         ImageButton vid2 = (ImageButton) v.findViewById(R.id.mobileapp);
@@ -83,7 +93,7 @@ public class eduActivity extends Fragment {
         // Initialize a new instance of popup window
         mPopupWindow = new PopupWindow(
                 popUpView,
-                FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT
         );
         mPopupWindow.setFocusable(true);
@@ -95,7 +105,7 @@ public class eduActivity extends Fragment {
         }
 
         // Get a reference for the custom view close button
-        ImageButton closeButton = (ImageButton) popUpView.findViewById(R.id.wolofTop);
+        ImageButton closeButton = (ImageButton) popUpView.findViewById(R.id.closeWindow);
 
         // Set a click listener for the popup window close button
         closeButton.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +116,11 @@ public class eduActivity extends Fragment {
             }
         });
 
+        Log.i(TAG, "Setting up popup for " + getResources().getResourceName(activity_vid));
+
+        Log.i(TAG, "Playing vid: " + R.raw.eduvideo1);
+        Log.i(TAG, "Playing vid: " + raw_vid);
+        
         //Activity Elements
         String videoLink = "android.resource://com.appdockproject.appdock/"+raw_vid;
         final VideoView videoView = (VideoView) popUpView.findViewById(R.id.videoView);
@@ -113,7 +128,7 @@ public class eduActivity extends Fragment {
         videoView.setVideoPath(videoLink);
 
         MediaController mediaController = new
-                MediaController(getContext());
+                MediaController(getActivity());
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
 
@@ -121,5 +136,6 @@ public class eduActivity extends Fragment {
 
         // Finally, show the popup window at the center location of root relative layout
         mPopupWindow.showAtLocation(mLinearLayout, Gravity.CENTER, 0, 0);
+
     }
 }
