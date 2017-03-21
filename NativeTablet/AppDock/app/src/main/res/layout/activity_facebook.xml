@@ -53,12 +53,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="50dp">
+            android:padding="24dp">
 
             <ImageView
                 android:id="@+id/imFacebookphoto"
-                android:layout_width="580dp"
-                android:layout_height="300dp"
+                android:layout_width="600dp"
+                android:layout_height="325dp"
                 android:layout_centerInParent="true"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/placehorlder_appdock_round" />
