@@ -59,7 +59,7 @@ public class appPage extends Fragment {
 
         // Setup firebase to get information about apps
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Apps");
-        
+
         DatabaseReference app1_ref = mDatabase.child("app1"),
             app2_ref = mDatabase.child("app2"),
             app3_ref = mDatabase.child("app3"),
@@ -271,58 +271,4 @@ public class appPage extends Fragment {
         return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
     }
 
-    void setupPopup(int activity_app, int appSMSLink){
-
-        // Inflate the custom layout/view
-        popUpView = popUpInflater.inflate(activity_app, null);
-
-        // Initialize a new instance of popup window
-        mPopupWindow = new PopupWindow(
-                popUpView,
-                FrameLayout.LayoutParams.WRAP_CONTENT,
-                FrameLayout.LayoutParams.WRAP_CONTENT
-        );
-        mPopupWindow.setFocusable(true);
-
-        // Set an elevation value for popup window
-        // Call requires API level 21
-        if (Build.VERSION.SDK_INT >= 21) {
-            mPopupWindow.setElevation(5.0f);
-        }
-
-        // Get a reference for the custom view close button
-        ImageButton closeButton = (ImageButton) popUpView.findViewById(R.id.wolofTop);
-
-        // Set a click listener for the popup window close button
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Dismiss the popup window
-                mPopupWindow.dismiss();
-            }
-        });
-
-        //Activity Elements
-        Button smsBtn = (Button) popUpView.findViewById(R.id.getAppPhoneBtn);
-        final EditText phoneNumInput = (EditText) popUpView.findViewById(R.id.smsNumber);
-        final String smsLink = getString(appSMSLink);
-
-        //get number by Text
-        smsBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //to send the text
-
-                String userSMSNum = phoneNumInput.getText().toString(); //user input number as a string
-
-                TwilioSMS ts = new TwilioSMS(getActivity());
-
-                if (ts.sendSMS(userSMSNum, smsLink))
-                    phoneNumInput.getText().clear();
-
-            }
-        });
-
-        // Finally, show the popup window at the center location of root relative layout
-        mPopupWindow.showAtLocation(mLinearLayout, Gravity.CENTER, 0, 0);
-    }
 }
