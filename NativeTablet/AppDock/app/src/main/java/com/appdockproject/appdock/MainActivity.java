@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class MainActivity extends FragmentActivity {
 
@@ -21,6 +23,9 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.main_activity);
 
         Log.i(TAG, "Started Main activity");
+
+        // Setup firebase to cache data locally
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         hideSystemUI();
 
