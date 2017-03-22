@@ -41,18 +41,6 @@ public class appPage extends Fragment {
     private View popUpView;
     LayoutInflater popUpInflater;
 
-    // Firebase reference
-    private DatabaseReference mDatabase,
-        app1_ref,
-        app2_ref,
-        app3_ref,
-        app4_ref,
-        app5_ref,
-        app6_ref,
-        app7_ref,
-        app8_ref,
-        app9_ref;
-
     App[] apps = new App[9];
 
     public appPage(){}
@@ -70,16 +58,17 @@ public class appPage extends Fragment {
         mLinearLayout = (LinearLayout) v.findViewById(R.id.appPage_layout);
 
         // Setup firebase to get information about apps
-        mDatabase = FirebaseDatabase.getInstance().getReference("Apps");
-        app1_ref = mDatabase.child("app1");
-        app2_ref = mDatabase.child("app2");
-        app3_ref = mDatabase.child("app3");
-        app4_ref = mDatabase.child("app4");
-        app5_ref = mDatabase.child("app5");
-        app6_ref = mDatabase.child("app6");
-        app7_ref = mDatabase.child("app7");
-        app8_ref = mDatabase.child("app8");
-        app9_ref = mDatabase.child("app9");
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Apps");
+        
+        DatabaseReference app1_ref = mDatabase.child("app1"),
+            app2_ref = mDatabase.child("app2"),
+            app3_ref = mDatabase.child("app3"),
+            app4_ref = mDatabase.child("app4"),
+            app5_ref = mDatabase.child("app5"),
+            app6_ref = mDatabase.child("app6"),
+            app7_ref = mDatabase.child("app7"),
+            app8_ref = mDatabase.child("app8"),
+            app9_ref = mDatabase.child("app9");
 
         ValueEventListener postListener = new ValueEventListener() {
             @Override
