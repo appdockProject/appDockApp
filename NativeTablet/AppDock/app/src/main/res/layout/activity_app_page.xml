@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appPage_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/appPage_layout"
     android:background="@color/actBg"
     android:orientation="vertical"
     tools:context="com.appdockproject.appdock.appPage">
@@ -50,10 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
         android:columnCount="3"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -63,9 +63,11 @@
 
             <ImageButton
                 android:id="@+id/aImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/a" />
 
             <TextView
@@ -80,7 +82,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,9 +90,11 @@
 
             <ImageButton
                 android:id="@+id/bImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/b" />
 
             <TextView
@@ -115,9 +118,11 @@
 
             <ImageButton
                 android:id="@+id/cImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/c" />
 
             <TextView
@@ -141,9 +146,11 @@
 
             <ImageButton
                 android:id="@+id/dImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/d" />
 
             <TextView
@@ -167,9 +174,11 @@
 
             <ImageButton
                 android:id="@+id/eImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/e" />
 
             <TextView
@@ -194,14 +203,16 @@
 
             <ImageButton
                 android:id="@+id/fImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/f" />
 
             <TextView
                 android:id="@+id/fText"
-                android:layout_width="146dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:paddingTop="5dp"
@@ -221,9 +232,11 @@
 
             <ImageButton
                 android:id="@+id/gImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/g" />
 
             <TextView
@@ -247,9 +260,11 @@
 
             <ImageButton
                 android:id="@+id/hImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/h" />
 
             <TextView
@@ -273,14 +288,16 @@
 
             <ImageButton
                 android:id="@+id/iImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
                 android:background="@color/actBg"
+                android:scaleType="fitCenter"
                 android:src="@drawable/i" />
 
             <TextView
                 android:id="@+id/iText"
-                android:layout_width="138dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:paddingTop="5dp"

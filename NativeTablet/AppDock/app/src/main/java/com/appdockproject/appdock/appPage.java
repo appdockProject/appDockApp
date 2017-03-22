@@ -31,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 import static android.R.id.closeButton;
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 import static com.appdockproject.appdock.R.drawable.a;
+import static com.appdockproject.appdock.R.string.app2;
 
 public class appPage extends Fragment {
 
@@ -42,6 +43,8 @@ public class appPage extends Fragment {
     LayoutInflater popUpInflater;
 
     App[] apps = new App[9];
+    TextView[] titles = new TextView[9];
+    ImageButton[] buttons = new ImageButton[9];
 
     public appPage(){}
 
@@ -79,6 +82,8 @@ public class appPage extends Fragment {
                 App app = dataSnapshot.getValue(App.class);
                 apps[key-1] = app;
                 //setupWindow(apps[key]);
+                titles[key-1].setText(app.getName());
+                buttons[key-1].setImageBitmap(decodeBit64Image(app.getLogo()));
 
             }
 
@@ -99,18 +104,43 @@ public class appPage extends Fragment {
         app8_ref.addValueEventListener(postListener);
         app9_ref.addValueEventListener(postListener);
 
-        //setupImageButtons();
-
-        //Buttons to the app pages
+        //Buttons and titles to the app pages
         ImageButton app1 = (ImageButton) v.findViewById(R.id.aImage);
+        buttons[0] = app1;
+        TextView t1 = (TextView) v.findViewById(R.id.aText);
+        titles[0] = t1;
         ImageButton app2 = (ImageButton) v.findViewById(R.id.bImage);
+        buttons[1] = app2;
+        TextView t2 = (TextView) v.findViewById(R.id.bText);
+        titles[1] = t2;
         ImageButton app3 = (ImageButton) v.findViewById(R.id.cImage);
+        buttons[2] = app3;
+        TextView t3 = (TextView) v.findViewById(R.id.cText);
+        titles[2] = t3;
         ImageButton app4 = (ImageButton) v.findViewById(R.id.dImage);
+        buttons[3] = app4;
+        TextView t4 = (TextView) v.findViewById(R.id.dText);
+        titles[3] = t4;
         ImageButton app5 = (ImageButton) v.findViewById(R.id.eImage);
+        buttons[4] = app5;
+        TextView t5 = (TextView) v.findViewById(R.id.eText);
+        titles[4] = t5;
         ImageButton app6 = (ImageButton) v.findViewById(R.id.fImage);
+        buttons[5] = app6;
+        TextView t6 = (TextView) v.findViewById(R.id.fText);
+        titles[5] = t6;
         ImageButton app7 = (ImageButton) v.findViewById(R.id.gImage);
+        buttons[6] = app7;
+        TextView t7 = (TextView) v.findViewById(R.id.gText);
+        titles[6] = t7;
         ImageButton app8 = (ImageButton) v.findViewById(R.id.hImage);
+        buttons[7] = app8;
+        TextView t8 = (TextView) v.findViewById(R.id.hText);
+        titles[7] = t8;
         ImageButton app9 = (ImageButton) v.findViewById(R.id.iImage);
+        buttons[8] = app9;
+        TextView t9 = (TextView) v.findViewById(R.id.iText);
+        titles[8] = t9;
 
         //Listeners to navigate to the app activities
         app1.setOnClickListener(new View.OnClickListener() {
@@ -203,8 +233,6 @@ public class appPage extends Fragment {
         }
 
         Log.i(TAG, "Opening app " + app.getName());
-        Log.i(TAG, "Dev logo: " + app.getDev1().length());
-        Log.i(TAG, "Logo:  " + app.getLogo().length());
 
         // Setup logos
         ImageView logo = (ImageView) popUpView.findViewById(R.id.appLogo);
