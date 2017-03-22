@@ -11,7 +11,6 @@ public class App {
     String name,
             desc,
             dev1,
-            dev2,
             keywords,
             link,
             logo,
@@ -41,14 +40,6 @@ public class App {
 
     public void setDev1(String dev1) {
         this.dev1 = dev1;
-    }
-
-    public String getDev2() {
-        return dev2;
-    }
-
-    public void setDev2(String dev2) {
-        this.dev2 = dev2;
     }
 
     public String getKeywords() {

@@ -1,9 +1,12 @@
 package com.appdockproject.appdock;
 
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -27,6 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import static android.R.id.closeButton;
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+import static com.appdockproject.appdock.R.drawable.a;
 
 public class appPage extends Fragment {
 
@@ -76,7 +80,6 @@ public class appPage extends Fragment {
         app7_ref = mDatabase.child("app7");
         app8_ref = mDatabase.child("app8");
         app9_ref = mDatabase.child("app9");
-        mDatabase.child("TEST").setValue("TEST");
 
         ValueEventListener postListener = new ValueEventListener() {
             @Override
@@ -210,20 +213,25 @@ public class appPage extends Fragment {
             mPopupWindow.setElevation(5.0f);
         }
 
+        Log.i(TAG, "Opening app " + app.getName());
+        Log.i(TAG, "Dev logo: " + app.getDev1().length());
+        Log.i(TAG, "Logo:  " + app.getLogo().length());
+
         // Setup logos
         ImageView logo = (ImageView) popUpView.findViewById(R.id.appLogo);
+        if (app.getLogo() != null)
+            logo.setImageBitmap(decodeBit64Image(app.getLogo()));
         ImageView dev = (ImageView) popUpView.findViewById(R.id.devLogo);
+        if (app.getDev1() != null)
+            dev.setImageBitmap(decodeBit64Image(app.getDev1()));
 
         // Setup all text in app
         TextView title = (TextView) popUpView.findViewById(R.id.appTitle);
         title.setText(app.getName());
-        Log.i(TAG, "Opening app " + app.getName());
         TextView keyWords = (TextView) popUpView.findViewById(R.id.appKeywords);
         keyWords.setText(app.getKeywords());
-        Log.i(TAG, "Has keywords: " + app.getKeywords());
         TextView desc = (TextView) popUpView.findViewById(R.id.appDesc);
         desc.setText(app.getDesc());
-        Log.i(TAG, "With description " + app.getDesc());
         TextView webLink = (TextView) popUpView.findViewById(R.id.bitly);
         webLink.setText(app.getLink());
 
@@ -261,6 +269,17 @@ public class appPage extends Fragment {
 
         // Finally, show the popup window at the center location of root relative layout
         mPopupWindow.showAtLocation(mLinearLayout, Gravity.CENTER, 0, 0);
+    }
+
+    Bitmap decodeBit64Image(String image){
+        byte[] imageAsBytes;
+        try {
+            imageAsBytes = Base64.decode(image, Base64.DEFAULT);
+        } catch (IllegalArgumentException e){
+            Log.e(TAG, "Bad bit64..");
+            return null;
+        }
+        return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
     }
 
     void setupPopup(int activity_app, int appSMSLink){
