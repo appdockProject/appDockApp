@@ -6,7 +6,7 @@
     android:id="@+id/eduPage_layout"
     android:background="@color/actBg"
     android:orientation="horizontal"
-    tools:context="com.appdockproject.appdock.eduActivity">
+    tools:context="com.appdockproject.appdock.Fragments.eduFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

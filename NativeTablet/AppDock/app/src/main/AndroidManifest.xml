@@ -56,10 +56,10 @@
             android:authorities="com.facebook.app.FacebookContentProvider165226117264719"
             android:exported="true" />
 
-        <activity android:name=".eduVid1Activity" />
-        <activity android:name=".eduVid4Activity" />
-        <activity android:name=".eduVid5Activity" />
-        <activity android:name=".eduVid6Activity" />
+        <activity android:name=".VideoActivities.eduVid1Activity" />
+        <activity android:name=".VideoActivities.eduVid4Activity" />
+        <activity android:name=".VideoActivities.eduVid5Activity" />
+        <activity android:name=".VideoActivities.eduVid6Activity" />
     </application>
 
 </manifest>

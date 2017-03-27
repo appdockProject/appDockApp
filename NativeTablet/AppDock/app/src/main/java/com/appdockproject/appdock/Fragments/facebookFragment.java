@@ -1,4 +1,4 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.Fragments;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.appdockproject.appdock.R;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
@@ -61,7 +62,7 @@ import static com.appdockproject.appdock.R.id.devBtn;
 import static com.appdockproject.appdock.R.id.eduBtn;
 import static com.facebook.FacebookSdk.getApplicationContext;
 
-public class facebookActivity extends Fragment {
+public class facebookFragment extends Fragment {
 
     private static final int CONTENT_REQUEST = 1337;
     private final String TAG = "fbPhotoActivity";
@@ -74,7 +75,7 @@ public class facebookActivity extends Fragment {
     Button bShareToFacebook;
     File output;
 
-    public facebookActivity() {
+    public facebookFragment() {
         // Required empty public constructor
     }
 

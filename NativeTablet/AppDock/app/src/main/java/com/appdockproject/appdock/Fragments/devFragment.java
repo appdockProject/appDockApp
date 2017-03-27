@@ -1,4 +1,4 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,9 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class devActivity extends Fragment {
+import com.appdockproject.appdock.R;
 
-    public devActivity() {}
+public class devFragment extends Fragment {
+
+    public devFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

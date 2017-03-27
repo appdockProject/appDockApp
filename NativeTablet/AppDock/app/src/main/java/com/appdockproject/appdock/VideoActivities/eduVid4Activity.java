@@ -1,21 +1,24 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.VideoActivities;
 
 import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-public class eduVid5Activity extends AppCompatActivity {
+import com.appdockproject.appdock.R;
+
+public class eduVid4Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eduvid5);
+        setContentView(R.layout.activity_eduvid4);
 
         ImageButton closeButton = (ImageButton) findViewById(R.id.closeWindow);
         closeButton.setOnClickListener(new View.OnClickListener() {
@@ -25,7 +28,7 @@ public class eduVid5Activity extends AppCompatActivity {
             }
         });
 
-        String videoLink = "android.resource://com.appdockproject.appdock/" + R.raw.eduvideo5;
+        String videoLink = "android.resource://com.appdockproject.appdock/" + R.raw.eduvideo4;
         final VideoView videoView = (VideoView) findViewById(R.id.videoView);
 
         videoView.setVideoPath(videoLink);
@@ -35,8 +38,6 @@ public class eduVid5Activity extends AppCompatActivity {
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
 
-
         videoView.start();
-
     }
 }
