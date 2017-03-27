@@ -1,4 +1,4 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.Fragments;
 
 
 import android.os.Bundle;

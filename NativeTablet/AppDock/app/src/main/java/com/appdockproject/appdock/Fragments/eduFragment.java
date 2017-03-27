@@ -1,9 +1,8 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.Fragments;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.PixelFormat;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,8 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -23,9 +20,15 @@ import android.widget.MediaController;
 import android.widget.PopupWindow;
 import android.widget.VideoView;
 
+import com.appdockproject.appdock.R;
+import com.appdockproject.appdock.VideoActivities.eduVid1Activity;
+import com.appdockproject.appdock.VideoActivities.eduVid4Activity;
+import com.appdockproject.appdock.VideoActivities.eduVid5Activity;
+import com.appdockproject.appdock.VideoActivities.eduVid6Activity;
+
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
-public class eduActivity extends Fragment {
+public class eduFragment extends Fragment {
 
     String TAG = "EduVids";
 
@@ -34,7 +37,7 @@ public class eduActivity extends Fragment {
     private View popUpView;
     LayoutInflater popUpInflater;
 
-    public eduActivity() {}
+    public eduFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

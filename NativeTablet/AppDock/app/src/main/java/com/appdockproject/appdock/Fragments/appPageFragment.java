@@ -1,4 +1,4 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.Fragments;
 
 
 import android.graphics.Bitmap;
@@ -22,6 +22,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.appdockproject.appdock.Data.App;
+import com.appdockproject.appdock.R;
+import com.appdockproject.appdock.TwilioSMS;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,7 +35,7 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 import static com.appdockproject.appdock.R.drawable.a;
 import static com.appdockproject.appdock.R.string.app2;
 
-public class appPage extends Fragment {
+public class appPageFragment extends Fragment {
 
     String TAG = "appsPage";
 
@@ -46,7 +48,7 @@ public class appPage extends Fragment {
     TextView[] titles = new TextView[9];
     ImageButton[] buttons = new ImageButton[9];
 
-    public appPage(){}
+    public appPageFragment(){}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

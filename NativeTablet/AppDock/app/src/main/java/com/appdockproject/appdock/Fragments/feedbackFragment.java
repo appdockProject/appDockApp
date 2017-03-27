@@ -1,4 +1,4 @@
-package com.appdockproject.appdock;
+package com.appdockproject.appdock.Fragments;
 
 import android.*;
 import android.Manifest;
@@ -26,7 +26,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.appdockproject.appdock.*;
 import com.appdockproject.appdock.Data.Answer;
+import com.appdockproject.appdock.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.karumi.dexter.Dexter;
@@ -39,7 +41,7 @@ import java.util.List;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
 
-public class feedbackActivity extends Fragment {
+public class feedbackFragment extends Fragment {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -63,7 +65,7 @@ public class feedbackActivity extends Fragment {
     private String gpsData = "";
     private String latit, longit;
 
-    public feedbackActivity() {
+    public feedbackFragment() {
     }
 
     @Override
@@ -71,7 +73,7 @@ public class feedbackActivity extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View v = inflater.inflate(R.layout.fragment_survey, container, false);
+        View v = inflater.inflate(com.appdockproject.appdock.R.layout.fragment_survey, container, false);
 
         initializeUI(v);
 

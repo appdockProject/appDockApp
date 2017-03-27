@@ -3,12 +3,16 @@ package com.appdockproject.appdock;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.appdockproject.appdock.Fragments.appPageFragment;
+import com.appdockproject.appdock.Fragments.devFragment;
+import com.appdockproject.appdock.Fragments.eduFragment;
+import com.appdockproject.appdock.Fragments.facebookFragment;
+import com.appdockproject.appdock.Fragments.feedbackFragment;
 import com.google.firebase.database.FirebaseDatabase;
 
 
@@ -40,7 +44,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed Dev");
                 resetButtons();
                 devBtn.setPressed(true);
-                changeFragment(new devActivity());
+                changeFragment(new devFragment());
             }
         });
 
@@ -49,7 +53,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed Edu");
                 resetButtons();
                 eduBtn.setPressed(true);
-                changeFragment(new eduActivity());
+                changeFragment(new eduFragment());
             }
         });
 
@@ -58,7 +62,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed Cmnt");
                 resetButtons();
                 cmntBtn.setPressed(true);
-                changeFragment(new feedbackActivity());
+                changeFragment(new feedbackFragment());
             }
         });
 
@@ -67,7 +71,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed App");
                 resetButtons();
                 appBtn.setPressed(true);
-                changeFragment(new appPage());
+                changeFragment(new appPageFragment());
             }
         });
         facebookBtn.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +79,7 @@ public class MainActivity extends FragmentActivity {
                 Log.i(TAG, "Pressed Facebook");
                 resetButtons();
                 facebookBtn.setPressed(true);
-                changeFragment(new facebookActivity());
+                changeFragment(new facebookFragment());
             }
         });
 
@@ -92,7 +96,7 @@ public class MainActivity extends FragmentActivity {
             }
 
             // Create a new Fragment to be placed in the activity layout
-            appPage firstFragment = new appPage();
+            appPageFragment firstFragment = new appPageFragment();
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
