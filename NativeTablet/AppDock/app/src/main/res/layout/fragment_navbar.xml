@@ -37,6 +37,7 @@
         android:text="@string/devTitleBtn"
         android:theme="@style/buttonStyle" />
 
+    <!-- Removing survey button
     <Button
         android:id="@+id/comBtn"
         android:layout_width="match_parent"
@@ -44,6 +45,7 @@
         android:layout_weight="1"
         android:text="@string/surveyTitleBtn"
         android:theme="@style/buttonStyle" />
+        -->
 
     <Button
         android:id="@+id/fbBtn"

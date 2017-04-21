@@ -208,7 +208,7 @@ public class facebookFragment extends Fragment {
             Log.e(TAG, "Did not take photo. Requestcode: " + requestCode);
         }
     }
-    
+
     private void postToFace(byte[] image) {
 
         String path;

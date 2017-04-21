@@ -35,7 +35,7 @@ public class MainActivity extends FragmentActivity {
 
         devBtn = (Button) findViewById(R.id.devBtn);
         eduBtn = (Button) findViewById(R.id.eduBtn);
-        cmntBtn = (Button) findViewById(R.id.comBtn);
+        //cmntBtn = (Button) findViewById(R.id.comBtn); // Removed survey
         appBtn = (Button) findViewById(R.id.appBtn);
         facebookBtn = (Button) findViewById(R.id.fbBtn);
 
@@ -56,7 +56,7 @@ public class MainActivity extends FragmentActivity {
                 changeFragment(new eduFragment());
             }
         });
-
+/*
         cmntBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.i(TAG, "Pressed Cmnt");
@@ -65,7 +65,7 @@ public class MainActivity extends FragmentActivity {
                 changeFragment(new feedbackFragment());
             }
         });
-
+*/
         appBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.i(TAG, "Pressed App");
@@ -111,7 +111,7 @@ public class MainActivity extends FragmentActivity {
     private void resetButtons(){
         devBtn.setPressed(false);
         eduBtn.setPressed(false);
-        cmntBtn.setPressed(false);
+        //cmntBtn.setPressed(false);
         appBtn.setPressed(false);
         facebookBtn.setPressed(false);
     }
