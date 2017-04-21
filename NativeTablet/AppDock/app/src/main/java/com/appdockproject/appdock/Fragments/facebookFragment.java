@@ -208,47 +208,7 @@ public class facebookFragment extends Fragment {
             Log.e(TAG, "Did not take photo. Requestcode: " + requestCode);
         }
     }
-
-    public void testFace(View v) {
-
-        Log.i(TAG, "Making API call ");
-
-        GraphRequest request = GraphRequest.newGraphPathRequest(
-                AccessToken.getCurrentAccessToken(),
-                getString(R.string.facebook_page_id),
-                new GraphRequest.Callback() {
-                    @Override
-                    public void onCompleted(GraphResponse response) {
-                        // Insert your code here
-                        Log.i(TAG, "Got response: " + response.toString());
-
-                        boolean canPost = false;
-
-                        if (response.getJSONObject().has("can_post")) {
-                            try {
-                                canPost = response.getJSONObject().getBoolean("can_post");
-                            } catch (JSONException e) {
-                                Log.e(TAG, e.toString());
-                                e.printStackTrace();
-                            }
-                        }
-
-                        Log.i(TAG, "Can post: " + canPost);
-
-                        if (canPost)
-                            postToFace(null);
-
-                    }
-                });
-
-        Bundle parameters = new Bundle();
-        parameters.putString("access_token", getResources().getString(R.string.facebook_access_token));
-        parameters.putString("fields", "about,can_post");
-        request.setParameters(parameters);
-        request.executeAsync();
-
-    }
-
+    
     private void postToFace(byte[] image) {
 
         String path;
