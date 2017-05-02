@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="400dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="24dp">
 
     <LinearLayout
-        android:layout_below="@+id/closeApp"
         android:id="@+id/layout_images"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_below="@+id/closeApp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <ImageView
             android:id="@+id/appLogo"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/devLogo"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@+id/layout_images"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:layout_below="@+id/layout_images"
         android:orientation="vertical">
 
         <TextView
@@ -53,7 +55,7 @@
             android:textStyle="bold" />
 
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
