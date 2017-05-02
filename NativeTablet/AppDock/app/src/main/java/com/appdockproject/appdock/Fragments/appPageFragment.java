@@ -1,12 +1,11 @@
 package com.appdockproject.appdock.Fragments;
 
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Base64;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -22,18 +21,15 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.appdockproject.appdock.Data.App;
+import com.appdockproject.appdock.Data.AppViewHolder;
 import com.appdockproject.appdock.R;
 import com.appdockproject.appdock.TwilioSMS;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import static android.R.id.closeButton;
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
-import static com.appdockproject.appdock.R.drawable.a;
-import static com.appdockproject.appdock.R.string.app2;
 
 public class appPageFragment extends Fragment {
 
@@ -44,9 +40,8 @@ public class appPageFragment extends Fragment {
     private View popUpView;
     LayoutInflater popUpInflater;
 
-    App[] apps = new App[9];
-    TextView[] titles = new TextView[9];
-    ImageButton[] buttons = new ImageButton[9];
+    FirebaseRecyclerAdapter mAdapter;
+    RecyclerView mAppGridView;
 
     public appPageFragment(){}
 
@@ -65,148 +60,28 @@ public class appPageFragment extends Fragment {
         // Setup firebase to get information about apps
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Apps");
 
-        DatabaseReference app1_ref = mDatabase.child("app1"),
-            app2_ref = mDatabase.child("app2"),
-            app3_ref = mDatabase.child("app3"),
-            app4_ref = mDatabase.child("app4"),
-            app5_ref = mDatabase.child("app5"),
-            app6_ref = mDatabase.child("app6"),
-            app7_ref = mDatabase.child("app7"),
-            app8_ref = mDatabase.child("app8"),
-            app9_ref = mDatabase.child("app9");
-
-        ValueEventListener postListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // Get Post object and use the values to update the UI
-                int key = Integer.parseInt(dataSnapshot.getKey().replace("app", ""));
-                Log.i(TAG, "Datachange on app number: " + key);
-                App app = dataSnapshot.getValue(App.class);
-                apps[key-1] = app;
-                //setupWindow(apps[key]);
-                titles[key-1].setText(app.getName());
-                buttons[key-1].setImageBitmap(decodeBit64Image(app.getLogo()));
-
-            }
+        mAppGridView = (RecyclerView) v.findViewById(R.id.appDrawer);
+        mAppGridView.setHasFixedSize(false);
+        GridLayoutManager gm = new GridLayoutManager(getContext(), 3);
+        mAppGridView.setLayoutManager(gm);
+        mAdapter = new FirebaseRecyclerAdapter<App, AppViewHolder>(App.class, R.layout.app_icon, AppViewHolder.class, mDatabase) {
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Getting Post failed, log a message
-                Log.w(TAG, "loadApp:onCancelled", databaseError.toException());
-                // ...
+            protected void populateViewHolder(AppViewHolder viewHolder, final App app, int position) {
+
+                Glide.with(getContext()).load(app.getLogo()).into(viewHolder.logo);
+                viewHolder.setAppName(app.getName());
+
+                viewHolder.setOnClickListener(new AppViewHolder.ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        setupWindow(app);
+                    }
+                });
             }
         };
-        app1_ref.addValueEventListener(postListener);
-        app2_ref.addValueEventListener(postListener);
-        app3_ref.addValueEventListener(postListener);
-        app4_ref.addValueEventListener(postListener);
-        app5_ref.addValueEventListener(postListener);
-        app6_ref.addValueEventListener(postListener);
-        app7_ref.addValueEventListener(postListener);
-        app8_ref.addValueEventListener(postListener);
-        app9_ref.addValueEventListener(postListener);
 
-        //Buttons and titles to the app pages
-        ImageButton app1 = (ImageButton) v.findViewById(R.id.aImage);
-        buttons[0] = app1;
-        TextView t1 = (TextView) v.findViewById(R.id.aText);
-        titles[0] = t1;
-        ImageButton app2 = (ImageButton) v.findViewById(R.id.bImage);
-        buttons[1] = app2;
-        TextView t2 = (TextView) v.findViewById(R.id.bText);
-        titles[1] = t2;
-        ImageButton app3 = (ImageButton) v.findViewById(R.id.cImage);
-        buttons[2] = app3;
-        TextView t3 = (TextView) v.findViewById(R.id.cText);
-        titles[2] = t3;
-        ImageButton app4 = (ImageButton) v.findViewById(R.id.dImage);
-        buttons[3] = app4;
-        TextView t4 = (TextView) v.findViewById(R.id.dText);
-        titles[3] = t4;
-        ImageButton app5 = (ImageButton) v.findViewById(R.id.eImage);
-        buttons[4] = app5;
-        TextView t5 = (TextView) v.findViewById(R.id.eText);
-        titles[4] = t5;
-        ImageButton app6 = (ImageButton) v.findViewById(R.id.fImage);
-        buttons[5] = app6;
-        TextView t6 = (TextView) v.findViewById(R.id.fText);
-        titles[5] = t6;
-        ImageButton app7 = (ImageButton) v.findViewById(R.id.gImage);
-        buttons[6] = app7;
-        TextView t7 = (TextView) v.findViewById(R.id.gText);
-        titles[6] = t7;
-        ImageButton app8 = (ImageButton) v.findViewById(R.id.hImage);
-        buttons[7] = app8;
-        TextView t8 = (TextView) v.findViewById(R.id.hText);
-        titles[7] = t8;
-        ImageButton app9 = (ImageButton) v.findViewById(R.id.iImage);
-        buttons[8] = app9;
-        TextView t9 = (TextView) v.findViewById(R.id.iText);
-        titles[8] = t9;
-
-        //Listeners to navigate to the app activities
-        app1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app1, R.string.app1SMSLink);
-                setupWindow(apps[0]);
-            }
-        });
-
-        app2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app2, R.string.app2SMSLink);
-                setupWindow(apps[1]);
-            }
-        });
-
-        app3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app3, R.string.app3SMSLink);
-                setupWindow(apps[2]);
-            }
-        });
-
-        app4.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app4, R.string.app4SMSLink);
-                setupWindow(apps[3]);
-            }
-        });
-
-        app5.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app5, R.string.app5SMSLink);
-                setupWindow(apps[4]);
-            }
-        });
-
-        app6.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app6, R.string.app6SMSLink);
-                setupWindow(apps[5]);
-            }
-        });
-
-        app7.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app7, R.string.app7SMSLink);
-                setupWindow(apps[6]);
-            }
-        });
-
-        app8.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app8, R.string.app8SMSLink);
-                setupWindow(apps[7]);
-            }
-        });
-
-        app9.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_app9, R.string.app9SMSLink);
-                setupWindow(apps[8]);
-            }
-        });
+        mAppGridView.setAdapter(mAdapter);
 
         return v;
     }
@@ -238,11 +113,9 @@ public class appPageFragment extends Fragment {
 
         // Setup logos
         ImageView logo = (ImageView) popUpView.findViewById(R.id.appLogo);
-        if (app.getLogo() != null)
-            logo.setImageBitmap(decodeBit64Image(app.getLogo()));
+        Glide.with(getContext()).load(app.getLogo()).into(logo);
         ImageView dev = (ImageView) popUpView.findViewById(R.id.devLogo);
-        if (app.getDev1() != null)
-            dev.setImageBitmap(decodeBit64Image(app.getDev1()));
+        Glide.with(getContext()).load(app.getDev1()).into(dev);
 
         // Setup all text in app
         TextView title = (TextView) popUpView.findViewById(R.id.appTitle);
@@ -288,17 +161,6 @@ public class appPageFragment extends Fragment {
 
         // Finally, show the popup window at the center location of root relative layout
         mPopupWindow.showAtLocation(mLinearLayout, Gravity.CENTER, 0, 0);
-    }
-
-    Bitmap decodeBit64Image(String image){
-        byte[] imageAsBytes;
-        try {
-            imageAsBytes = Base64.decode(image, Base64.DEFAULT);
-        } catch (IllegalArgumentException e){
-            Log.e(TAG, "Bad bit64..");
-            return null;
-        }
-        return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
     }
 
 }
