@@ -1,3 +1,4 @@
+//noinspection GradleCompatible
 apply plugin: 'com.android.application'
 
 android {
@@ -28,14 +29,16 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support:support-v4:25.0.0'
-    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
 
     compile 'com.android.volley:volley:1.0.0'
     compile 'com.karumi:dexter:2.3.1' //Permission wrapper library
     compile 'com.google.firebase:firebase-core:9.6.1' //firebase
     compile 'com.google.firebase:firebase-database:9.6.0' //firebase database
+    compile 'com.github.bumptech.glide:glide:3.7.0' // For handling images
+    compile 'com.firebaseui:firebase-ui-database:1.2.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)' //Facebook SDK
 }
 

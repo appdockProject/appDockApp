@@ -18,6 +18,7 @@
     <!-- screen background -->
     <color name="actBg">#208a71</color>
     <color name="navBarBg">#bddb39</color>
+    <color name="devBg">#0D4559</color>
 
     <!-- activity colors -->
     <color name="stringColorBlue">#3399CC</color>

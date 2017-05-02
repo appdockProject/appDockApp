@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/actBg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/devButton"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:background="@drawable/devs1"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center_vertical"
+        android:scaleType="fitCenter">
+
+        <ImageView
+            android:id="@+id/developerIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/dev1" />
+
+        <ImageView
+            android:id="@+id/devAppLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/a" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/devNames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="NAME OF DEVELOPERS"
+        android:textAlignment="viewStart"
+        android:textColor="@color/titles"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>

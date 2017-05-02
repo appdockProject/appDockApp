@@ -8,15 +8,49 @@ import com.google.firebase.database.DatabaseReference;
 
 public class App {
 
-    String name,
-            desc,
-            dev1,
-            keywords,
-            link,
-            logo,
-            smslink;
+    private String desc;
+    private String dev1;
+    private String devInfo;
+    private String devName1;
+    private String devName2;
+    private String devName3;
+    private String keywords;
+    private String link;
+    private String logo;
+    private String name;
+    private String smslink;
 
-    DatabaseReference ref;
+    public String getDevInfo() {
+        return devInfo;
+    }
+
+    public void setDevInfo(String devInfo) {
+        this.devInfo = devInfo;
+    }
+
+    public String getDevName1() {
+        return devName1;
+    }
+
+    public void setDevName1(String devName1) {
+        this.devName1 = devName1;
+    }
+
+    public String getDevName2() {
+        return devName2;
+    }
+
+    public void setDevName2(String devName2) {
+        this.devName2 = devName2;
+    }
+
+    public String getDevName3() {
+        return devName3;
+    }
+
+    public void setDevName3(String devName3) {
+        this.devName3 = devName3;
+    }
 
     public String getName() {
         return name;

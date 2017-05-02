@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/devFragment"
     android:background="@color/actBg"
     android:orientation="vertical">
 
@@ -45,142 +46,15 @@
     </RelativeLayout>
 
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="20dp"
-        android:columnCount="2"
-        android:rowCount="4">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/dev1"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_column="0"
-                android:layout_row="0"
-                android:background="@color/actBg"
-                android:scaleType="fitCenter"
-                android:src="@drawable/devs1" />
-
-            <TextView
-                android:id="@+id/dev1txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_row="1"
-                android:background="@color/actBg"
-                android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="@string/dev1"
-                android:textAlignment="viewStart"
-                android:textColor="@color/titles"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/dev2"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_column="1"
-                android:layout_row="0"
-                android:background="@color/actBg"
-                android:scaleType="fitCenter"
-                android:src="@drawable/devs2"
-                android:textColor="@color/titles" />
-
-            <TextView
-                android:id="@+id/dev2txt"
-                android:layout_width="213dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_row="1"
-                android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="@string/dev2"
-                android:textAlignment="viewStart"
-                android:textColor="@color/titles"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingEnd="100dp">
-
-            <ImageButton
-                android:id="@+id/dev3"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_column="0"
-                android:layout_row="2"
-                android:background="@color/actBg"
-                android:scaleType="fitCenter"
-                android:src="@drawable/devs3" />
-
-            <TextView
-                android:id="@+id/dev3txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_row="3"
-                android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="@string/dev3"
-                android:textAlignment="viewStart"
-                android:textColor="@color/titles"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/developers_layout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical">
+            android:clipToPadding="false"
+            android:padding="5dp">
 
-            <ImageButton
-                android:id="@+id/dev4"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_column="1"
-                android:layout_row="2"
-                android:background="@color/actBg"
-                android:scaleType="fitCenter"
-                android:src="@drawable/devs4" />
-
-            <TextView
-                android:id="@+id/dev4txt"
-                android:layout_width="wrap_content"
-                android:layout_height="41dp"
-                android:layout_column="1"
-                android:layout_row="3"
-                android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="@string/dev4"
-                android:textColor="@color/titles"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-    </GridLayout>
-
+        </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
 
