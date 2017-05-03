@@ -1,3 +1,5 @@
+//WHAT IS ANDROID
+
 package com.appdockproject.appdock.VideoActivities;
 
 import android.content.Intent;

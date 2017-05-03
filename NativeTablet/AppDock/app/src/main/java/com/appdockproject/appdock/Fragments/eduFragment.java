@@ -51,12 +51,13 @@ public class eduFragment extends Fragment {
 
         mLinearLayout = (LinearLayout) v.findViewById(R.id.eduPage_layout);
 
-        ImageButton vid1 = (ImageButton) v.findViewById(R.id.gmail);
-        ImageButton vid2 = (ImageButton) v.findViewById(R.id.mobileapp);
-        ImageButton vid3 = (ImageButton) v.findViewById(R.id.play);
-        ImageButton vid4 = (ImageButton) v.findViewById(R.id.download);
+        ImageButton androidVid = (ImageButton) v.findViewById(R.id.android);
+        ImageButton appVid = (ImageButton) v.findViewById(R.id.mobileapp);
+        ImageButton emailVid = (ImageButton) v.findViewById(R.id.email);
+        //ImageButton vid4 = (ImageButton) v.findViewById(R.id.download);
 
-        vid1.setOnClickListener(new View.OnClickListener() {
+        //EDUVIDEO1 - WHAT IS ANDROID
+        androidVid.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -66,28 +67,38 @@ public class eduFragment extends Fragment {
             }
         });
 
-        vid2.setOnClickListener(new View.OnClickListener() {
+        //EDUVIDEO2
+
+        //EDUVIDEO3
+
+        //EDUVIDEO4 - WHAT IS AN EMAIL ADDRESS
+        emailVid.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 //setupPopup(R.layout.activity_eduvid4, R.raw.eduvideo4);
-                //setupDialogView(R.layout.activity_eduvid4, R.raw.eduvideo4);
                 Intent intent = new Intent(getContext(), eduVid4Activity.class);
                 startActivity(intent);
             }
         });
 
-        vid3.setOnClickListener(new View.OnClickListener() {
+        //EDUVIDEO5
+
+        //EDUVIDEO6 - WHAT IS AN APP
+        appVid.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                //setupPopup(R.layout.activity_eduvid5, R.raw.eduvideo5);
-                Intent intent = new Intent(getContext(), eduVid5Activity.class);
+                //setupPopup(R.layout.activity_eduvid6, R.raw.eduvideo6);
+                //setupDialogView(R.layout.activity_eduvid6, R.raw.eduvideo6);
+                Intent intent = new Intent(getContext(), eduVid6Activity.class);
                 startActivity(intent);
             }
         });
 
-        vid4.setOnClickListener(new View.OnClickListener() {
+
+
+        /**vid4.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -95,7 +106,7 @@ public class eduFragment extends Fragment {
                 Intent intent = new Intent(getContext(), eduVid6Activity.class);
                 startActivity(intent);
             }
-        });
+        }); **/
 
         return v;
     }

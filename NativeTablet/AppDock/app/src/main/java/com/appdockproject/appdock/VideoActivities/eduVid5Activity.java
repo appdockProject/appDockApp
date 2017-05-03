@@ -1,3 +1,5 @@
+//HOW TO CREATE AN EMAIL
+
 package com.appdockproject.appdock.VideoActivities;
 
 import android.content.Intent;
@@ -19,7 +21,7 @@ public class eduVid5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eduvid5);
 
-        ImageButton closeButton = (ImageButton) findViewById(R.id.closeWindow);
+/**        ImageButton closeButton = (ImageButton) findViewById(R.id.closeWindow);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +40,7 @@ public class eduVid5Activity extends AppCompatActivity {
         videoView.setMediaController(mediaController);
 
 
-        videoView.start();
+        videoView.start(); **/
 
     }
 }

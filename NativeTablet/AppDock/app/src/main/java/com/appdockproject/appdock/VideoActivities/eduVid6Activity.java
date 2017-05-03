@@ -1,3 +1,5 @@
+//WHAT IS AN APPLICATION
+
 package com.appdockproject.appdock.VideoActivities;
 
 import android.content.Intent;
@@ -40,6 +42,7 @@ public class eduVid6Activity extends AppCompatActivity {
 
 
         videoView.start();
+
 
     }
 }

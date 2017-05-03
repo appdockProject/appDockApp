@@ -1,3 +1,5 @@
+//WHAT IS AN EMAIL
+
 package com.appdockproject.appdock.VideoActivities;
 
 import android.content.Intent;
