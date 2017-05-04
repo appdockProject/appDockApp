@@ -26,10 +26,8 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        Log.i(TAG, "Started Main activity");
-
-        // Setup firebase to cache data locally
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+//        // Setup firebase to cache data locally
+//        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         hideSystemUI();
 
