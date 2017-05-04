@@ -6,6 +6,8 @@ import android.graphics.PixelFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,11 +22,17 @@ import android.widget.MediaController;
 import android.widget.PopupWindow;
 import android.widget.VideoView;
 
+import com.appdockproject.appdock.Data.DeveloperHolder;
+import com.appdockproject.appdock.Data.Video;
+import com.appdockproject.appdock.Data.VideoViewHolder;
 import com.appdockproject.appdock.R;
 import com.appdockproject.appdock.VideoActivities.eduVid1Activity;
 import com.appdockproject.appdock.VideoActivities.eduVid4Activity;
 import com.appdockproject.appdock.VideoActivities.eduVid5Activity;
 import com.appdockproject.appdock.VideoActivities.eduVid6Activity;
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
@@ -36,6 +44,10 @@ public class eduFragment extends Fragment {
     private LinearLayout mLinearLayout;
     private View popUpView;
     LayoutInflater popUpInflater;
+
+    RecyclerView mGridView;
+
+    ArrayList<Video> videos;
 
     public eduFragment() {}
 
@@ -51,64 +63,76 @@ public class eduFragment extends Fragment {
 
         mLinearLayout = (LinearLayout) v.findViewById(R.id.eduPage_layout);
 
-        ImageButton androidVid = (ImageButton) v.findViewById(R.id.android);
-        ImageButton appVid = (ImageButton) v.findViewById(R.id.mobileapp);
-        ImageButton emailVid = (ImageButton) v.findViewById(R.id.email);
-        //ImageButton vid4 = (ImageButton) v.findViewById(R.id.download);
+        // ADD NEW VIDEOS in this method
+        setupVideos();
 
-        //EDUVIDEO1 - WHAT IS ANDROID
-        androidVid.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_eduvid1, R.raw.eduvideo1);
-                Intent intent = new Intent(getContext(), eduVid1Activity.class);
-                startActivity(intent);
-            }
-        });
-
-        //EDUVIDEO2
-
-        //EDUVIDEO3
-
-        //EDUVIDEO4 - WHAT IS AN EMAIL ADDRESS
-        emailVid.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_eduvid4, R.raw.eduvideo4);
-                Intent intent = new Intent(getContext(), eduVid4Activity.class);
-                startActivity(intent);
-            }
-        });
-
-        //EDUVIDEO5
-
-        //EDUVIDEO6 - WHAT IS AN APP
-        appVid.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_eduvid6, R.raw.eduvideo6);
-                //setupDialogView(R.layout.activity_eduvid6, R.raw.eduvideo6);
-                Intent intent = new Intent(getContext(), eduVid6Activity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-        /**vid4.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                //setupPopup(R.layout.activity_eduvid6, R.raw.eduvideo6);
-                Intent intent = new Intent(getContext(), eduVid6Activity.class);
-                startActivity(intent);
-            }
-        }); **/
+        setupGridview(v);
 
         return v;
+    }
+
+    void setupVideos(){
+        videos = new ArrayList<>();
+
+        // Change to add more videos. Can make as many as you want.
+        for (int i=0; i<9; i++){
+            switch (i){
+                case 1:
+                    videos.add(new Video(getString(R.string.video1Title), R.drawable.whatisandroid, eduVid1Activity.class));
+                    break;
+                case 2: case 3:
+                    break;
+                case 4:
+                    videos.add(new Video(getString(R.string.video4Title), R.drawable.whatisanemail, eduVid4Activity.class));
+                    break;
+                case 5:
+                    //videos.add(new Video(getString(R.string.video5Title), R.drawable.whatisanapp, eduVid5Activity.class));
+                    break;
+                case 6:
+                    videos.add(new Video(getString(R.string.video6Title), R.drawable.whatisanapp, eduVid6Activity.class));
+                    break;
+            }
+        }
+    }
+
+    void setupGridview(View v){
+        mGridView = (RecyclerView) v.findViewById(R.id.videos_grid);
+        mGridView.setHasFixedSize(false);
+        GridLayoutManager gm = new GridLayoutManager(getContext(), 3); // Use 3 columns
+        mGridView.setLayoutManager(gm);
+
+        RecyclerView.Adapter mAdapter = new RecyclerView.Adapter<VideoViewHolder>() {
+            @Override
+            public VideoViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+                View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.video_icon, null);
+
+                VideoViewHolder vvh = new VideoViewHolder(view);
+                return vvh;
+            }
+
+            @Override
+            public void onBindViewHolder(final VideoViewHolder holder, final int position) {
+                //Set the name of the video
+                holder.setVidName(videos.get(position).getName());
+                //Set the image of the video
+                Glide.with(getContext()).load(videos.get(position).getImageResource()).into(holder.vidLogo);
+
+                holder.setOnClickListener(new VideoViewHolder.ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int pos) {
+                        Intent intent = new Intent(getContext(), videos.get(position).videoResource);
+                        startActivity(intent);
+                    }
+                });
+            }
+
+            @Override
+            public int getItemCount() {
+                return videos.size();
+            }
+
+        };
+        mGridView.setAdapter(mAdapter);
     }
 
     void setupPopup(int activity_vid, int raw_vid){
