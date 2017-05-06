@@ -49,6 +49,9 @@ public class devFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.activity_dev, container, false);
 
+        TextView headerTitle = (TextView) v.findViewById(R.id.titleOfFragment);
+        headerTitle.setText(R.string.devTitle);
+
         mLinearLayout = (LinearLayout) v.findViewById(R.id.devFragment);
 
         // Set up Layoutinflater for the popup windows

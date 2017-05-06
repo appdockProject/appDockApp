@@ -55,6 +55,9 @@ public class appPageFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_app_page, container, false);
 
+        TextView headerTitle = (TextView) v.findViewById(R.id.titleOfFragment);
+        headerTitle.setText(R.string.appTitle);
+
         mLinearLayout = (LinearLayout) v.findViewById(R.id.appPage_layout);
 
         // Setup firebase to get information about apps

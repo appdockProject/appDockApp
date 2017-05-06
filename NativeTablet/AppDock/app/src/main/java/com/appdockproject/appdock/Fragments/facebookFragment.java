@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appdockproject.appdock.R;
@@ -60,6 +61,7 @@ import static com.appdockproject.appdock.R.id.bShareToFacebook;
 import static com.appdockproject.appdock.R.id.bTakePhoto;
 import static com.appdockproject.appdock.R.id.devBtn;
 import static com.appdockproject.appdock.R.id.eduBtn;
+import static com.appdockproject.appdock.R.string.facebookTitle;
 import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class facebookFragment extends Fragment {
@@ -88,6 +90,9 @@ public class facebookFragment extends Fragment {
         View v = inflater.inflate(R.layout.activity_facebook, container, false);
 
         Log.i(TAG, "Starting " + getActivity().getComponentName().getShortClassName());
+
+        TextView headerTitle = (TextView) v.findViewById(R.id.titleOfFragment);
+        headerTitle.setText(R.string.facebookTitle);
 
         photoTaken = false;
 

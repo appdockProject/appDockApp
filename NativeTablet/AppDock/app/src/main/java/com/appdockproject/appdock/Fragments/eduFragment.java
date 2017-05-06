@@ -20,6 +20,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.appdockproject.appdock.Data.Video;
@@ -57,6 +58,9 @@ public class eduFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_edu, container, false);
+
+        TextView headerTitle = (TextView) v.findViewById(R.id.titleOfFragment);
+        headerTitle.setText(R.string.eduTitle);
 
         mLinearLayout = (LinearLayout) v.findViewById(R.id.eduPage_layout);
 
