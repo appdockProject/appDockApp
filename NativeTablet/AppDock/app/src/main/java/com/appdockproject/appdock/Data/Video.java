@@ -9,10 +9,10 @@ import android.widget.ImageView;
 public class Video {
     private String name;
     private int imageResource;
-    public Class videoResource;
+    private int videoResource;
     public ImageView im;
 
-    public Video(String name, int imageResource, Class videoResource) {
+    public Video(String name, int imageResource, int videoResource) {
         this.name = name;
         this.imageResource = imageResource;
         this.videoResource = videoResource;
@@ -34,7 +34,7 @@ public class Video {
         this.imageResource = imageResource;
     }
 
-    public Class getVideoResource() {
+    public int getVideoResource() {
         return videoResource;
     }
 

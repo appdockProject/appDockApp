@@ -1,25 +1,35 @@
-//WHAT IS AN APPLICATION
-
-package com.appdockproject.appdock.VideoActivities;
+package com.appdockproject.appdock;
 
 import android.content.Intent;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.appdockproject.appdock.R;
+/**
+ * Created by jangerhard on 05-May-17.
+ */
 
-public class eduVid6Activity extends AppCompatActivity {
+public class VideoActivity extends AppCompatActivity {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eduvid6);
+
+        Intent intent = getIntent();
+
+        String name = intent.getStringExtra("VIDEO_NAME");
+        int video_resource = intent.getIntExtra("VIDEO_RESOURCE", 0);
+
+        if (video_resource == 0){
+            Log.e("VideoActivity", "No video source was given when activity started");
+            finish();
+        }
+
+        setContentView(R.layout.activity_video);
 
         ImageButton closeButton = (ImageButton) findViewById(R.id.closeWindow);
         closeButton.setOnClickListener(new View.OnClickListener() {
@@ -29,8 +39,10 @@ public class eduVid6Activity extends AppCompatActivity {
             }
         });
 
+        TextView tv = (TextView) findViewById(R.id.titleOfVideo);
+        tv.setText(name);
 
-        String videoLink = "android.resource://com.appdockproject.appdock/" + R.raw.eduvideo6;
+        String videoLink = "android.resource://com.appdockproject.appdock/" + video_resource;
         final VideoView videoView = (VideoView) findViewById(R.id.videoView);
 
         videoView.setVideoPath(videoLink);
@@ -40,9 +52,7 @@ public class eduVid6Activity extends AppCompatActivity {
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
 
-
         videoView.start();
-
 
     }
 }
