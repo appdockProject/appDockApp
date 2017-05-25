@@ -84,8 +84,6 @@ public class feedbackFragment extends Fragment {
 
         this.v = v;
 
-        Dexter.initialize(getActivity()); //Used to get Permissions
-
         //Submit button
         submit = (Button) v.findViewById(R.id.submit);
 
@@ -139,7 +137,10 @@ public class feedbackFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Dexter.checkPermissions(new MultiplePermissionsListener() {
+                Dexter.withActivity(getActivity()).withPermissions (
+                        Manifest.permission.INTERNET,
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                ).withListener( new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
                         if (report.areAllPermissionsGranted()) {
@@ -160,7 +161,7 @@ public class feedbackFragment extends Fragment {
                     public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
                         token.continuePermissionRequest();
                     }
-                }, Manifest.permission.INTERNET, Manifest.permission.ACCESS_COARSE_LOCATION);
+                }).check();
 
             }
         });

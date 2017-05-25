@@ -107,14 +107,16 @@ public class facebookFragment extends Fragment {
         shareDialog = new ShareDialog(this);
 
         Log.i(TAG, "Initializing permissions");
-        Dexter.initialize(getActivity()); //Used to get Permissions
 
         final Button bTakePhoto = (Button) v.findViewById(R.id.bTakePhoto);
         bTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "Checking for camera and storage permissions.");
-                Dexter.checkPermissions(new MultiplePermissionsListener() {
+                Dexter.withActivity(getActivity()).withPermissions(
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                ).withListener( new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
                         if (report.areAllPermissionsGranted()) {
@@ -134,7 +136,7 @@ public class facebookFragment extends Fragment {
                     public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
                         token.continuePermissionRequest();
                     }
-                }, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE);
+                }).check();
             }
         });
         bShareToFacebook = (Button) v.findViewById(R.id.bShareToFacebook);
@@ -143,7 +145,10 @@ public class facebookFragment extends Fragment {
             public void onClick(View v) {
 
                 Log.i(TAG, "Checking for internet permission.");
-                Dexter.checkPermissions(new MultiplePermissionsListener() {
+                Dexter.withActivity(getActivity()).withPermissions(
+                        Manifest.permission.INTERNET,
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                ).withListener( new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
                         if (report.areAllPermissionsGranted()) {
@@ -163,7 +168,7 @@ public class facebookFragment extends Fragment {
                     public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
                         token.continuePermissionRequest();
                     }
-                }, Manifest.permission.INTERNET, Manifest.permission.READ_EXTERNAL_STORAGE);
+                }).check();
             }
         });
 
