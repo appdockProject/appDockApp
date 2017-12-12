@@ -77,9 +77,16 @@ public class eduFragment extends Fragment {
 
         // Change to add more videos. Can make as many as you want.
 
-        videos.add(new Video(getString(R.string.video1Title), R.drawable.whatisandroid, R.raw.eduvideo1));
-        videos.add(new Video(getString(R.string.video4Title), R.drawable.whatisanemail, R.raw.eduvideo4));
-        videos.add(new Video(getString(R.string.video6Title), R.drawable.whatisanapp, R.raw.eduvideo6));
+        videos.add(new Video(getString(R.string.video1Title), R.drawable.eduvideo1, R.raw.eduvideo1));
+        videos.add(new Video(getString(R.string.video2Title), R.drawable.eduvideo2, R.raw.eduvideo2));
+        videos.add(new Video(getString(R.string.video3Title), R.drawable.eduvideo3, R.raw.eduvideo3));
+        videos.add(new Video(getString(R.string.video4Title), R.drawable.eduvideo4, R.raw.eduvideo4));
+        videos.add(new Video(getString(R.string.video5Title), R.drawable.eduvideo5, R.raw.eduvideo5));
+        videos.add(new Video(getString(R.string.video6Title), R.drawable.eduvideo6, R.raw.eduvideo6));
+        videos.add(new Video(getString(R.string.video7Title), R.drawable.eduvideo7, R.raw.eduvideo7));
+        videos.add(new Video(getString(R.string.video8Title), R.drawable.eduvideo8, R.raw.eduvideo8));
+//        videos.add(new Video(getString(R.string.video4Title), R.drawable.whatisanemail, R.raw.eduvideo4));
+//        videos.add(new Video(getString(R.string.video6Title), R.drawable.whatisanapp, R.raw.eduvideo6));
 
     }
 
